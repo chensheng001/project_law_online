@@ -1,0 +1,48 @@
+<div class="modal">
+    <ion-header-bar align-title="left" class="bar-positive title-color">
+        <h1 class="title">用户评价</h1>
+        <div class="buttons">
+            <button class="button button-energized button-outline" ng-click="userratingmodal.hide()">关闭</button>
+        </div>
+    </ion-header-bar>
+    <ion-content>
+        <ion-refresher pulling-text="下拉刷新..." on-refresh="evaluateList.doRefresh()">
+        </ion-refresher>
+
+        <div class="banner" style="position: relative;">
+            <div style="width: 6em;margin: 0px auto;">
+                <img ng-src="{{evaluateList.lawyer.photoUrl}}" alt="" class="user-headportrait"
+                     style="height: 6em;width: 6em">
+            </div>
+            <h3 class="text-center">{{evaluateList.lawyer.realName}}{{evaluateList.lawyer.type}}</h3>
+
+            <div class="energized" style="top: 9px;position: absolute;right: 10px;">
+                <evaluate-star star-num="evaluateList.lawyer.evaluateGrade"></evaluate-star>
+            </div>
+
+        </div>
+        <div class="list">
+            <div class="item item-divider">
+                用户评价（{{evaluateList.page.total}}）
+                <button style="float:right;background-color: #f5762d;" class="button button-small button-energized"
+                        ng-click="postRatingShow()">
+                    我要点评
+                </button>
+            </div>
+            <a class="item item-avatar item-text-wrap" href="#" ng-repeat="item in evaluateList.page.list">
+                <img ng-src="{{item.photo_url}}">
+                <h2>{{item.nick_name}}</h2>
+                <p>
+                    <evaluate-star star-num="item.grade"></evaluate-star>
+                </p>
+                <p>{{item.content}}</p>
+            </a>
+        </div>
+
+        <ion-infinite-scroll ng-if="evaluateList.page.currPage<evaluateList.page.pages"
+                             on-infinite="evaluateList.loadMore()"
+                             distance="1%">
+        </ion-infinite-scroll>
+    </ion-content>
+</div>
+

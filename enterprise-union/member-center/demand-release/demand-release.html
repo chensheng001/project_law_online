@@ -1,0 +1,57 @@
+<ion-view view-title="其他需求发布">
+    <ion-content>
+        <ion-refresher pulling-text="下拉刷新..." on-refresh="need.doRefresh()">
+        </ion-refresher>
+        <div class="button-bar">
+            <a class="button" ng-click="need.selectTab(0)" style="color:#ED1A24;">全部</a>
+            <a class="button" ng-click="need.selectTab(1)" style="color:#F8931F;">待审核</a>
+            <a class="button" ng-click="need.selectTab(2)" style="color:#F8931F;">已通过</a>
+        </div>
+        <div>
+            <div class="card" ng-repeat="item in need.page.content">
+                <div class="item">
+                    <p>{{item.title}}</p>
+                    <p>终止时间:{{item.endTime | javaDate: 'yyyy-MM-dd'}}</p>
+                </div>
+                <div class="item">
+                    <p>
+                        {{item.province}}-{{item.city}}
+                        <span style="float:right;">
+                        {{item.time | javaDate: 'yyyy-MM-dd HH:mm:ss'}}
+                    </span>
+                    </p>
+                </div>
+                <div class="item item-divider ">
+                    <button class="button button-small button-calm button-outline">
+                        {{item.statusStr}}
+                    </button>
+                    <button class="button button-small button-calm " style="float: right;"
+                            ng-click="detail.show(item.id)">查看详情
+                    </button>
+                </div>
+            </div>
+        </div>
+        <ion-infinite-scroll ng-if="need.page.number<need.page.totalPages-1" on-infinite="need.loadMore()"
+                             distance="1%">
+        </ion-infinite-scroll>
+
+    </ion-content>
+
+    <ion-footer-bar align-title="center" class="bar-balanced" ng-if="user.type != 6">
+        <div class="title" ui-sref="memberCenter.releaseFrom">
+            发布需求
+        </div>
+    </ion-footer-bar>
+
+    <ion-footer-bar align-title="center" class="bar-stable" ng-if="user.type == 6">
+        <div class="buttons" ui-sref="memberCenter.releaseFrom">
+            <button class="button button-balanced ">发布需求</button>
+        </div>
+        <h1 class="title"></h1>
+        <div class="buttons" ui-sref="memberCenter.myDocking">
+            <button class="button button-balanced button-outline">我对接的需求</button>
+        </div>
+    </ion-footer-bar>
+
+</ion-view>
+

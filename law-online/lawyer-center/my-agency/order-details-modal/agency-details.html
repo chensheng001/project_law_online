@@ -1,0 +1,47 @@
+<div class="modal">
+    <ion-header-bar align-title="left" class="bar-positive title-color">
+        <h1 class="title">代办详情</h1>
+        <div class="buttons">
+            <button class="button button-energized button-outline" ng-click="agencyDetials.hide()">关闭</button>
+        </div>
+    </ion-header-bar>
+    <ion-content>
+        <div class="card">
+            <div class="item item-divider">
+                代办信息
+                <span style="float: right">
+                    {{entrusts.detail.info.amount}}元
+                </span>
+            </div>
+            <div class="item ">
+                事项标题：{{entrusts.detail.info.amount}}
+            </div>
+            <div class="item ">
+                代办区域：{{entrusts.detail.info.province}}-{{entrusts.detail.info.city}}-{{entrusts.detail.info.area}}
+            </div>
+            <div class="item ">
+                终止时间：{{entrusts.detail.info.endTime | javaDate:'yyyy-MM-dd'}}
+            </div>
+            <div class="item ">
+                <h2>事项概述</h2>
+                <p>{{entrusts.detail.info.content}}</p>
+            </div>
+        </div>
+
+        <div class="list" ng-if="entrusts.type == 0 && entrusts.detail.info.status > 1 ">
+            <div class="item item-divider">
+                代办人信息
+            </div>
+            <a class="item item-avatar" href="#">
+                <img ng-src="{{entrusts.detail.lawyer.photoUrl}}">
+                <h2>{{entrusts.detail.lawyer.realName}}{{entrusts.detail.lawyer.type}}</h2>
+                <p>执照号：{{entrusts.detail.lawyer.licenseNo}}</p>
+                <p>手机号：{{entrusts.detail.lawyer.mobile}}</p>
+            </a>
+        </div>
+
+        <div class="padding" ng-if="entrusts.type == 1 && entrust.detail.info.status == 3">
+            <button class="button button-positive button-block " ng-if="entrusts.detail.confirm()">确认完成</button>
+        </div>
+    </ion-content>
+</div>

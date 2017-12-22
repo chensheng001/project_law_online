@@ -1,0 +1,86 @@
+
+<ion-view view-title="我的资料">
+    <ion-content>
+
+        <div class="user-info text-center">
+            <div style="margin:0px auto;margin-bottom:1rem; width: 6rem;height: 6rem;">
+                <img class="img-thumbnail" ng-src="{{user.photoUrl}}" id="user_photo" alt="">
+                <input onchange='angular.element(this).scope().fileChanged(this)'
+                       style="width: 6rem;height: 6rem;opacity: 0.01;position: relative; top: -7rem;z-index: 99"
+                       type="file">
+            </div>
+            <p>{{user.name}}</p>
+        </div>
+        <hr>
+
+        <ul class="list">
+            <li class="item">
+                <span>会员类别:</span>
+                <span>{{user.typeStr}}</span>
+            </li>
+            <div ng-if="user.type == 1">
+                <li class="item">
+                    <span>手机号:</span>
+                    <span>{{user.directMobile}}</span>
+                </li>
+                <li class="item">
+                    <span>用户姓名:</span>
+                    <span>{{user.directName}}</span>
+                </li>
+                <li class="item">
+                    <span>身份证号:</span>
+                    <span>{{user.idCard}}</span>
+                </li>
+                <li class="item">
+                    <span>邮箱:</span>
+                    <span>{{user.email}}</span>
+                </li>
+            </div>
+            <div ng-if="user.type != 1">
+                <li class="item">
+                    <span>企业全称:</span>
+                    <span>{{user.companyName}}</span>
+                </li>
+                <li class="item" ng-if="user.type != 2">
+                    <span>营业执照号:</span>
+                    <span>{{user.licenseNo}}</span>
+                </li>
+                <li class="item">
+                    <span>办公地址:</span>
+                    <span>{{user.province}} - {{user.city}} - {{user.area}} - {{user.detailAddress}}</span>
+                </li>
+                <li class="item">
+                    <span>对接人姓名:</span>
+                    <span>{{user.directName}}</span>
+                </li>
+                <li class="item">
+                    <span>对接人手机号:</span>
+                    <span>{{user.directMobile}}</span>
+                </li>
+                <li class="item">
+                    <span>邮箱:</span>
+                    <span>{{user.email}}</span>
+                </li>
+                <li class="item item-text-wrap" ng-if="user.type == 6">
+                    <h2>主营业务:</h2>
+                    <p style="margin-top: 1rem;">{{user.business}}</p>
+                </li>
+            </div>
+        </ul>
+    </ion-content>
+    <style>
+        .user-info {
+            margin-bottom: 2rem;
+            padding-top: 1rem;
+        }
+
+        .user-info img {
+            margin: 2rem auto 1rem;
+            border-radius: 50%;
+            display: block;
+            height: 6rem;
+            width: 6rem;
+        }
+    </style>
+</ion-view>
+

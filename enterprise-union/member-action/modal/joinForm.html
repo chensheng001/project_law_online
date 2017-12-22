@@ -1,0 +1,37 @@
+<div class="modal">
+    <ion-header-bar align-title="left" class="bar-positive title-color">
+        <h1 class="title">我要参加</h1>
+        <div class="buttons">
+            <button class="button button-energized button-outline" ng-click="joinFormModel.hide()">关闭</button>
+        </div>
+    </ion-header-bar>
+    <ion-content>
+        <div class="list">
+            <label class="item item-input">
+                <span class="input-label">企业名称</span>
+                <input type="text" ng-model="join.info.companyName">
+            </label>
+            <label class="item item-input">
+                <span class="input-label">参加人数</span>
+                <input type="text" ng-model="join.info.num">
+            </label>
+            <label class="item item-input">
+                <span class="input-label">姓名</span>
+                <input type="text" ng-model="join.info.name">
+            </label>
+            <label class="item item-input">
+                <span class="input-label">职位</span>
+                <input type="text" ng-model="join.info.position">
+            </label>
+            <label class="item item-input">
+                <span class="input-label">电话</span>
+                <input type="text" ng-model="join.info.mobile">
+            </label>
+        </div>
+        <div class="padding">
+            <button class="button button-block button-dark-yellow" ng-click="join.submit()">
+                提交
+            </button>
+        </div>
+    </ion-content>
+</div>

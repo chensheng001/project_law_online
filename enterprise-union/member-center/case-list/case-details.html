@@ -1,0 +1,96 @@
+<div class="modal">
+    <ion-header-bar align-title="left" class="bar-positive title-color">
+        <h1 class="title">案件详情</h1>
+        <div class="buttons">
+            <button class="button button-energized button-outline" ng-click="caseListmodal.hide()">关闭</button>
+        </div>
+    </ion-header-bar>
+    <ion-content>
+        <ion-refresher pulling-text="下拉刷新..." on-refresh="detail.msgs.doRefresh()">
+        </ion-refresher>
+        <div class="card">
+            <div class="item item-divider">
+                案件信息
+                <p style="float: right">
+                    {{detail.case.province}}-{{detail.case.city}}
+                </p>
+            </div>
+            <div class="item ">
+                案件类型：{{detail.case.domainName}}
+            </div>
+            <div class="item ">
+                委托报价：{{detail.case.minAmount}}元-{{detail.case.maxAmount}}元
+            </div>
+            <div class="item item-text-wrap">
+                <h3>案件内容：</h3>
+                <p>{{detail.case.content}}</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="item item-divider">
+                个人信息
+            </div>
+            <div class="item ">
+                姓名：{{detail.case.name}}
+            </div>
+            <div class="item ">
+                手机号码：{{detail.case.mobile}}
+            </div>
+            <div class="item ">
+                身份证号：{{detail.case.idCard}}
+            </div>
+
+        </div>
+
+        <div class="card">
+            <div class="item item-divider">
+                案件资料
+            </div>
+            <a class="item " ng-click="detail.myPic.show()">
+                <i class="ion-image ion"></i>
+                用户的图片资料
+            </a>
+            <a class="item " ng-click="detail.lawyerPic.show()">
+                <i class="ion-image ion"></i>
+                律师的图片资料
+            </a>
+            <a class="item " ng-click="detail.logs.show()">
+                <i class="ion-image ion"></i>
+                案件进展
+            </a>
+        </div>
+
+        <div class="card" ng-if="detail.case.status  > 0">
+            <div class="item item-divider">
+                案件进展
+            </div>
+            <label class="item item-input">
+                <textarea rows="5" placeholder="请输入回复内容" ng-model="detail.msgs.msg.content"></textarea>
+            </label>
+            <div class="padding">
+                <button class="button button-small button-block button-balanced" ng-click="detail.msgs.submit()">
+                    回复
+                </button>
+            </div>
+            <div class="item item-text-wrap" ng-repeat="item in detail.msgs.page.content">
+                <h3 style="line-height:30px">
+                    <button class="button button-outline button-small button-positive" ng-if="item.type == 1">用户说
+                    </button>
+                    <button class="button button-outline button-small button-positive" ng-if="item.type == 2">律师说
+                    </button>
+                    <p style="float: right">{{item.time | javaDate : 'yyyy-MM-dd HH:mm:ss'}}</p>
+                </h3>
+                <p>
+                    {{item.content}}
+                </p>
+            </div>
+
+        </div>
+        <ion-infinite-scroll ng-if="detail.msgs.page.currPage<detail.msgs.page.pages"
+                             on-infinite="detail.msgs.loadMore()"
+                             distance="1%">
+        </ion-infinite-scroll>
+
+    </ion-content>
+</div>

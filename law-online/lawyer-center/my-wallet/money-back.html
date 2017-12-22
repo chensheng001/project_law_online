@@ -1,0 +1,56 @@
+<div class="modal">
+    <ion-header-bar align-title="lef
+    t" class="bar-positive">
+        <h1 class="title">提现</h1>
+        <div class="buttons">
+            <button class="button" ng-click="moneybackmodal.hide()">关闭</button>
+        </div>
+    </ion-header-bar>
+    <ion-content>
+        <div class="list">
+            <div class="item">
+                当前余额：{{lawyer.balance}}元
+            </div>
+            <label class="item item-input">
+                <span class="input-label">提现金额</span>
+                <input type="number" ng-model="withdraw.info.amount" ng-init="withdraw.info.amount=''">
+            </label>
+            <label class="item item-input item-select">
+                <div class="input-label">
+                    提现方式
+                </div>
+                <select ng-init="withdraw.info.type='1'" ng-model="withdraw.info.type">
+                    <option value="1">支付宝</option>
+                    <option value="2">银行卡</option>
+                </select>
+            </label>
+        </div>
+        <div class="list card">
+            <label class="item item-input" ng-show="withdraw.info.type == '1'">
+                <span class="input-label">支付宝账号</span>
+                <input type="text" ng-model="withdraw.info.zfbAccount" ng-init="withdraw.info.zfbAccount=''">
+            </label>
+            <label class="item item-input" ng-show="withdraw.info.type == '1'">
+                <span class="input-label">支付宝姓名</span>
+                <input type="text" ng-model="withdraw.info.zfbName" ng-init="withdraw.info.zfbName=''">
+            </label>
+            <label class="item item-input" ng-show="withdraw.info.type == '2'">
+                <span class="input-label">银行卡账号</span>
+                <input type="text" ng-model="withdraw.info.yhkAccount" ng-init="withdraw.info.yhkAccount=''">
+            </label>
+            <label class="item item-input" ng-show="withdraw.info.type == '2'">
+                <span class="input-label">持卡人姓名</span>
+                <input type="text" ng-model="withdraw.info.yhkName" ng-init="withdraw.info.yhkName=''">
+            </label>
+
+        </div>
+        <div class="padding">
+            <button class="button button-block button-assertive" ng-click="withdraw.submit()">
+                提交申请
+            </button>
+            <p class="text-center assertive">
+                温馨提示：审核提现时间次日到账
+            </p>
+        </div>
+    </ion-content>
+</div>

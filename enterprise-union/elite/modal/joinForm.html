@@ -1,0 +1,47 @@
+<div class="modal">
+    <ion-header-bar align-title="left" class="bar-positive title-color">
+        <h1 class="title">我要参加</h1>
+        <div class="buttons">
+            <button class="button button-energized button-outline" ng-click="joinFormModel.hide()">关闭</button>
+        </div>
+    </ion-header-bar>
+    <ion-content>
+        <div class="list">
+            <label class="item item-input">
+                <span class="input-label">姓名</span>
+                <input type="text" ng-model="join.info.name">
+            </label>
+            <label class="item item-input">
+                <span class="input-label">电话</span>
+                <input type="text" ng-model="join.info.mobile">
+            </label>
+            <label class="item item-input">
+                <span class="input-label">身份证号</span>
+                <input type="text" ng-model="join.info.idCard">
+            </label>
+            <label class="item item-input">
+                <span class="input-label">所在公司</span>
+                <input type="text" ng-model="join.info.companyName">
+            </label>
+            <ionic-city-picker options='vm.CityPickData'></ionic-city-picker>
+            <label class="item item-input">
+                <span class="input-label">详细地址</span>
+                <input type="text" ng-model="join.info.detailAddress">
+            </label>
+            <label class="item item-input">
+                <span class="input-label">职位</span>
+                <input type="text" ng-model="join.info.position">
+            </label>
+            <label class="item item-input">
+                <span class="input-label">籍贯</span>
+                <input type="text" ng-model="join.info.origin">
+            </label>
+
+        </div>
+        <div class="padding">
+            <button class="button button-block button-dark-yellow" ng-click="join.submit()">
+                提交
+            </button>
+        </div>
+    </ion-content>
+</div>

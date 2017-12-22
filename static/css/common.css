@@ -1,0 +1,62 @@
+@charset "utf-8";
+/* css reset*/
+/*初始化*/
+html{
+    font-size: 125%
+}
+@media only screen and (min-width: 561px){
+    html {
+        font-size: 150%!important;
+    }
+}
+body, div, span, object, iframe,h1, h2,
+h3, h4, h5, h6, p, blockquote, pre,abbr, address, cite, code,del, dfn,
+em, img, ins,kbd, q, samp,small, strong, sub, sup, var,b, i,dl, dt, dd,
+ol, ul, li,fieldset, form, label, legend,table, caption, tbody,
+tfoot,thead,tr, th, td,article, aside, canvas, details, figcaption,
+figure, footer, header, hgroup, menu, nav, section, summary,time, mark,
+audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    vertical-align:baseline;
+    background:transparent;
+    outline-style:none;
+    font-family: "Microsoft YaHei","sans-serif";
+    -webkit-font-smoothing: antialiased;
+    font-size: 0.7rem;
+    color: #666;
+}
+.hidden{
+    display: none !important;
+}
+.uploadImg{
+    position: relative;
+    height: 5rem;
+    overflow: hidden;
+}
+.uploadImg img{
+    max-width: 100%;
+    height: 5rem;
+}
+.uploadImg input{
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    height: 5rem;
+    z-index: 999;
+}
+.btn-common{
+    width: 100%;
+    height: 2rem;
+    min-height: 2rem;
+    line-height: 2rem;
+    background: #2cd2ec;
+    font-size: 0.8rem;
+    color: #fff;
+}
+.width-100{
+    width: 100%;
+}

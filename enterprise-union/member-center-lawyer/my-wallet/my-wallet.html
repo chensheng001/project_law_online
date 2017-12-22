@@ -1,0 +1,27 @@
+<ion-view view-title="我的钱包">
+    <ion-content>
+        <ion-refresher pulling-text="下拉刷新..." on-refresh="wallet.doRefresh()">
+        </ion-refresher>
+        <div class="bar bar-header bar-light">
+            <h1 class="title">当前余额：{{lawyer.balance}}元</h1>
+            <button class="button button-balanced " ng-click="withdraw.show()">我要提现</button>
+        </div>
+        <ul class="list has-header">
+            <li class="item" ng-repeat="item in wallet.page.content">
+                <div style="float: left">
+                    {{item.remark}}
+                    <p>{{item.time | javaDate:'yyyy-MM-dd HH:mm:ss'}}</p>
+                </div>
+                <h2 style="float:right;font-size: 30px;" class="balanced" ng-if="item.type == 1">
+                    +{{item.amount}}元
+                </h2>
+                <h2 style="float:right;font-size: 30px;" class="assertive" ng-if="item.type == 2">
+                    -{{item.amount}}元
+                </h2>
+            </li>
+        </ul>
+        <ion-infinite-scroll ng-if="wallet.page.number<wallet.page.totalPages-1" on-infinite="wallet.loadMore()"
+                             distance="1%">
+        </ion-infinite-scroll>
+    </ion-content>
+</ion-view>

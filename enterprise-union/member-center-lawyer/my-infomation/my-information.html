@@ -1,0 +1,37 @@
+<ion-view view-title="我的资料">
+    <ion-content>
+        <div class="list">
+            <div class="card">
+                <div class="item item-divider">
+                    编辑资料
+                </div>
+                <ionic-city-picker options='vm.CityPickData' ng-if="vm.CityPickData"></ionic-city-picker>
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">详细地址</span>
+                    <textarea type="text" placeholder="请输入具体地址" ng-model="lawyer.detailAddress"></textarea>
+                </label>
+                <div class="item item-divider" style="line-height: 30px" ng-init="toggleSelect = true"
+                     ng-click="toggleSelect = !toggleSelect">
+                    擅长领域（最多2项）
+                    <button ng-class="{'false':'button-positive','true':'button-assertive'}[toggleSelect]"
+                            class="button  button-small  " style="float:right;">
+                        {{toggleSelect == true ? '收起':'展开'}}
+                        <i class="ion"
+                           ng-class="{'true':'ion-ios-arrow-down','false':'ion-ios-arrow-right'}[toggleSelect]"></i>
+                    </button>
+                </div>
+                <div ng-show="toggleSelect">
+                    <ion-checkbox ng-repeat="item in domains" ng-model="item.checked">{{item.name}}</ion-checkbox>
+                </div>
+                <label class="item item-input">
+                    <textarea rows="5" placeholder="律师简介（不超过100字）" ng-model="lawyer.summary"></textarea>
+                </label>
+            </div>
+        </div>
+        <div class="padding">
+            <button class="button button-block button-small button-dark-yellow" ng-click="saveInfo()">
+                点击保存
+            </button>
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,21 @@
+<div class="modal">
+    <ion-header-bar align-title="left" class="bar-positive title-color">
+        <h1 class="title">过往案例</h1>
+        <div class="buttons">
+            <button class="button button-energized button-outline" ng-click="pastcasemodal.hide()">关闭</button>
+        </div>
+    </ion-header-bar>
+    <ion-content>
+        <div class="padding">
+            <h2 class="text-center">
+                {{lawyerCaseInfo.title}}
+            </h2>
+            <div class="padding">
+                <img ng-src="{{lawyerCaseInfo.pictureUrl}}" alt="" width="100%" height="300px">
+            </div>
+            <p>
+                {{lawyerCaseInfo.content}}
+            </p>
+        </div>
+    </ion-content>
+</div>

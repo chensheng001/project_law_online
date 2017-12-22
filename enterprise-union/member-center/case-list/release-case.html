@@ -1,0 +1,107 @@
+<div class="modal">
+    <ion-header-bar align-title="left" class="bar-positive title-color">
+        <h1 class="title">案件详情</h1>
+        <div class="buttons">
+            <button class="button button-energized button-outline" ng-click="releasemodal.hide()">关闭</button>
+        </div>
+    </ion-header-bar>
+    <ion-content>
+        <div class="list">
+            <div class="item">
+                <div class="row text-center">
+                    <div class="col">
+                        <i class="ion ion-person-stalker" style="font-size: 25px;color:#f5762d;"></i>
+                        <p style="color:#f5762d;">发布</p>
+                    </div>
+                    <div class="col-5" style="    padding-top: 12px;">
+                        <i class="ion ion-chevron-right balanced" style="font-size: 25px; line-height: 30px"></i>
+                    </div>
+                    <div class="col">
+                        <i class="ion ion-paintbrush" style="font-size: 25px;color:#f5762d;"></i>
+                        <p style="color:#f5762d;">平台审核</p>
+                    </div>
+                    <div class="col-5" style="    padding-top: 12px;">
+                        <i class="ion ion-chevron-right balanced" style="font-size: 25px"></i>
+                    </div>
+                    <div class="col">
+                        <i class="ion ion-chatbubbles" style="font-size: 25px;color:#f5762d;"></i>
+                        <p style="color:#f5762d;">律师回访</p>
+                    </div>
+                    <div class="col-5" style="    padding-top: 12px;">
+                        <i class="ion ion-chevron-right balanced" style="font-size: 25px"></i>
+                    </div>
+                    <div class="col">
+                        <i class="ion ion-ios-infinite" style="font-size: 25px;color:#f5762d;"></i>
+                        <p style="color:#f5762d;">律师办理</p>
+                    </div>
+                </div>
+            </div>
+            <label class="item item-input">
+                <span class="input-label">姓名：</span>
+                <input type="text" ng-model="publish.case.name">
+            </label>
+            <label class="item item-input">
+                <span class="input-label">联系电话：</span>
+                <input type="number" ng-model="publish.case.mobile">
+            </label>
+            <label class="item item-input">
+                <span class="input-label">身份证号：</span>
+                <input type="text" ng-model="publish.case.idCard">
+            </label>
+            <label class="item item-input">
+                <span class="input-label">案件内容：</span>
+                <textarea placeholder="请详细描述案件内容" rows="5" ng-model="publish.case.content">
+
+                </textarea>
+            </label>
+            <div class="item ">
+                <div class="item-select">
+                    案件类型
+                    <select ng-model="publish.case.domainId">
+                        <option value="{{item.id}}" ng-repeat="item in domains">{{item.name}}</option>
+                    </select>
+                </div>
+            </div>
+            <ionic-city-picker options='vm.CityPickData'></ionic-city-picker>
+            <div class="item item-input">
+                委托报价&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="number" ng-model="publish.case.minAmount" class="input-amount">元&nbsp;&nbsp;&nbsp;-
+                &nbsp;&nbsp;&nbsp;<input type="number" ng-model="publish.case.maxAmount" class="input-amount">元&nbsp;&nbsp;&nbsp;
+            </div>
+
+            <div class="padding">
+                <button class="button button-small button-dark-yellow button-block" ng-click="publish.publish()">
+                    确认提交
+                </button>
+            </div>
+        </div>
+
+    </ion-content>
+</div>
+<style>
+    .circular {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        border: none;
+        border-radius: 50%;
+        text-align: center;
+        margin-bottom: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        color: white;
+    }
+
+    .right-arrow {
+        font-size: 2.5rem;
+    }
+    .input-amount{
+        border-style: solid !important;
+        border-top-width: 0px !important;
+        border-right-width: 0px !important;
+        border-bottom-width: 1px !important;
+        border-left-width: 0px !important;
+        border-bottom-color: #cac7c7 !important;
+        margin: 0px 10px !important;
+    }
+</style>

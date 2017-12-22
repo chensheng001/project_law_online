@@ -1,0 +1,48 @@
+<ion-view view-title="企业机构认证">
+    <ion-content>
+        <div class="list">
+            <div class="item item-input">
+                <span class="input-label">企业名称</span>
+                <input type="text">
+            </div>
+            <div class="item item-input">
+                <span class="input-label">统一社会信用编码</span>
+                <input type="text">
+            </div>
+            <div class="item">
+                <div><span class="input-label">企业统一社会信用编码</span></div>
+                <div class="uploadImg">
+                    <img class="img-thumbnail" src="http://www.runoob.com/try/demo_source/blue-album.jpg"  alt="">
+                    <input onchange='angular.element(this).scope().fileChanged(this)'
+                           type="file">
+                </div>
+            </div>
+            <div class="item item-input">
+                <span class="input-label">创业办公地址</span>
+                <input type="text" >
+            </div>
+            <div class="item item-input">
+                <span class="input-label">联系人</span>
+                <input type="text" >
+            </div>
+            <div class="item item-input">
+                <span class="input-label">对接人职位</span>
+                <input type="text" >
+            </div>
+            <div class="item item-input">
+                <span class="input-label">对接人联系电话</span>
+                <input type="text" >
+            </div>
+            <div class="item item-input">
+                <span class="input-label">邮箱</span>
+                <input type="email" >
+            </div>
+        </div>
+
+        <div class="padding">
+            <button class="button btn-common" ng-click="updateSubmit()">
+                提交申请
+            </button>
+        </div>
+    </ion-content>
+</ion-view>

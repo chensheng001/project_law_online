@@ -1,0 +1,54 @@
+<div class="modal">
+    <ion-header-bar align-title="left" class="bar-positive title-color">
+        <h1 class="title">需求发布详情</h1>
+        <div class="buttons">
+            <button class="button button-energized button-outline" ng-click="detailsmodal.hide()">关闭</button>
+        </div>
+    </ion-header-bar>
+    <ion-content>
+
+        <div class="list">
+            <div class="item item-text-wrap">
+                <h2>{{detail.need.title}}</h2>
+                <p>{{detail.need.content}}</p>
+            </div>
+            <div class="item">
+                <p>
+                    联系人：{{detail.need.contactName}}
+                </p>
+            </div>
+            <div class="item">
+                <p>
+                    联系人电话：{{detail.need.contactMobile}}
+                </p>
+            </div>
+            <div class="item">
+                <p>
+                    地区：{{detail.need.province}} - {{detail.need.city}} - {{detail.need.area}}
+                </p>
+            </div>
+            <div class="item">
+                <p>
+                    需求终止时间：{{detail.need.endTime | javaDate: 'yyyy-MM-dd'}}
+                </p>
+            </div>
+            <div ng-if="detail.need.forUserId > 0">
+                <div class="item item-divider">
+                    <p>
+                        对接机构
+                    </p>
+                </div>
+                <div class="item">
+                    <p>
+                        公司名称：{{detail.business.companyName}}
+                    </p>
+                </div>
+                <div class="item">
+                    <p>
+                        提供服务：{{detail.business.business}}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</div>

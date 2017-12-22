@@ -1,0 +1,87 @@
+<ion-view view-title="合同审查">
+    <ion-content>
+
+        <div class="list">
+            <div class="item">
+                <h2>合同审查</h2>
+            </div>
+            <div class="item item-text-wrap">
+                <p>{{service.summary}}</p>
+            </div>
+            <div class="item item-text-wrap">
+                <h2>服务流程</h2>
+                <div class="row text-center">
+                    <div class="col">
+                        <i class="ion ion-edit balanced" style="font-size: 25px;color:#f5762d;"></i>
+                        <p>
+                    <span class="button button-balanced button-small button-clear"
+                          style="color:#f5762d;">购买服务</span>
+                        </p>
+                    </div>
+                    <div class="col-5 " style="    padding-top: 12px;">
+                        <i class="ion ion-chevron-right balanced" style="font-size: 25px; line-height: 30px"></i>
+                    </div>
+                    <div class="col">
+                        <i class="iconfont icon-lvshi balanced" style="font-size: 25px;color:#f5762d;"></i>
+                        <p>
+                    <span class="button button-balanced button-small button-clear"
+                          style="color:#f5762d;">律师对接</span>
+                        </p>
+                    </div>
+                    <div class="col-5" style="    padding-top: 12px;">
+                        <i class="ion ion-chevron-right balanced" style="font-size: 25px"></i>
+                    </div>
+                    <div class="col">
+                        <i class="iconfont icon-jiaofu balanced" style="font-size: 25px;color:#f5762d;"></i>
+                        <p>
+                    <span class="button button-balanced button-small button-clear"
+                          style="color:#f5762d;">交付成果</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="item item-text-wrap " ng-if="service.serviceTime != '' && service.serviceTime != null">
+                <h2>服务时间</h2>
+                <p>{{service.serviceTime}}</p>
+            </div>
+            <div class="card">
+                <div class="item item-divider item-energized">
+                    客服邮箱{{_so.serviceEmail}}
+                </div>
+                <div class="item item-text-wrap">
+                    <p>
+                        温馨提示：购买后发送邮件至官方邮箱，注明您的手机号码、律师名称及审核合同字样，便于律师为您及时办理。
+                    </p>
+                </div>
+            </div>
+            <div class="item item-divider">
+                剩余服务次数：{{userNum.num}}次
+                <span style="float: right">到期时间：{{userNum.endTime | javaDate : 'yyyy-MM-dd'}}</span>
+            </div>
+
+            <div class="padding">
+                <div class="row">
+                    <div class="col">
+                        <button class="button button-block button-balanced button-small" ng-click="submit()">
+                            确认提交
+                        </button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col col-25 col-offset-25"></div>
+                    <div class="col">
+                        <button class="button button-block button-energized button-small" ui-sref="memberCenter.buyProductService">
+                            购买服务
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="padding">
+                <span class="item-note assertive">温馨提示：当您的服务数量已使用完毕，请点击去购买或到产品服务中购买服务</span>
+            </div>
+
+        </div>
+
+    </ion-content>
+</ion-view>
+

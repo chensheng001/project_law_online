@@ -1,0 +1,31 @@
+<div class="modal">
+    <ion-header-bar align-title="left" class="bar-positive title-color">
+        <h1 class="title">合同文书详情</h1>
+        <div class="buttons">
+            <button class="button button-energized button-outline" ng-click="downloadmodal.hide()">关闭</button>
+        </div>
+    </ion-header-bar>
+    <ion-content>
+        <div class="card">
+            <div class="item item-divider">
+                合同名称：{{contract.contract.name}}
+            </div>
+            <div class="item item-text-wrap">
+                <h2>全文预览下载：</h2>
+                <div ng-bind-html="contract.contract.content"></div>
+            </div>
+            <div class="item item-divider" style="line-height: 30px;">
+                <strong class="assertive">
+                    打赏{{contract.contract.price}}元
+                </strong>
+                <button style="float:right;" class="button button-assertive button-small "
+                        ng-click="contract.download()">
+                    打赏下载
+                </button>
+            </div>
+            <div class="padding">
+                <span class="item-note assertive">温馨提示：下载前请确认个人资料填写了邮箱，支付成功后合同会发送到您的邮箱中。</span>
+            </div>
+        </div>
+    </ion-content>
+</div>

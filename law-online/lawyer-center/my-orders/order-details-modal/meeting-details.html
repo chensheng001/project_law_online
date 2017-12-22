@@ -1,0 +1,81 @@
+<div class="modal">
+    <ion-header-bar align-title="left" class="bar-positive title-color">
+        <h1 class="title">订单详情</h1>
+        <div class="buttons">
+            <button class="button button-energized button-outline" ng-click="meetingDetials.hide()">关闭</button>
+        </div>
+    </ion-header-bar>
+    <ion-content>
+        <div class="card">
+            <div class="item item-divider">
+                订单信息
+                <span style="float: right">
+                    {{detail.data.order.amount}}元
+                </span>
+            </div>
+            <div class="item ">
+                订单类型：{{dict.orderType[detail.data.order.type]}}
+            </div>
+            <div class="item ">
+                订单编号：{{detail.data.order.orderNo}}
+            </div>
+            <div class="item ">
+                <p style="line-height: 30px">
+                    {{detail.data.order.time | javaDate:'yyyy-MM-dd HH:mm:ss'}}
+                    <span style="float: right;">
+                    <button class="button button-small button-outline button-positive">
+                        {{dict.orderStatus[detail.data.order.status]}}
+                    </button>
+                </span>
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="item item-divider">
+                咨询信息
+            </div>
+            <a class="item item-avatar" href="#">
+                <img ng-src="{{detail.data.user.photoUrl}}">
+                <h2>{{detail.data.user.nickName}}</h2>
+            </a>
+            <div class="item item-text-wrap">
+                <p>
+                    联系电话：{{detail.data.orderMeet.contactName}}
+                </p>
+                <p>
+                    身份证号：{{detail.data.orderMeet.contactMobile}}
+                </p>
+                <h3>预约事项：</h3>
+                <p>{{detail.data.orderMeet.content}}</p>
+                <p>预约时间：{{detail.data.orderMeet.meetTime | javaDate:'yyyy-MM-dd HH:mm:ss'}}</p>
+                <p>
+                    预约地点：{{detail.data.orderMeet.province}}-{{detail.data.orderMeet.city}}-{{detail.data.orderMeet.area}}</p>
+                <h3>详细地点：</h3>
+                <p>{{detail.data.orderMeet.detailAddress}}</p>
+            </div>
+
+            <div class="item" ng-if="detail.data.order.status == 1">
+                <div class="row">
+                    <div class="col" ng-if="detail.data.orderMeet.updateNum > 0">
+                        <button class="button button-block button-small button-assertive"
+                                ng-click="meet.updateInfo.show()">修改预约信息
+                        </button>
+                    </div>
+                    <div class="col">
+                        <button class="button button-block button-small button-positive"
+                                ng-click="meet.complete(detail.data.order.id)">
+                            完成预约
+                        </button>
+                    </div>
+                </div>
+                <div class="item item-text-wrap" ng-if="detail.data.orderMeet.updateNum > 0">
+                    <p class="energized">小提示：只能修改一次预约信息，在修改的同时需要找用户协商同意，
+                        如自行修改产生纠纷需律师自行负责</p>
+                </div>
+            </div>
+
+        </div>
+
+    </ion-content>
+</div>

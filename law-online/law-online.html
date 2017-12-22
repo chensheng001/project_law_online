@@ -1,0 +1,148 @@
+<!doctype html>
+<html ng-app="lawOnline">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>法律在线</title>
+    <link href="../ionic-v1-master/ionic-v1-master/release/css/ionic.min.css" rel="stylesheet">
+    <link href="personal-center.css" rel="stylesheet">
+    <script src="../ionic-v1-master/ionic-v1-master/release/js/ionic.bundle.js"></script>
+    <script src="law-online.js"></script>
+    <script src="law-online-router.js"></script>
+    <script src="law-online-service.js"></script>
+    <script src="../static/js/ionic-citypicker.min.js"></script>
+    <script src="angular-extend.js"></script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+
+    <script>
+        Date.prototype.Format = function (fmt) { //author: meizz
+            var o = {
+                "M+": this.getMonth() + 1, //月份
+                "d+": this.getDate(), //日
+                "h+": this.getHours(), //小时
+                "m+": this.getMinutes(), //分
+                "s+": this.getSeconds(), //秒
+                "q+":    Math.floor((this.getMonth() + 3) / 3), //季度
+                "S": this.getMilliseconds() //毫秒
+            };
+            if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+            for (var k in o)
+                if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+            return fmt;
+        };
+    </script>
+    <!--  -->
+    <script src="http://gosspublic.alicdn.com/aliyun-oss-sdk-4.4.4.min.js"></script>
+
+
+    <!--图标文件-->
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_291853_5gp8apz83g0evcxr.css">
+    <!--maincss-->
+    <link rel="stylesheet" href="../static/css/law-main.css">
+
+</head>
+<body ng-controller="MyCtrl">
+<ion-nav-bar class="bar-balanced">
+    <ion-nav-buttons side="left">
+        <div ng-include="'citySelect.html'" ng-if="isShowCitySelect"></div>
+    </ion-nav-buttons>
+    <ion-nav-back-button></ion-nav-back-button>
+    <ion-nav-buttons side="right">
+        <a class="button button-energized button-outline ion-navicon-round icon-left" ng-click="toggleRight()">
+            登录/注册导航
+        </a>
+    </ion-nav-buttons>
+</ion-nav-bar>
+
+<!--导航框架之导航视图-->
+<ion-view view-title="律师在线">
+    <!--侧栏-->
+    <ion-side-menus>
+        <!-- 中间内容 -->
+        <ion-side-menu-content>
+
+            <ion-nav-view name="main">
+            </ion-nav-view>
+
+        </ion-side-menu-content>
+
+        <!-- 左侧菜单 -->
+        <!--                <ion-side-menu side="left">
+                        </ion-side-menu>-->
+
+        <!-- 右侧菜单 -->
+        <ion-side-menu side="right" is-enabled="true">
+            <ion-content>
+                <div class="list">
+                    <div class="item item-divider" style="color:#F8931F;">
+                        <i class="ion ion-navicon-round"></i>
+                        网站导航
+                    </div>
+                    <a class="item" menu-close ui-sref="consult.index">
+                        <i class="ion ion-help"></i>
+                        预约咨询
+                    </a>
+                    <a class="item" menu-close ui-sref="share.daily">
+                        <i class="ion ion-share"></i>
+                        精选分享
+                    </a>
+
+                    <a class="item" menu-close ui-sref="proService.menu">
+                        <i class="ion ion-help-buoy"></i>
+                        产品服务
+                    </a>
+
+                    <a class="item" menu-close ui-sref="selectUtil.menu">
+                        <i class="ion ion-wrench"></i>
+                        查询助手
+                    </a>
+
+                    <div class="item item-divider" style="color:#8CC540;">
+                        <i class="ion ion-navicon-round"></i>
+                        会员导航
+                    </div>
+                    <div ng-if="!_role">
+                        <a class="item" menu-close ui-sref="personalCenter.personalLogin">
+                            <i class="ion ion-log-in"></i>
+                            登录
+                        </a>
+                        <a class="item" menu-close ui-sref="personalCenter.personalRegist">
+                            <i class="ion ion-ios-book"></i>
+                            注册
+                        </a>
+                    </div>
+                    <div ng-if="_role == 'user'">
+                        <a class="item" menu-close ui-sref="personalCenter.centerList">
+                            <i class="ion ion-ios-person"></i>
+                            个人中心
+                        </a>
+                    </div>
+                    <div ng-if="_role == 'lawyer'">
+                        <a class="item" menu-close ui-sref="lawyerCenter.centerList">
+                            <i class="ion ion-university"></i>
+                            个人中心
+                        </a>
+                        <a class="item" menu-close ui-sref="concierge.list">
+                            <i class="ion ion-android-calendar"></i>
+                            委托代办
+                        </a>
+                    </div>
+                </div>
+
+            </ion-content>
+            <div class="bar bar-footer bar-dark">
+                <div class="h6 title">客服电话：{{_so.serviceMobile}}</div>
+            </div>
+
+        </ion-side-menu>
+    </ion-side-menus>
+</ion-view>
+
+
+</body>
+</html>
+<style>
+    .bar-balanced {
+        border: none;
+    }
+</style>

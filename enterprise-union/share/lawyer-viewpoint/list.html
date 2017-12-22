@@ -1,0 +1,36 @@
+<div class="modal">
+    <ion-header-bar align-title="left" class="bar-positive title-color">
+        <h1 class="title">过往聚观</h1>
+        <div class="buttons">
+            <button class="button button-energized button-outline" ng-click="listmodal.hide()">关闭</button>
+        </div>
+    </ion-header-bar>
+    <ion-content>
+        <ion-refresher pulling-text="下拉刷新..." on-refresh="vps.doRefresh()">
+        </ion-refresher>
+        <div class="card" ng-repeat="item in vps.page.content">
+            <div class="item item-text-wrap">
+                {{item.content}}
+            </div>
+            <div class="item item-divider">
+                <div class="row" style="line-height: 30px">
+                    <div class="col">
+                        <p>律师聚观：{{item.answerNum}}人</p>
+                    </div>
+                    <div class="col">
+                        <p>听客：{{item.listenNum}}人</p>
+                    </div>
+                    <div class="col">
+                        <button class="button button-small button-positive" ng-click="vps.pointDetail(item.id)">
+                            查看详情
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <ion-infinite-scroll ng-if="vps.page.currPage<vps.page.pages" on-infinite="vps.loadMore()"
+                             distance="1%">
+        </ion-infinite-scroll>
+    </ion-content>
+</div>
+

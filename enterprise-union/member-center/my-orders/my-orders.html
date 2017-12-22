@@ -1,0 +1,38 @@
+<ion-view view-title="我的订单">
+    <ion-content>
+        <ion-refresher pulling-text="下拉刷新..." on-refresh="order.doRefresh()"></ion-refresher>
+        <div class="button-bar">
+            <a class="button" ng-click="order.selectTab(0)" style="color:#ED1A24;">全部</a>
+            <a class="button" ng-click="order.selectTab(1)" style="color:#F8931F;">待处理</a>
+            <a class="button" ng-click="order.selectTab(2)" style="color:#8CC540;">已完成</a>
+        </div>
+        <div>
+            <div class="card" ng-repeat="item in order.page.content">
+                <div class="item item-divider">
+                    {{item.statusStr}}
+                </div>
+                <a class="item item-avatar" href="#">
+                    <img ng-src="{{item.photo_url}}" ng-if="item.lawyer_id > 0">
+                    <h2 ng-if="item.lawyer_id > 0">{{item.real_name}}{{item.lawyer_type}}</h2>
+                    <p style="line-height: 30px">订单类型：
+                        <button class="button-outline button-positive button button-small">
+                            {{item.service_name}}
+                        </button>
+                    </p>
+                    <p>订单编号：{{item.order_no}}</p>
+                    <hr class="stable">
+                    <p>时间：{{item.time | javaDate:'yyyy-MM-dd HH:mm:ss'}}</p>
+                </a>
+                <div class="item item-divider text-right">
+                    <button class="button button-small button-calm" ng-click="detail.openDetail(item.id,item.service_id)">
+                        查看详情
+                    </button>
+                </div>
+            </div>
+        </div>
+        <ion-infinite-scroll ng-if="order.page.number<order.page.totalPages-1" on-infinite="order.loadMore()"
+                             distance="1%">
+        </ion-infinite-scroll>
+    </ion-content>
+
+</ion-view>

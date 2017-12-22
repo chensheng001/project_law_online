@@ -1,0 +1,116 @@
+<div class="modal">
+    <ion-header-bar align-title="left" class="bar-positive title-color">
+        <h1 class="title">预约会面</h1>
+        <div class="buttons">
+            <button class="button button-energized button-outline" ng-click="meetingmodal.hide()">关闭</button>
+        </div>
+    </ion-header-bar>
+    <ion-content>
+
+        <div class="row text-center">
+            <div class="col">
+                <i class="ion ion-compose balanced" style="font-size: 25px;color:#f5762d;"></i>
+                <p><span class="button button-balanced button-small button-clear" style="color:#f5762d;">填写资料</span></p>
+            </div>
+            <div class="col-5" style="    padding-top: 12px;">
+                <i class="ion ion-chevron-right balanced" style="font-size: 25px; line-height: 30px"></i>
+            </div>
+            <div class="col">
+                <i class="ion ion-card balanced" style="font-size: 25px;color:#f5762d;"></i>
+                <p><span class="button button-balanced button-small button-clear" style="color:#f5762d;">支付金额</span></p>
+            </div>
+            <div class="col-5" style="    padding-top: 12px;">
+                <i class="ion ion-chevron-right balanced" style="font-size: 25px"></i>
+            </div>
+            <div class="col">
+                <i class="ion ion-chatbubbles balanced" style="font-size: 25px;color:#f5762d;"></i>
+                <p><span class="button button-balanced button-small button-clear" style="color:#f5762d;">律师联系</span></p>
+            </div>
+            <div class="col-5" style="    padding-top: 12px;">
+                <i class="ion ion-chevron-right balanced" style="font-size: 25px"></i>
+            </div>
+            <div class="col">
+                <i class="iconfont icon-lvshi balanced" style="font-size: 25px;color:#f5762d;"></i>
+                <p><span class="button button-balanced button-small button-clear" style="color:#f5762d;">律师会面</span></p>
+            </div>
+        </div>
+
+        <div style="position: relative;">
+            <div style="width: 6em;margin: 0px auto;">
+                <img ng-src="{{meet.lawyer.photoUrl}}" alt="" class="user-headportrait"
+                     style="height: 6em;width: 6em">
+            </div>
+            <h3 class="text-center">{{meet.lawyer.realName}}{{meet.lawyer.type}}</h3>
+
+            <div class="energized" style="top: -150px;position: relative; right:-300px">
+                <evaluate-star star-num="meet.lawyer.evaluateGrade"></evaluate-star>
+            </div>
+
+        </div>
+        <div class="list">
+
+            <label class="item item-input">
+                <span class="input-label">联系人：</span>
+                <input type="text" ng-model="meet.contactName">
+            </label>
+            <label class="item item-input">
+                <span class="input-label">联系电话：</span>
+                <input type="number" ng-model="meet.contactMobile">
+            </label>
+            <label class="item item-input">
+                <span class="input-label">身份证号：</span>
+                <input type="text" ng-model="meet.idCard">
+            </label>
+
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">预约事件描述：</span>
+                <textarea rows="5" placeholder="请详细描述您要预约的事务内容" ng-model="meet.content"></textarea>
+            </label>
+            <label class="item item-input">
+                <span class="input-label">预约时间：</span>
+                <input type="date" ng-model="meet.meetTime">
+            </label>
+            <ionic-city-picker options='vm.meetCityData'></ionic-city-picker>
+            <label class="item item-input">
+                <input type="text" placeholder="详细地址" ng-model="meet.detailAddress">
+            </label>
+            <div class="item">
+                打赏金额：300元/次
+            </div>
+
+            <div class="row">
+                <div class="col col-33 col-offset-33">
+                    <button class="button button-small button-dark-yellow button-block" ng-click="meetSubmit()">
+                        确认提交
+                    </button>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <span class="item-note assertive">温馨提示：如您预约的时间与律师时间不对称，律师将重新与您约时间。</span>
+            </div>
+
+
+        </div>
+
+    </ion-content>
+</div>
+<style>
+    .circular {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        border: none;
+        border-radius: 50%;
+        text-align: center;
+        margin-bottom: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        color: white;
+    }
+
+    .right-arrow {
+        font-size: 2.5rem;
+    }
+</style>

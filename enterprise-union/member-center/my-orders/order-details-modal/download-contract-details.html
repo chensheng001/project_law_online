@@ -1,0 +1,44 @@
+<div class="modal">
+    <ion-header-bar align-title="left" class="bar-positive title-color">
+        <h1 class="title">订单详情</h1>
+        <div class="buttons">
+            <button class="button button-energized button-outline" ng-click="downloadDetials.hide()">关闭</button>
+        </div>
+    </ion-header-bar>
+    <ion-content>
+        <div class="card">
+            <div class="item item-divider">
+                订单信息
+            </div>
+            <div class="item ">
+                订单类型：{{detail.data.order.service.name}}
+            </div>
+            <div class="item ">
+                订单编号：{{detail.data.order.orderNo}}
+            </div>
+            <div class="item ">
+                <p style="line-height: 30px">
+                    {{detail.data.order.time | javaDate:'yyyy-MM-dd HH:mm:ss'}}
+                    <span style="float: right;">
+                    <button class="button button-small button-outline button-positive">
+                        {{detail.data.order.statusStr}}
+                    </button>
+                </span>
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="item item-divider">
+                详情
+            </div>
+            <div class="item">
+                合同名称：{{detail.data.contract.name}}
+            </div>
+        </div>
+        <div class="padding">
+            <span class="item-note assertive">温馨提示：合同已经发送到您的邮箱，请注意查看。</span>
+        </div>
+
+    </ion-content>
+</div>

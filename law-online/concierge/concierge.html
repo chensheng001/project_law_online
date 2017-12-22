@@ -1,0 +1,25 @@
+<ion-view view-title="委托代办">
+    <ion-content>
+        <ion-refresher pulling-text="下拉刷新..." on-refresh="entrust.doRefresh()">
+        </ion-refresher>
+        <div class="list">
+            <div class="item item-avatar item-icon-right" ng-repeat="item in entrust.page.list"
+                 ng-click="entrust.detail.show(item.id)">
+                <img ng-src="{{item.photo_url}}">
+                <h2>{{item.title}}</h2>
+                <p>地点：{{item.province}}-{{item.city}}</p>
+                <p>终止时间：{{item.end_time | javaDate: 'yyyy-MM-dd'}}</p>
+            </div>
+        </div>
+        <style>
+            .banner {
+                width: 150px;
+                margin: auto;
+            }
+        </style>
+        <ion-infinite-scroll ng-if="entrust.page.currPage<entrust.page.pages" on-infinite="entrust.loadMore()"
+                             distance="1%">
+        </ion-infinite-scroll>
+    </ion-content>
+
+</ion-view>

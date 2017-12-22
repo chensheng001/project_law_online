@@ -1,0 +1,98 @@
+<ion-view view-title="申请加入">
+    <ion-content>
+        <div class="list">
+            <div class="item item-input">
+                <span class="input-label">姓名</span>
+                <input type="text">
+            </div>
+            <div class="item item-input">
+                <span class="input-label">手机号码</span>
+                <input type="text">
+            </div>
+            <div class="item item-input">
+                <span class="input-label">地区</span><!--{{detail.need.province}} - {{detail.need.city}} - {{detail.need.area}}-->
+            </div>
+            <div class="item item-input">
+                <span class="input-label">时间</span><!--{{item.time | javaDate:'yyyy-MM-dd HH:mm:ss'}}-->
+            </div>
+            <div class="item item-input">
+                <span class="input-label">执照号码</span>
+                <input type="text" >
+            </div>
+            <div class="item item-input">
+                <span class="input-label">身份证号码</span>
+                <input type="text" >
+            </div>
+        </div>
+        <div class="row pics">
+            <div class="col col-33">
+                <div class="uploadImg text-center">
+                    <img class="img-thumbnail" src="http://www.runoob.com/try/demo_source/blue-album.jpg"  alt="">
+                    <input onchange='angular.element(this).scope().fileChanged(this)'
+                           type="file">
+                </div>
+                <p class="padding text-center">律师资格证书</p>
+            </div>
+            <div class="col col-33">
+                <div class="uploadImg text-center">
+                    <img class="img-thumbnail" src=""  alt="">
+                    <input onchange='angular.element(this).scope().fileChanged(this)'
+                           type="file">
+                </div>
+                <p class="padding text-center">身份证号码</p>
+            </div>
+            <div class="col col-33">
+                <div class="uploadImg text-center">
+                    <img class="img-thumbnail" src="http://www.runoob.com/try/demo_source/blue-album.jpg"  alt="">
+                    <input onchange='angular.element(this).scope().fileChanged(this)'
+                           type="file">
+                </div>
+                <p class="padding text-center">本人照片</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="item item-divider">
+                擅长领域
+            </div>
+            <div class="item item-text-wrap">
+                <ul class="list">
+                    <li class="item item-checkbox">
+                        <label class="checkbox">
+                            <input type="checkbox" checked="">
+                        </label>
+                        离婚吧
+                    </li>
+                    <li class="item item-checkbox">
+                        <label class="checkbox">
+                            <input type="checkbox" checked="">
+                        </label>
+                        离婚吧
+                    </li>
+                    <li class="item item-checkbox">
+                        <label class="checkbox">
+                            <input type="checkbox" checked="">
+                        </label>
+                        离婚吧
+                    </li>
+                    <li class="item item-checkbox">
+                        <label class="checkbox">
+                            <input type="checkbox" checked="">
+                        </label>
+                        离婚吧
+                    </li>
+                    <li class="item item-checkbox">
+                        <label class="checkbox">
+                            <input type="checkbox">
+                        </label>
+                        离婚吧
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="padding">
+            <button class="button btn-common" ng-click="updateSubmit()">
+                提交申请
+            </button>
+        </div>
+    </ion-content>
+</ion-view>

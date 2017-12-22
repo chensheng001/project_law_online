@@ -1,0 +1,50 @@
+<div class="modal">
+    <ion-header-bar align-title="left" class="bar-positive title-color">
+        <h1 class="title">申请更换律师</h1>
+        <div class="buttons">
+            <button class="button button-energized button-outline" ng-click="replaceLawyerModal.hide()">关闭</button>
+        </div>
+    </ion-header-bar>
+    <ion-content>
+
+        <div class="list">
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">申请更换缘由：</span>
+                <textarea placeholder="请输入更换缘由" rows="5" ng-model="replace.info.content"></textarea>
+            </label>
+            <div class="item item-divider">
+                选择律师
+            </div>
+            <div class="row">
+                <div class="col">
+                    <button class="button button-stable button-block button-small" ng-click="replace.lawyer.show()">
+                        自主选择
+                    </button>
+                </div>
+                <div class="col">
+                    <button class="button button-balanced button-block button-small" ng-click="replace.noLawyer()">
+                        平台推荐
+                    </button>
+                </div>
+            </div>
+            <a class="item item-avatar" ng-if="replace.lawyer.lawyer.id > 0">
+                <img ng-src="{{replace.lawyer.lawyer.photoUrl}}">
+                <h2>
+                    {{replace.lawyer.lawyer.realName}}{{replace.lawyer.lawyer.type}}
+                    <div style="float:right;" class="energized">
+                        <evaluate-star star-num="replace.lawyer.lawyer.evaluateGrade"></evaluate-star>
+                    </div>
+                </h2>
+                <p>{{replace.lawyer.lawyer.province}}-{{replace.lawyer.lawyer.city}}</p>
+                <p>执照号：{{replace.lawyer.lawyer.licenseNo}}</p>
+            </a>
+
+            <div class="padding">
+                <button class="button button-small button-dark-yellow button-block" ng-click="replace.submit()">
+                    确认提交
+                </button>
+            </div>
+        </div>
+    </ion-content>
+</div>
+

@@ -1,0 +1,53 @@
+<ion-view view-title="合同下载">
+    <ion-content>
+
+        <div class="row text-center">
+            <div class="col">
+                <i class="ion ion-edit balanced" style="font-size: 25px;color:#f5762d;"></i>
+                <p>
+                    <span class="button button-balanced button-small button-clear"
+                          style="color:#f5762d;">选择合同</span>
+                </p>
+            </div>
+            <div class="col-5 " style="    padding-top: 12px;">
+                <i class="ion ion-chevron-right balanced" style="font-size: 25px; line-height: 30px"></i>
+            </div>
+            <div class="col">
+                <i class="ion ion-card balanced" style="font-size: 25px;color:#f5762d;"></i>
+                <p>
+                    <span class="button button-balanced button-small button-clear"
+                          style="color:#f5762d;">确认下载</span>
+                </p>
+            </div>
+            <div class="col-5" style="    padding-top: 12px;">
+                <i class="ion ion-chevron-right balanced" style="font-size: 25px"></i>
+            </div>
+            <div class="col">
+                <i class="ion ion-navigate balanced" style="font-size: 25px;color:#f5762d;"></i>
+                <p>
+                    <span class="button button-balanced button-small button-clear"
+                          style="color:#f5762d;">接收邮件</span>
+                </p>
+            </div>
+        </div>
+        <ul class="list list-inset">
+            <div ng-repeat="(key,list) in contracts">
+                <li class="item item-icon-right" ng-init="ldrs == false" ng-click="ldrs = !ldrs">
+                    {{key}}
+                    <i class="icon ion-chevron-right" ng-show="!ldrs"></i>
+                    <i class="icon ion-chevron-down" ng-show="ldrs"></i>
+                </li>
+                <li class="item item-button-right stable-bg" ng-repeat="item in list" ng-show="ldrs"
+                    ng-click="detail.show(item)">
+                    {{item.name}}
+                    <button class="button button-positive">
+                        <i class="icon ion-document-text"></i>
+                    </button>
+                </li>
+            </div>
+
+
+        </ul>
+    </ion-content>
+</ion-view>
+

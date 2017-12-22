@@ -1,0 +1,43 @@
+<ion-view view-title="我的代办">
+    <ion-content>
+        <ion-refresher pulling-text="下拉刷新..." on-refresh="entrusts.doRefresh()">
+        </ion-refresher>
+        <div class="button-bar">
+            <a class="button" ng-click="entrusts.selectTab(0)">发布的代办</a>
+            <a class="button" ng-click="entrusts.selectTab(1)">应征的代办</a>
+        </div>
+        <div>
+            <div class="card" ng-repeat="item in entrusts.page.content">
+                <div class="item item-divider">
+                    {{dict[item.status]}}
+                    <span style="float:right;">{{item.amount}}元</span>
+                </div>
+                <a class="item item-avatar">
+                    <img ng-src="{{item.photo_url}}" ng-if="item.photo_url">
+                    <h2 ng-if="item.real_name">{{item.real_name}}{{item.type}}</h2>
+                    <p>{{item.title}}</p>
+                    <p>终止时间：{{item.end_time | javaDate:'yyyy-MM-dd'}}</p>
+                    <hr class="stable">
+                    <p>{{item.province}}-{{item.city}}</p>
+                </a>
+                <div class="item item-divider text-right">
+                    <button class="button button-small button-positive" ng-if="item.status == 0"
+                            ng-click="detail.wxPay.pay(item.id)">立即付款
+                    </button>
+                    <button class="button button-small button-calm" ng-click="detail.show(item.id)">查看详情
+                    </button>
+                    <button class="button button-small button-assertive" ng-if="item.status == 0"
+                            ng-click="detail.cancel(item.id)">取消代办
+                    </button>
+                </div>
+            </div>
+        </div>
+        <ion-infinite-scroll ng-if="entrusts.page.number<entrusts.page.totalPages-1" on-infinite="entrusts.loadMore()"
+                             distance="1%">
+        </ion-infinite-scroll>
+    </ion-content>
+    <div class="bar bar-footer stable-bg">
+            <div class="title" ng-click="publish.show()">发布代办</div>
+    </div>
+
+</ion-view>

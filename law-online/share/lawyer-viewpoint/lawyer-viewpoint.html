@@ -1,0 +1,74 @@
+<ion-view view-title="精选分享">
+    <ion-content>
+        <ion-refresher pulling-text="下拉刷新..." on-refresh="vp.doRefresh()">
+        </ion-refresher>
+        <div class="button-bar">
+            <a class="button balanced" ui-sref="share.daily">日常法典</a>
+            <a class="button energized" style="color: #F1582A;" ui-sref="share.lawyerViewPoint(0)">法聚观点</a>
+        </div>
+        <ion-slide-box style="">
+            <ion-slide>
+                <div class="box blue">
+                    <img src="../static/img/viewpoint.jpg" alt="" style="width: 100%">
+                </div>
+            </ion-slide>
+        </ion-slide-box>
+
+        <div class="card">
+            <div class="item item-divider" style="padding: 0px;">
+                <div class="row">
+                    <div class="col-40" style="line-height: 40px;padding-left: 5px;">
+                        案件概况
+                    </div>
+                    <div class="col">
+                        <button style="float:right;" class="button button-small button-positive button-clear"
+                                ng-click="listShow()" ng-if="vp.questionId == 0">
+                            过往聚观>>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="item item-text-wrap">
+                {{vp.question.content}}
+            </div>
+            <div class="item item-divider" style="line-height: 30px;padding: 0px;">
+                <div class="row">
+                    <div class="col">
+                        <p>律师聚观：{{vp.question.answerNum}}人</p>
+                    </div>
+                    <div class="col">
+                        <p>听客：{{vp.question.listenNum}}人</p>
+                    </div>
+                    <div class="col-30">
+                        <button style="float:right;" class="button button-small  button-positive"
+                                ng-click="reportShow(vp.question.id,vp.question.content)">
+                            &nbsp;&nbsp;&nbsp;发布观点&nbsp;&nbsp;&nbsp;
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+
+            <div class="item item-thumbnail-left item-button-right" href="#" ng-repeat="item in vp.repays.list">
+                <img ng-src="{{item.photo_url}}">
+                <h2>
+                    {{item.real_name}}{{item.type}}
+                    <evaluate-star star-num="item.evaluate_grade"></evaluate-star>
+                </h2>
+                <p>{{item.province}}-{{item.city}}</p>
+                <p>执照号：{{item.license_no}}</p>
+                <div class="buttons">
+                    <button class="button button-small button-dark-yellow button-block" style="font-size: 12px;line-height: 20px"
+                            ng-click="vp.wxPay.pay(item.id)">
+                        <i class='icon-toukan iconfont'></i>
+                        {{item.price}}元偷看答案
+                    </button>
+                </div>
+            </div>
+        </div>
+        <ion-infinite-scroll ng-if="vp.page.currPage<vp.page.pages" on-infinite="vp.loadMore()"
+                             distance="1%">
+        </ion-infinite-scroll>
+    </ion-content>
+</ion-view>

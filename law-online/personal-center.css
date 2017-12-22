@@ -1,0 +1,106 @@
+/*最新资讯*/
+#information .list .item h2{
+    font-size: 0.8rem;
+    overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+}
+#information .list .item .bottom{
+    position: absolute;
+    bottom: 5px;
+    width: 100%;
+}
+#information .list .item .bottom .number{
+    color: #00c1e0;
+    margin-right: 5px;
+}
+
+/*个人中心*/
+.list-inset{
+    margin: 0;
+}
+.list-inset .item{
+    border-width: 0;
+    border-bottom: 1px solid #ddd;
+    margin: 0;
+}
+.item-icon-left.item-icon-right .icon:first-child {
+    font-size: 1rem;
+}
+.ion-chevron-right{
+    font-size: 0.5rem !important;
+    color: #989797;
+}
+.user-info{
+    background: url("../static/img/photo_bg.png") no-repeat center;
+}
+.user-info .level{
+    position: absolute;
+    width: 2rem;
+    top: 1rem;
+    background: #eeea49;
+    text-align: left;
+    padding-left: 0.2rem;
+    color: #a8a045;
+    border-top-right-radius: 0.6rem;
+    line-height: 1.2rem;
+    border-bottom-right-radius: 0.6rem;
+}
+.user-info .name{
+    margin: 1rem auto;
+}
+.user-info .name i{
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 0.6rem;
+    background: rgba(190, 193, 16, 0.38);
+    color: #fff;
+    margin-left: 5px;
+    line-height: 1.2rem;
+}
+.user-info .photo{
+    margin: 0 auto;
+    width: 4rem;
+    height: 4rem;
+}
+.user-info .photo img{
+    border-radius: 2rem;
+    background: pink;
+    width: 4rem;
+    height: 4rem;
+    margin-top: 0.5rem;
+}
+.user-info .photo input{
+    width: 6rem;height: 6rem;
+    opacity: 0.01;position: relative;
+    top: -7rem;z-index: 99
+}
+.btn-group{
+    background: #fff;
+    margin-bottom: 0.6rem;
+    text-align: center;
+}
+.user-info .btn-apply{
+    background: rgba(138, 138, 138, 0.18);
+    margin-bottom: 0;
+    color: #fff;
+}
+.user-info .btn-apply a{
+    color: rgba(255, 255, 255, 1);
+}
+.user-info .btn-apply a i{
+    color: rgba(255, 255, 255, 1);
+    margin-right: 0.2rem;
+}
+.user-info .btn-apply a:first-child{
+    border-right: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+/*我的资料*/
+.item-divider{
+    background: rgba(0, 193, 224, 0.56);
+    color: #fff;;
+}

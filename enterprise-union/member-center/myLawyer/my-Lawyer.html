@@ -1,0 +1,60 @@
+<ion-view view-title="我的律师">
+    <ion-content>
+        <ion-refresher pulling-text="下拉刷新..." on-refresh="evaluateList.doRefresh()">
+        </ion-refresher>
+
+        <div class="banner" style="position: relative;">
+            <div style="width: 6em;margin: 0px auto;">
+                <img ng-src="{{lawyer.photoUrl}}" alt="" class="user-headportrait"
+                     style="height: 6em;width: 6em">
+            </div>
+            <h3 class="text-center">{{lawyer.realName}}{{lawyer.type}}</h3>
+
+            <div class="energized" style="top: 9px;position: absolute;right: 10px;">
+                <evaluate-star star-num="lawyer.evaluateGrade"></evaluate-star>
+            </div>
+
+        </div>
+        <div class="list">
+            <div class="row">
+                <div class="col">
+                    <button class="button button-small button-block button-dark-yellow"
+                            ng-click="replace.show()">
+                        申请更换律师
+                    </button>
+                </div>
+                <div class="col">
+                    <button class="button button-small button-block button-balanced"
+                            ng-click="postRating.show()">
+                        我要点评
+                    </button>
+                </div>
+            </div>
+            <div class="item item-divider">
+                用户评价（{{evaluate.page.totalElements}}）
+            </div>
+
+            <a class="item item-avatar item-text-wrap" href="#" ng-repeat="item in evaluate.page.content">
+                <img ng-src="{{item.photo_url}}">
+                <h2>{{item.nick_name}}</h2>
+                <p>
+                    <evaluate-star star-num="item.grade"></evaluate-star>
+                </p>
+                <p>{{item.content}}</p>
+            </a>
+        </div>
+
+        <ion-infinite-scroll ng-if="evaluateList.page.currPage<evaluateList.page.pages"
+                             on-infinite="evaluateList.loadMore()"
+                             distance="1%">
+        </ion-infinite-scroll>
+
+
+    </ion-content>
+    <!--	<style>
+            .banner {
+                width: 150px;
+                margin: auto;
+            }
+        </style>-->
+</ion-view>

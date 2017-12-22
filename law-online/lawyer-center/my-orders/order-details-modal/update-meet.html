@@ -1,0 +1,25 @@
+<div class="modal">
+    <ion-header-bar align-title="left" class="bar-positive title-color">
+        <div class="buttons">
+            <button class="button button-energized button-outline" ng-click="updateMeetingDetials.hide()">关闭</button>
+        </div>
+    </ion-header-bar>
+    <ion-content>
+        <div class="list">
+            <label class="item item-input">
+                <span class="input-label">预约时间：</span>
+                <input type="date" ng-model="meet.updateInfo.info.meetTime">
+            </label>
+            <ionic-city-picker options='vm.meetCityData' ng-if="vm.meetCityData"></ionic-city-picker>
+            <label class="item item-input">
+                <input type="text" placeholder="详细地址" ng-model="meet.updateInfo.info.detailAddress">
+            </label>
+            <div class="padding">
+                <button class="button button-small button-dark-yellow button-block"
+                        ng-click="meet.updateInfo.update(detail.data.order.id)">
+                    确认提交
+                </button>
+            </div>
+        </div>
+    </ion-content>
+</div>

@@ -1,0 +1,60 @@
+<div class="modal">
+    <ion-header-bar align-title="left" class="bar-positive title-color">
+        <h1 class="title">订单详情</h1>
+        <div class="buttons">
+            <button class="button button-energized button-outline" ng-click="phoneDetials.hide()">关闭</button>
+        </div>
+    </ion-header-bar>
+    <ion-content>
+        <div class="card">
+            <div class="item item-divider">
+                订单信息
+                <span style="float: right">
+                    {{detail.data.order.amount}}元
+                </span>
+            </div>
+            <div class="item ">
+                订单类型：{{dict.orderType[detail.data.order.type]}}
+            </div>
+            <div class="item ">
+                订单编号：{{detail.data.order.orderNo}}
+            </div>
+            <div class="item ">
+                <p style="line-height: 30px">
+                    {{detail.data.order.time | javaDate:'yyyy-MM-dd HH:mm:ss'}}
+                    <span style="float: right;">
+                    <button class="button button-small button-outline button-positive">
+                        {{dict.orderStatus[detail.data.order.status]}}
+                    </button>
+                </span>
+                </p>
+            </div>
+        </div>
+
+        <div class="list">
+
+            <a class="item item-avatar" href="#">
+                <img ng-src="{{detail.data.lawyer.photoUrl}}">
+                <h2>{{detail.data.lawyer.realName}}{{detail.data.lawyer.type}}</h2>
+                <p>执照号：{{detail.data.lawyer.licenseNo}}</p>
+            </a>
+            <div class="item item-text-wrap">
+                <p>
+                    打赏金额：{{detail.data.order.amount}}￥
+                </p>
+                <p>
+                    咨询称呼：{{detail.data.orderMobile.nickName}}
+                </p>
+                <p>
+                    咨询手机号：{{detail.data.orderMobile.mobile}}
+                </p>
+                <hr>
+                <p>律师电话：{{detail.data.lawyer.mobile}}</p>
+            </div>
+            <div class="item item-text-wrap">
+                <p class="energized">小提示：支付一次只能通话一次哦，当需要再次拨打时，需再次进行电话咨询哦</p>
+            </div>
+        </div>
+
+    </ion-content>
+</div>

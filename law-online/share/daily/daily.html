@@ -1,0 +1,71 @@
+<!--hot导航-->
+<ion-view view-title="精选分享">
+    <ion-content>
+        <ion-refresher pulling-text="下拉刷新..." on-refresh="search.doRefresh()">
+        </ion-refresher>
+        <div class="button-bar">
+            <a class="button balanced" ui-sref="share.daily">日常法典</a>
+            <a class="button energized" style="color: #F1582A;" ui-sref="share.lawyerViewPoint(0)">法聚观点</a>
+        </div>
+        <div class="card">
+            <div class="item" style="padding: 0.3rem;">
+                <div class="padding text-center ">
+                    <div class="_col-25">
+                        <p ng-click="search.searchDomain(0)" class=" button button-clear button-assertive button-small">
+                            全部
+                        </p>
+                    </div>
+                    <div class="_col-25" ng-repeat="item in domains">
+                        <p ng-click="search.searchDomain(item.id)" style="color:#444;"
+                           class="button button-clear button-positive button-small">
+                            {{item.name}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!--列表-->
+        <div class="card" ng-repeat="item in search.page.list">
+            <div class="item item-divider item-positive">
+                问题
+            </div>
+            <div class="item-text-wrap item">
+                {{item.content}}
+            </div>
+            <div class="item item-avatar ">
+                <img ng-src="{{item.photo_url}}">
+                <h2>
+                    {{item.real_name}}{{item.type}}
+                    <div style="float:right;" class="energized">
+                        <evaluate-star star-num="item.evaluate_grade"></evaluate-star>
+                    </div>
+                </h2>
+                <p>{{item.province}}-{{item.city}}</p>
+                <p>执照号：{{item.license_no}}</p>
+            </div>
+            <div class="buttons row">
+                <div class="col-25">
+                    <p class=" button button-small button-dark button-block button-clear">{{item.amount}}元</p>
+                </div>
+                <div class="col-25">
+                    <p class=" button button-small button-dark button-block button-clear">{{item.listen_num}}人听过</p>
+                </div>
+                <div class="col">
+                    <button class=" button button-small button-dark-yellow button-block"
+                            ng-click="checkAnswerShow(item.id)">
+                        <i class='icon-toukan iconfont'></i>
+                        {{item.price}}元偷偷看答案
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+        <ion-infinite-scroll ng-if="search.page.currPage<search.page.pages" on-infinite="search.loadMore()"
+                             distance="1%">
+        </ion-infinite-scroll>
+
+    </ion-content>
+</ion-view>
+

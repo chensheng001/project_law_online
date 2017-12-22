@@ -1,0 +1,43 @@
+<ion-view view-title="我的案件">
+    <ion-content>
+        <ion-refresher pulling-text="下拉刷新..." on-refresh="case.doRefresh()">
+        </ion-refresher>
+        <div class="button-bar">
+            <a class="button" ng-click="case.selectTab(0)">全部</a>
+            <a class="button" ng-click="case.selectTab(1)">处理中</a>
+            <a class="button" ng-click="case.selectTab(2)">已完成</a>
+        </div>
+        <div>
+            <div class="card" ng-repeat="item in case.page.list">
+                <div class="item item-divider">
+                    {{item.domainName}}
+                    <button class="button button-outline button-positive button-small" style="float:right;">
+                        {{dict.status[item.status]}}
+                    </button>
+                </div>
+                <div class="item">
+                    {{item.name}}
+                    <p>电话：{{item.mobile}}</p>
+                </div>
+                <p class="item">
+                    {{item.province}}-{{item.city}}
+                    <span style="float:right;">
+                        {{item.min_amount}}元-{{item.max_amount}}元
+                    </span>
+                </p>
+                <div class="item item-divider text-right">
+                    <button class="button button-small button-calm" ng-click="case.detail.show(item.id)">查看详情</button>
+                </div>
+            </div>
+        </div>
+        <ion-infinite-scroll ng-if="case.page.currPage<case.page.pages" on-infinite="case.loadMore()"
+                             distance="1%">
+        </ion-infinite-scroll>
+    </ion-content>
+    <ion-footer-bar align-title="center" class="bar-balanced">
+        <div class="title" ng-click="publish.openShow()">
+            发布案件
+        </div>
+    </ion-footer-bar>
+
+</ion-view>

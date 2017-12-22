@@ -1,0 +1,9 @@
+<ion-view view-title="会员活动">
+    <ion-content>
+        <div class="list">
+            <a class="item" ng-repeat="item in activity.page.content" ui-sref="memberAction.details({id:item.id})">
+                <p>{{item.title}}</p>
+            </a>
+        </div>
+    </ion-content>
+</ion-view>

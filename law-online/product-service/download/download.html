@@ -1,0 +1,48 @@
+<ion-view view-title="合同文书下载">
+    <ion-content>
+        <div class="list">
+            <div class="item">
+                <div class="row text-center">
+                    <div class="col">
+                        <i class="ion ion-edit balanced" style="font-size: 25px;color:#f5762d;"></i>
+                        <p>
+                            <span class="button button-balanced button-small button-clear" style="color:#f5762d;">个人资料填写邮箱</span>
+                        </p>
+                    </div>
+                    <div class="col-5 " style="    padding-top: 12px;">
+                        <i class="ion ion-chevron-right balanced" style="font-size: 25px; line-height: 30px"></i>
+                    </div>
+                    <div class="col">
+                        <i class="ion ion-card balanced" style="font-size: 25px;color:#f5762d;"></i>
+                        <p>
+                            <span class="button button-balanced button-small button-clear"
+                                  style="color:#f5762d;">购买支付</span>
+                        </p>
+                    </div>
+                    <div class="col-5" style="    padding-top: 12px;">
+                        <i class="ion ion-chevron-right balanced" style="font-size: 25px"></i>
+                    </div>
+                    <div class="col">
+                        <i class="ion ion-navigate balanced" style="font-size: 25px;color:#f5762d;"></i>
+                        <p>
+                            <span class="button button-balanced button-small button-clear" style="color:#f5762d;">点击邮件链接下载</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div ng-repeat="(key,list) in contracts">
+                <div class="item item-icon-right" ng-init="ldrs = false" ng-click=" ldrs = !ldrs">
+                    {{dict[key]}}
+                    <i class="icon " ng-class="{true:'ion-ios-arrow-down',false:'ion-ios-arrow-right'}[ldrs]"></i>
+                </div>
+                <ul ng-show="ldrs">
+                    <li class="item stable-bg" ng-repeat="item in list" ng-click="contract.show(item.id)">
+                        {{item.name}}
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </ion-content>
+
+</ion-view>

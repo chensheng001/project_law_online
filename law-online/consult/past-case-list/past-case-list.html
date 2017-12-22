@@ -1,0 +1,27 @@
+<ion-view view-title="过往案例列表">
+    <ion-content>
+        <div class="banner">
+            <img ng-src="{{lawyer.photoUrl}}" alt="" class="user-headportrait"
+                 style="height: 150px;width: 100%">
+            <h3 class="text-center">{{lawyer.realName}}{{lawyer.type}}</h3>
+            <div  class="energized" style="top: 9px;position: absolute;right: 12px;">
+                <evaluate-star star-num="lawyer.evaluateGrade"></evaluate-star>
+            </div>
+        </div>
+        <div class="list">
+            <div ng-repeat="item in list">
+                <a class="item item-avatar" ng-click="pastcasemodalShow(item.id)">
+                    <img ng-src="{{item.pictureUrl}}">
+                    <h2>{{item.title}}</h2>
+                    <p>{{item.content}}</p>
+                </a>
+            </div>
+        </div>
+    </ion-content>
+    <style>
+        .banner{
+            width: 150px;
+            margin: auto;
+        }
+    </style>
+</ion-view>
