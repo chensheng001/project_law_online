@@ -1,14 +1,14 @@
 <ion-view view-title="最新资讯">
     <div class="content " id="information">
-        <div class="list">
-            <a class="item item-thumbnail-right" href="#" ng-repeat="item in informations">
+        <ul class="list">
+            <li class="item item-thumbnail-right" href="#" ng-repeat="item in informations">
                 <img src="http://www.runoob.com/try/demo_source/blue-album.jpg">
                 <h2>{{item.name}}</h2>
                 <p class="bottom">
                     <span>{{item.date}}</span>
                     <span class="col-offset-10"><i class="number">{{item.person}}</i>已浏览</span>
                 </p>
-            </a>
-        </div>
+            </li>
+        </ul>
     </div>
 </ion-view>

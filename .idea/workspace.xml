@@ -2,11 +2,42 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3fc4986d-3e90-4362-a2a7-db79682646c6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/deployment.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/law-online/personal-center/scoreMail.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/law-online/personal-center/my-lawsuit/consultReply.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/law-online/personal-center/my-lawsuit/details.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/law-online/personal-center/my-order/details.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/law-online/personal-center/my-vipPackage/details.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/law-online/personal-center/my-lawsuit/list.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/law-online/personal-center/my-order/list.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/law-online/personal-center/my-vipPackage/list.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/law-online/personal-center/my-order/serviceJudge.html" />
+      <change type="DELETED" beforePath="D:\个人项目\project_law_online\law-online\personal-center\about-platform\about-platform-details.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\个人项目\project_law_online\law-online\personal-center\about-platform\about-platform.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\个人项目\project_law_online\law-online\personal-center\about-platform\use-guide.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\个人项目\project_law_online\law-online\personal-center\case-list\addImg-details.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\个人项目\project_law_online\law-online\personal-center\case-list\case-details.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\个人项目\project_law_online\law-online\personal-center\case-list\case-list.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\个人项目\project_law_online\law-online\personal-center\case-list\case-logs.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\个人项目\project_law_online\law-online\personal-center\case-list\imgs-details.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\个人项目\project_law_online\law-online\personal-center\case-list\release-case.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\个人项目\project_law_online\law-online\personal-center\case-list\select-lawyer.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\个人项目\project_law_online\law-online\personal-center\heard-issue\heard-issue-details.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\个人项目\project_law_online\law-online\personal-center\heard-issue\heard-issue.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\个人项目\project_law_online\law-online\personal-center\my-orders\my-orders.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\个人项目\project_law_online\law-online\personal-center\my-orders\order-details-modal\download-contract-details.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\个人项目\project_law_online\law-online\personal-center\my-orders\order-details-modal\draft-contract-details.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\个人项目\project_law_online\law-online\personal-center\my-orders\order-details-modal\examination-contract-details.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\个人项目\project_law_online\law-online\personal-center\my-orders\order-details-modal\lawyer-letter-details.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\个人项目\project_law_online\law-online\personal-center\my-orders\order-details-modal\lawyer-mediation-details.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\个人项目\project_law_online\law-online\personal-center\my-orders\order-details-modal\lawyer-witness-details.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\个人项目\project_law_online\law-online\personal-center\my-orders\order-details-modal\meeting-details.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\个人项目\project_law_online\law-online\personal-center\my-orders\order-details-modal\phone-details.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\个人项目\project_law_online\law-online\personal-center\my-orders\order-details-modal\reward-details.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\个人项目\project_law_online\law-online\personal-center\my-orders\pay-now.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/common.css" afterPath="$PROJECT_DIR$/static/css/common.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/law-online/latestInformation/list.html" afterPath="$PROJECT_DIR$/law-online/latestInformation/list.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/law-online/personal-center.css" afterPath="$PROJECT_DIR$/law-online/personal-center.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.html" afterPath="$PROJECT_DIR$/test.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="project_law_online.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,11 +58,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="test.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="test.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.11376147">
-              <caret line="166" column="29" selection-start-line="166" selection-start-column="29" selection-end-line="166" selection-end-column="29" />
+            <state vertical-scroll-proportion="-0.9354839">
+              <caret line="258" column="8" selection-start-line="258" selection-start-column="8" selection-end-line="275" selection-end-column="9" />
               <folding>
                 <element signature="e#529#783#0" expanded="false" />
                 <element signature="e#824#917#0" expanded="false" />
@@ -42,82 +73,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="scoreMail.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/law-online/personal-center/scoreMail.html">
+      <file leaf-file-name="consultReply.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/law-online/personal-center/my-lawsuit/consultReply.html">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="17" selection-end-column="11" />
-              <folding>
-                <element signature="n#ion-view#0;n#!!top" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="list.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/law-online/latestInformation/list.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="13" selection-end-column="11" />
+              <caret line="0" column="27" selection-start-line="0" selection-start-column="27" selection-end-line="0" selection-end-column="27" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="my-information.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/law-online/personal-center/my-information/my-information.html">
+      <file leaf-file-name="phone-consult.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/law-online/consult/phone-consult.html">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="57" selection-end-column="11" />
-              <folding>
-                <element signature="n#ion-view#0;n#!!top" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="recharge.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/law-online/personal-center/recharge.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.3125">
-              <caret line="6" column="58" selection-start-line="0" selection-start-column="0" selection-end-line="22" selection-end-column="11" />
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="personal-center.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/law-online/personal-center/personal-center.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.75">
-              <caret line="8" column="47" selection-start-line="0" selection-start-column="0" selection-end-line="97" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="personal-center.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/law-online/personal-center.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="102" column="14" selection-start-line="102" selection-start-column="14" selection-end-line="102" selection-end-column="14" />
-              <folding>
-                <element signature="e#36#226#0" expanded="false" />
-                <element signature="e#259#320#0" expanded="false" />
-                <element signature="e#361#407#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="applyJoinLawyer.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/law-online/personal-center/applyJoinLawyer.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="97" selection-end-column="11" />
-              <folding>
-                <element signature="n#ion-view#0;n#!!top" expanded="false" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -125,9 +96,23 @@
       <file leaf-file-name="common.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/css/common.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.6">
-              <caret line="52" column="27" selection-start-line="52" selection-start-column="27" selection-end-line="52" selection-end-column="27" />
+            <state vertical-scroll-proportion="-15.4">
+              <caret line="94" column="26" selection-start-line="94" selection-start-column="26" selection-end-line="94" selection-end-column="26" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="personal-center.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/law-online/personal-center.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.36221838">
+              <caret line="225" column="35" selection-start-line="225" selection-start-column="35" selection-end-line="225" selection-end-column="35" />
+              <folding>
+                <element signature="e#36#226#0" expanded="false" />
+                <element signature="e#259#320#0" expanded="false" />
+                <element signature="e#361#407#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -141,9 +126,19 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/law-online/personal-center/scoreMail.html" />
+        <option value="$PROJECT_DIR$/law-online/latestInformation/list.html" />
+        <option value="$PROJECT_DIR$/law-online/myVipPackage/list.html" />
+        <option value="$PROJECT_DIR$/law-online/myVipPackage/details.html" />
+        <option value="$PROJECT_DIR$/law-online/myOrder/list.html" />
+        <option value="$PROJECT_DIR$/law-online/personal-center/my-order/details.html" />
+        <option value="$PROJECT_DIR$/law-online/personal-center/my-order/serviceJudge.html" />
+        <option value="$PROJECT_DIR$/law-online/personal-center/my-order/list.html" />
+        <option value="$PROJECT_DIR$/law-online/personal-center/my-lawsuit/list.html" />
+        <option value="$PROJECT_DIR$/law-online/personal-center/my-lawsuit/details.html" />
         <option value="$PROJECT_DIR$/static/css/common.css" />
-        <option value="$PROJECT_DIR$/law-online/personal-center.css" />
         <option value="$PROJECT_DIR$/test.html" />
+        <option value="$PROJECT_DIR$/law-online/personal-center/my-lawsuit/consultReply.html" />
+        <option value="$PROJECT_DIR$/law-online/personal-center.css" />
       </list>
     </option>
   </component>
@@ -280,7 +275,95 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="latestInformation" />
+              <option name="myItemId" value="personal-center" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="my-vipPackage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project_law_online" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project_law_online" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="law-online" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="personal-center" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="my-order" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project_law_online" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project_law_online" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="law-online" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="personal-center" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="my-lawsuit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project_law_online" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project_law_online" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="law-online" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="personal-center" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="my-information" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project_law_online" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project_law_online" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="law-online" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="consult" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -298,7 +381,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\个人项目\project_law_online\law-online\personal-center\my-lawsuit" />
       <recent name="D:\个人项目\project_law_online\law-online\personal-center" />
+      <recent name="D:\个人项目\project_law_online\law-online\personal-center\my-order" />
+      <recent name="D:\个人项目\project_law_online\law-online" />
+      <recent name="D:\个人项目\project_law_online\law-online\myVipPackage" />
     </key>
   </component>
   <component name="RunManager">
@@ -405,79 +492,237 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/common.css">
+    <entry file="file://$PROJECT_DIR$/law-online/share/lawyer-viewpoint/list.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.6">
-          <caret line="52" column="27" selection-start-line="52" selection-start-column="27" selection-end-line="52" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/law-online/personal-center.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="102" column="14" selection-start-line="102" selection-start-column="14" selection-end-line="102" selection-end-column="14" />
+        <state vertical-scroll-proportion="0.4">
+          <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="29" selection-end-column="14" />
           <folding>
-            <element signature="e#36#226#0" expanded="false" />
-            <element signature="e#259#320#0" expanded="false" />
-            <element signature="e#361#407#0" expanded="false" />
+            <element signature="n#div#0;n#ion-content#0;n#div#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/law-online/personal-center/personal-center.html">
+    <entry file="file://$PROJECT_DIR$/law-online/share/lawyer-viewpoint/lawyer-viewpoint.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.75">
-          <caret line="8" column="47" selection-start-line="0" selection-start-column="0" selection-end-line="97" selection-end-column="11" />
+        <state vertical-scroll-proportion="0.6">
+          <caret line="21" column="26" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/law-online/personal-center/recharge.html">
+    <entry file="file://$PROJECT_DIR$/law-online/share/daily/daily.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.3125">
-          <caret line="6" column="58" selection-start-line="0" selection-start-column="0" selection-end-line="22" selection-end-column="11" />
+        <state vertical-scroll-proportion="0.18608695">
+          <caret line="46" column="12" selection-start-line="46" selection-start-column="12" selection-end-line="60" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/law-online/components/selectcity-modal.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/law-online/personal-center/personallogin/user-agreement.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/law-online/personal-center/personalregist/personalregist.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.4">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/enterprise-union/enterprise-union-router.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.21746293">
+          <caret line="352" column="66" selection-start-line="352" selection-start-column="66" selection-end-line="352" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/law-online/personal-center/personallogin/personal-login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="8.625">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/law-online/concierge/concierge.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.28">
+          <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/law-online/consult/consult.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.24">
+          <caret line="6" column="47" selection-start-line="6" selection-start-column="47" selection-end-line="6" selection-end-column="47" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/law-online/personal-center/my-information/my-information.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="57" selection-end-column="11" />
-          <folding>
-            <element signature="n#ion-view#0;n#!!top" expanded="false" />
-          </folding>
+        <state vertical-scroll-proportion="-0.12">
+          <caret line="27" column="24" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/law-online/personal-center/my-vipPackage/details.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/law-online/latestInformation/list.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="13" selection-end-column="11" />
+        <state vertical-scroll-proportion="0.16">
+          <caret line="4" column="32" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/law-online/personal-center/personal-center.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.12">
+          <caret line="3" column="33" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/law-online/personal-center/recharge.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6">
+          <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="19" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/law-online/personal-center/scoreMail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="17" selection-end-column="11" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="25" selection-start-line="0" selection-start-column="25" selection-end-line="0" selection-end-column="25" />
           <folding>
             <element signature="n#ion-view#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/law-online/personal-center/my-lawsuit/list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="25" selection-start-line="0" selection-start-column="25" selection-end-line="0" selection-end-column="25" />
+          <folding>
+            <element signature="n#ion-view#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/law-online/personal-center/my-vipPackage/list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.4375">
+          <caret line="2" column="11" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/law-online/personal-center/my-order/list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.625">
+          <caret line="33" column="20" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="76" />
+          <folding>
+            <element signature="n#li#0;n#ul#0;n#ion-content#0;n#ion-view#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/law-online/personal-center/my-order/details.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.34375">
+          <caret line="49" column="46" selection-start-line="49" selection-start-column="30" selection-end-line="49" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/law-online/personal-center/my-lawsuit/details.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="59" column="11" selection-start-line="59" selection-start-column="11" selection-end-line="59" selection-end-column="11" />
+          <folding>
+            <element signature="n#ion-view#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/law-online/personal-center/my-order/serviceJudge.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.52">
+          <caret line="31" column="42" selection-start-line="31" selection-start-column="40" selection-end-line="31" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/law-online/consult/phone-consult.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/common.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.4">
+          <caret line="94" column="26" selection-start-line="94" selection-start-column="26" selection-end-line="94" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/law-online/personal-center/my-lawsuit/consultReply.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="27" selection-start-line="0" selection-start-column="27" selection-end-line="0" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.11376147">
-          <caret line="166" column="29" selection-start-line="166" selection-start-column="29" selection-end-line="166" selection-end-column="29" />
+        <state vertical-scroll-proportion="-0.9354839">
+          <caret line="258" column="8" selection-start-line="258" selection-start-column="8" selection-end-line="275" selection-end-column="9" />
           <folding>
             <element signature="e#529#783#0" expanded="false" />
             <element signature="e#824#917#0" expanded="false" />
             <element signature="e#966#1036#0" expanded="false" />
             <element signature="n#ion-view#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/law-online/personal-center.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.36221838">
+          <caret line="225" column="35" selection-start-line="225" selection-start-column="35" selection-end-line="225" selection-end-column="35" />
+          <folding>
+            <element signature="e#36#226#0" expanded="false" />
+            <element signature="e#259#320#0" expanded="false" />
+            <element signature="e#361#407#0" expanded="false" />
           </folding>
         </state>
       </provider>

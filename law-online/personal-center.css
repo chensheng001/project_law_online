@@ -102,7 +102,10 @@
 /*我的资料*/
 .item-divider{
     background: #387ef5;
-    color: #fff;;
+    color: #fff;
+}
+.item-divider span{
+    color: #fff;
 }
 /*充值金额*/
 .btn-money{
@@ -138,4 +141,100 @@
 }
 .scoreMail .bottom button{
     float: right;
+}
+/*我的会员套餐*/
+.myVipPackage .item-divider span,
+.myOrder .item-divider span{
+    line-height: 1.4rem;
+}
+.myVipPackage .item-divider span:nth-child(2){
+    float: right;
+    padding: 0 1rem;
+    display: inline-block;
+    transform: skew(-20deg);
+}
+.myVipPackageDetail .row .col{
+    text-align: center;
+    color: #fff;
+    background: #33cd5f;
+}
+.myVipPackageDetail .row .col p{
+    color: #fff;;
+}
+/*我的订单 */
+.myOrder .row{
+    border-bottom: 1px solid #ccc;
+    padding: 0;
+}
+.myOrder .row .col{
+    text-align: center;
+    color: #666;;
+}
+.myOrder .row a.active{
+    background: #33cd5f;
+    color: #fff;
+}
+.myOrder .item-divider span{
+    line-height: 1.4rem;
+}
+.myOrder .buttons{
+    line-height: 2.5rem;
+    padding: 0 1rem;
+}
+.myOrder .buttons button{
+    top: .5rem;
+}
+/*服务评价*/
+.serviceJudge .user-info{
+    height: 8rem;
+    position: relative;
+    text-align: center;
+}
+.serviceJudge .user-info img{
+    border-radius: 2rem;
+    background: pink;
+    width: 4rem;
+    height: 4rem;
+    margin-top: 0.5rem;
+}
+.serviceJudge .right{
+    position: absolute;
+    right: 0.5rem;
+    top: 2rem;
+}
+.serviceJudge .list .row{
+    padding:1rem 0.6rem;
+    border-bottom: 1px solid #ccc;;
+}
+.serviceJudge .list .row:last-child{
+    border: 0;
+}
+.serviceJudge textarea{
+    width: 100%;
+    border: 1px solid #ccc;
+    height: 4rem;
+}
+.serviceJudge .level span i{
+    margin-right: 0.2rem;
+}
+.serviceJudge .level .active{
+    color: #ef473a;
+}
+/*诉讼详情*/
+.myLawsuitDetail .card .row{
+    padding: 1rem 0.6rem;
+    border-bottom: 1px solid #ccc;;
+}
+.myLawsuitDetail textarea{
+    width: 100%;
+    height: 4rem;
+    padding: .4rem;
+}
+.myLawsuitDetail .content{
+    border-top: 1px solid #ccc;
+    margin-top: 0.5rem;
+}
+.myLawsuitDetail .content li{
+    margin-bottom: .5rem;
+    border-bottom: 1px solid #ccc;
 }

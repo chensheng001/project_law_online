@@ -25,7 +25,7 @@ audio, video {
     outline-style:none;
     font-family: "Microsoft YaHei","sans-serif";
     -webkit-font-smoothing: antialiased;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     color: #666;
 }
 .hidden{
@@ -55,10 +55,9 @@ audio, video {
     width: 100%;
 }
 .btn-small{
-    height: 1rem;
     background: #33cd5f;
     padding: 0 0.3rem;
-    line-height: 1rem;
+    line-height: 1.5rem;
     min-height: 1.5rem;
     color: #fff;
 }
@@ -68,4 +67,30 @@ audio, video {
 }
 .padding-tb-5{
     padding: 0.5rem 0;
+}
+.bg-gray{
+    background: #f5f5f5;
+}
+.margin-b-5{
+    margin-bottom: 0.5rem;
+}
+.float-right{
+    float: right;
+}
+.label-parallelogram{
+    display: inline-block;
+    transform: skew(-20deg);
+    padding: 0 1rem;
+}
+.margin-lf-5{
+    margin: 0 0.5rem;
+}
+.item p{
+    font-size: 0.8rem;
+}
+.overflow-hidden{
+    overflow: hidden !important;
+}
+.padding-r-5{
+    padding-right: 0.5rem;
 }
