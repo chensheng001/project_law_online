@@ -1,58 +1,56 @@
 <ion-view view-title="我的资料">
     <ion-content>
-        <div class="banner hidden">
-            <img src="../static/img/myInfo.jpg" style="width: 100%">
-        </div>
-
-        <div class="card">
-            <div class="item item-divider">
-                基础信息
+        <div class="myInformation">
+            <div class="banner hidden">
+                <img src="../static/img/myInfo.jpg" style="width: 100%">
             </div>
-            <div class="item item-text-wrap">
-                <div class="item item-input item-select">
-                    <div class="input-label">
-                        性别
-                    </div>
-                    <select>
-                        <option>男</option>
-                        <option>女</option>
-                    </select>
+            <div class="card">
+                <div class="item item-divider">
+                    基础信息
                 </div>
-                <label class="item item-input">
-                    <span class="input-label">邮箱：</span>
-                    <input type="email">
-                </label>
-                <label class="item item-input">
-                    <span class="input-label">详细地址：</span>
-                    <input type="text">
-                </label>
+                <div class="item item-text-wrap">
+                    <div class="item item-input item-select">
+                        <div class="input-label">
+                            性别
+                        </div>
+                        <select>
+                            <option>男</option>
+                            <option>女</option>
+                        </select>
+                    </div>
+                    <label class="item item-input">
+                        <span class="input-label">邮箱：</span>
+                        <input type="email">
+                    </label>
+                    <label class="item item-input">
+                        <span class="input-label">详细地址：</span>
+                        <input type="text">
+                    </label>
+                </div>
+                <div class="item item-divider">
+                    详细信息
+                </div>
+                <div class="item item-text-wrap">
+                    <label class="item item-input">
+                        <span class="input-label">真实姓名：</span>
+                        <input type="email">
+                    </label>
+                    <label class="item item-input">
+                        <span class="input-label">身份证号：</span>
+                        <input type="email">
+                    </label>
+                    <label class="item item-input">
+                        <span class="input-label">职业职位：</span>
+                        <input type="text">
+                    </label>
+                </div>
+            </div>
+            <div class="col">
+                <button class="button btn-common" ng-click="updateSubmit()">
+                    确认提交
+                </button>
             </div>
         </div>
-        <div class="card">
-            <div class="item item-divider">
-                详细信息
-            </div>
-            <div class="item item-text-wrap">
-                <label class="item item-input">
-                    <span class="input-label">真实姓名：</span>
-                    <input type="email">
-                </label>
-                <label class="item item-input">
-                    <span class="input-label">身份证号：</span>
-                    <input type="email">
-                </label>
-                <label class="item item-input">
-                    <span class="input-label">职业职位：</span>
-                    <input type="text">
-                </label>
-            </div>
-        </div>
-        <div class="col">
-            <button class="button btn-common" ng-click="updateSubmit()">
-                确认提交
-            </button>
-        </div>
-
     </ion-content>
 
 </ion-view>

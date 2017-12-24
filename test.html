@@ -39,59 +39,62 @@
             margin: 0;
         }
         .item-icon-left.item-icon-right .icon:first-child {
-            font-size: 1rem;
+            font-size: 2rem;
         }
         .ion-chevron-right{
-            font-size: 0.5rem !important;
+            font-size: 1rem !important;
             color: #989797;
         }
         .user-info{
-            background: url("./static/img/photo_bg.png") no-repeat center;
+            background: url("./static/img/personal-center-bg.png") no-repeat center;
         }
         .user-info .level{
             position: absolute;
-            width: 2rem;
-            top: 1rem;
+            width: 4rem;
+            top: 2rem;
             background: #eeea49;
             text-align: left;
-            padding-left: 0.2rem;
+            padding-left: 0.4rem;
             color: #a8a045;
-            border-top-right-radius: 0.6rem;
-            line-height: 1.2rem;
-            border-bottom-right-radius: 0.6rem;
+            border-top-right-radius: 1.2rem;
+            line-height: 2.4rem;
+            border-bottom-right-radius: 1.2rem;
         }
         .user-info .name{
             margin: 1rem auto;
         }
         .user-info .name i{
-            width: 1.2rem;
-            height: 1.2rem;
-            border-radius: 0.6rem;
+            width: 2.4rem;
+            height: 2.4rem;
+            border-radius: 1.2rem;
             background: rgba(190, 193, 16, 0.38);
             color: #fff;
-            margin-left: 5px;
-            line-height: 1.2rem;
+            margin-left: 0.5rem;
+            line-height: 2.4rem;
         }
         .user-info .photo{
             margin: 0 auto;
-            width: 4rem;
-            height: 4rem;
+            width: 8rem;
+            height: 10rem;
         }
         .user-info .photo img{
-            border-radius: 2rem;
+            border-radius: 4rem;
             background: pink;
-            width: 4rem;
-            height: 4rem;
-            margin-top: 0.5rem;
+            width: 8rem;
+            height: 8rem;
+            margin-top: 1rem;
         }
         .user-info .photo input{
-            width: 6rem;height: 6rem;
-            opacity: 0.01;position: relative;
-            top: -7rem;z-index: 99
+            width: 8rem;
+            height: 8rem;
+            opacity: 0.01;
+            position: relative;
+            top: -8rem;
+            z-index: 99
         }
         .btn-group{
             background: #fff;
-            margin-bottom: 0.6rem;
+            margin-bottom: 1.2rem;
             text-align: center;
         }
         .user-info .btn-apply{
@@ -104,7 +107,7 @@
         }
         .user-info .btn-apply a i{
             color: rgba(255, 255, 255, 1);
-            margin-right: 0.2rem;
+            margin-right: 0.4rem;
         }
         .user-info .btn-apply a:first-child{
             border-right: 1px solid rgba(255, 255, 255, 0.6);
@@ -115,25 +118,28 @@
             background: #387ef5;
             color: #fff;;
         }
+        .item-divider span{
+            color: #fff;
+        }
 
         /*申请加入*/
         .uploadImg{
             position: relative;
-            height: 5rem;
+            height: 10rem;
             overflow: hidden;
         }
         .uploadImg img{
             max-width: 100%;
-            height: 5rem;
+            height: 10rem;
         }
         .uploadImg input{
             position: absolute;
             left: 0;
             top: 0;
             opacity: 0;
-            height: 5rem;
+            height: 10rem;
             z-index: 999;
-            min-width: 5rem;
+            min-width: 10rem;
         }
 
         /*充值金额*/
@@ -141,9 +147,9 @@
             display: block !important;
             border: 1px solid #ccc !important;
             text-align: center;
-            line-height: 2rem !important;
+            line-height: 4rem !important;
             color: #666 !important;
-            height: 2rem !important;
+            height: 4rem !important;
             padding: 0 !important;
             border-radius: 0 !important;
         }
@@ -152,34 +158,393 @@
         .scoreMail ul li{
             width: 48%;
             float: left;
-            min-height: 13rem;
+            min-height: 26rem;
             border: 1px solid #ddd;
             margin: 1%;
-            padding: 0.6rem;
+            padding: 1.2rem;
             position: relative;
         }
         .scoreMail img{
             max-width: 100%;
-            max-height: 8rem;
+            max-height: 16rem;
+            height: 16rem;
         }
         .scoreMail .bottom{
-            line-height: 1.5rem;
+            line-height: 3rem;
             overflow: hidden;
             position: absolute;
-            bottom: 0.6rem;
+            bottom: 1.2rem;
             width: 90%;
         }
         .scoreMail .bottom button{
             float: right;
+        }
+
+        /*我的会员套餐*/
+        .myVipPackage .item-divider span{
+            line-height: 2.8rem;
+        }
+        .myVipPackage .item-divider span:nth-child(2){
+            float: right;
+            padding: 0 2rem;
+            display: inline-block;
+            transform: skew(-20deg);
+        }
+        .myVipPackageDetail .row .col{
+            text-align: center;
+            color: #fff;
+            background: #33cd5f;
+        }
+        .myVipPackageDetail .row .col p{
+            color: #fff;;
+        }
+
+        /*我的订单 */
+        .button-bar-header{
+            border-bottom: 1px solid #ccc;
+            padding: 0;
+        }
+        .button-bar-header .col{
+            text-align: center;
+            color: #666;;
+        }
+        .button-bar-header a.active{
+            background: #33cd5f;
+            color: #fff;
+        }
+        .myOrder .item-divider span{
+            line-height: 2.8rem;
+        }
+        .myOrder .buttons{
+            line-height: 5rem;
+            padding: 0 2rem;
+        }
+        .myOrder .buttons button{
+            top: 1rem;
+        }
+
+        /*服务评价*/
+        .serviceJudge .user-info{
+            height: 16rem;
+            position: relative;
+            text-align: center;
+        }
+        .serviceJudge .user-info img{
+            border-radius: 4rem;
+            background: pink;
+            width: 8rem;
+            height: 8rem;
+            margin-top: 1rem;
+        }
+        .serviceJudge .right{
+            position: absolute;
+            right: 1rem;
+            top: 4rem;
+        }
+        .serviceJudge .list .row{
+            padding:2rem 1.2rem;
+            border-bottom: 1px solid #ccc;;
+        }
+        .serviceJudge .list .row:last-child{
+            border: 0;
+        }
+        .serviceJudge textarea{
+            width: 100%;
+            border: 1px solid #ccc;
+            height: 8rem;
+        }
+        .serviceJudge .level span i{
+            margin-right: 0.4rem;
+        }
+        .serviceJudge .level .active{
+            color: #ef473a;
+        }
+
+        /*诉讼详情*/
+        .myLawsuitDetail .card .row{
+            padding: 2rem 1.2rem;
+            border-bottom: 1px solid #ccc;;
+        }
+        .myLawsuitDetail textarea{
+            width: 100%;
+            height: 8rem;
+            padding: 1rem;
+        }
+        .myLawsuitDetail .content{
+            border-top: 1px solid #ccc;
+            margin-top: 1rem;
+        }
+        .myLawsuitDetail .content li{
+            margin-bottom: 1rem;
+            border-bottom: 1px solid #ccc;
         }
     </style>
 </head>
 
 <body ng-app="myApp" ng-controller="myCtrl">
 
-<ion-view view-title="积分商城">
+<ion-view view-title="个人中心">
     <ion-content>
-        <div class="padding scoreMail">
+
+        <div class="personalCenter hidden bg-gray">
+            <div class="user-info text-center">
+                <div class="level">
+                    LV3
+                </div>
+                <div class="photo">
+                    <img class="img-thumbnail" src="http://www.runoob.com/try/demo_source/blue-album.jpg" id="user_photo" alt="">
+                    <input onchange='angular.element(this).scope().fileChanged(this)'
+                           type="file">
+                </div>
+                <div class="name">是洞主呀<i class="fa fa-mars"></i></div>
+                <div class="row btn-apply">
+                    <a class="col "><i class="fa fa-plus-circle"></i>申请加入律师</a>
+                    <a class="col"><i class="fa fa-vcard"></i>企业机构认证</a>
+                    <a ng-if="false" class="col">企业会员名</a>
+                </div>
+            </div>
+            <div class="row btn-group">
+                <div class="col">
+                    <p><i class="fa fa-credit-card"></i></p>
+                    <p>999.00</p>
+                    <p>余额</p>
+                </div>
+                <div class="col">
+                    <p><i class="fa fa fa-dollar"></i></p>
+                    <p>666</p>
+                    <p>积分</p>
+                </div>
+            </div>
+            <div class="list list-inset">
+
+                <a class="item item-icon-left item-icon-right" href="#">
+                    <i style="color: #eb4f38" class="fa icon fa-home"></i>
+                    我的资料
+                    <i class="icon ion-chevron-right"></i>
+                </a>
+
+                <a class="item item-icon-left item-icon-right" href="#">
+                    <i style="color: #fa6fb4" class="fa icon fa-briefcase"></i>
+                    我的会员套餐
+                    <i class="icon ion-chevron-right"></i>
+                </a>
+
+                <a class="item item-icon-left item-icon-right" href="#">
+                    <i style="color: #19b5ff" class="fa icon fa-file"></i>
+                    我的订单
+                    <i class="icon ion-chevron-right"></i>
+                </a>
+
+
+                <a class="item item-icon-left item-icon-right" href="#">
+                    <i style="color: #ff9399" class="fa icon fa-bell"></i>
+                    我的诉讼
+                    <i class="icon ion-chevron-right"></i>
+                </a>
+
+                <a class="item item-icon-left item-icon-right" href="#">
+                    <i style="color: #96a0fe" class="fa icon fa-video-camera"></i>
+                    我观看过的视频
+                    <i class="icon ion-chevron-right"></i>
+                </a>
+                <a class="item item-icon-left item-icon-right" href="#">
+                    <i style="color: #19b5ff" class="fa icon fa-gift"></i>
+                    我查听过的分享
+                    <i class="icon ion-chevron-right"></i>
+                </a>
+                <a class="item item-icon-left item-icon-right" href="#">
+                    <i style="color: #fe7937" class="fa icon fa-heart"></i>
+                    我的企业互助
+                    <i class="icon ion-chevron-right"></i>
+                </a>
+                <a class="item item-icon-left item-icon-right" href="#">
+                    <i style="color: #fe9e37" class="fa icon fa-money"></i>
+                    我的钱包
+                    <i class="icon ion-chevron-right"></i>
+                </a>
+                <a class="item item-icon-left item-icon-right" href="#">
+                    <i style="color: #617be8" class="icon fa fa-external-link"></i>
+                    我的推荐
+                    <i class="icon ion-chevron-right"></i>
+                </a>
+                <a class="item item-icon-left item-icon-right" href="#">
+                    <i style="color: #c463cf" class="icon fa fa-cogs"></i>
+                    安全设置
+                    <i class="icon ion-chevron-right"></i>
+                </a>
+                <a class="item item-icon-left item-icon-right" href="#">
+                    <i style="color: #a3a3a3" class="icon fa fa-cog"></i>
+                    设置
+                    <i class="icon ion-chevron-right"></i>
+                </a>
+
+            </div>
+        </div>
+
+        <div class="applyJoinLawyer hidden">
+            <div class="list">
+                <div class="item item-input">
+                    <span class="input-label">姓名</span>
+                    <input type="text">
+                </div>
+                <div class="item item-input">
+                    <span class="input-label">手机号码</span>
+                    <input type="text">
+                </div>
+                <div class="item item-input">
+                    <span class="input-label">地区</span><!--{{detail.need.province}} - {{detail.need.city}} - {{detail.need.area}}-->
+                </div>
+                <div class="item item-input">
+                    <span class="input-label">时间</span><!--{{item.time | javaDate:'yyyy-MM-dd HH:mm:ss'}}-->
+                </div>
+                <div class="item item-input">
+                    <span class="input-label">执照号码</span>
+                    <input type="text" >
+                </div>
+                <div class="item item-input">
+                    <span class="input-label">身份证号码</span>
+                    <input type="text" >
+                </div>
+            </div>
+            <div class="row pics">
+                <div class="col col-33">
+                    <div class="uploadImg text-center">
+                        <img class="img-thumbnail" src="http://www.runoob.com/try/demo_source/blue-album.jpg"  alt="">
+                        <input onchange='angular.element(this).scope().fileChanged(this)'
+                               type="file">
+                    </div>
+                    <p class="padding text-center">律师资格证书</p>
+                </div>
+                <div class="col col-33">
+                    <div class="uploadImg text-center">
+                        <img class="img-thumbnail" src=""  alt="">
+                        <input onchange='angular.element(this).scope().fileChanged(this)'
+                               type="file">
+                    </div>
+                    <p class="padding text-center">身份证号码</p>
+                </div>
+                <div class="col col-33">
+                    <div class="uploadImg text-center">
+                        <img class="img-thumbnail" src="http://www.runoob.com/try/demo_source/blue-album.jpg"  alt="">
+                        <input onchange='angular.element(this).scope().fileChanged(this)'
+                               type="file">
+                    </div>
+                    <p class="padding text-center">本人照片</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="item item-divider">
+                    擅长领域
+                </div>
+                <div class="item item-text-wrap">
+                    <ul class="list">
+                        <li class="item item-checkbox">
+                            <label class="checkbox">
+                                <input type="checkbox" checked="">
+                            </label>
+                            离婚吧
+                        </li>
+                        <li class="item item-checkbox">
+                            <label class="checkbox">
+                                <input type="checkbox" checked="">
+                            </label>
+                            离婚吧
+                        </li>
+                        <li class="item item-checkbox">
+                            <label class="checkbox">
+                                <input type="checkbox" checked="">
+                            </label>
+                            离婚吧
+                        </li>
+                        <li class="item item-checkbox">
+                            <label class="checkbox">
+                                <input type="checkbox" checked="">
+                            </label>
+                            离婚吧
+                        </li>
+                        <li class="item item-checkbox">
+                            <label class="checkbox">
+                                <input type="checkbox">
+                            </label>
+                            离婚吧
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="padding">
+                <button class="button btn-common" ng-click="updateSubmit()">
+                    提交申请
+                </button>
+            </div>
+        </div>
+
+        <div class="orgIdentify hidden">
+            <div class="list">
+                <div class="item item-input">
+                    <span class="input-label">企业名称</span>
+                    <input type="text">
+                </div>
+                <div class="item item-input">
+                    <span class="input-label">统一社会信用编码</span>
+                    <input type="text">
+                </div>
+                <div class="item">
+                    <div><span class="input-label">企业统一社会信用编码</span></div>
+                    <div class="uploadImg">
+                        <img class="img-thumbnail" src="http://www.runoob.com/try/demo_source/blue-album.jpg"  alt="">
+                        <input onchange='angular.element(this).scope().fileChanged(this)'
+                               type="file">
+                    </div>
+                </div>
+                <div class="item item-input">
+                    <span class="input-label">创业办公地址</span>
+                    <input type="text" >
+                </div>
+                <div class="item item-input">
+                    <span class="input-label">联系人</span>
+                    <input type="text" >
+                </div>
+                <div class="item item-input">
+                    <span class="input-label">对接人职位</span>
+                    <input type="text" >
+                </div>
+                <div class="item item-input">
+                    <span class="input-label">对接人联系电话</span>
+                    <input type="text" >
+                </div>
+                <div class="item item-input">
+                    <span class="input-label">邮箱</span>
+                    <input type="email" >
+                </div>
+            </div>
+            <div class="padding">
+                <button class="button btn-common" ng-click="updateSubmit()">
+                    提交申请
+                </button>
+            </div>
+        </div>
+
+        <div class="padding recharge hidden">
+            <h2 style="padding-left: 10px;">充值金额</h2>
+            <div class="row">
+                <div class="col"><a class="btn-money">10元</a></div>
+                <div class="col"><a class="btn-money">100元</a></div>
+                <div class="col"><a class="btn-money">200元</a></div>
+                <div class="col"><a class="btn-money">500元</a></div>
+            </div>
+            <div class="row">
+                <div class="col col-25"><a class="btn-money">1000元</a></div>
+                <div class="col col-25"><a class="btn-money">2000元</a></div>
+                <div class="col col-50"><input class="btn-money width-100" placeholder="其他金额" type="number"></div>
+            </div>
+            <div class="padding">
+                <button class="button btn-common" ng-click="updateSubmit()">
+                    充值支付
+                </button>
+            </div>
+        </div>
+
+        <div class="padding scoreMail hidden">
             <ul>
                 <li>
                     <div ><img src="http://www.runoob.com/try/demo_source/blue-album.jpg"></div>
@@ -193,6 +558,373 @@
                 <li>3</li>
             </ul>
         </div>
+
+        <div class="myInformation hidden">
+            <div class="banner hidden">
+                <img src="../static/img/myInfo.jpg" style="width: 100%">
+            </div>
+            <div class="card">
+                <div class="item item-divider">
+                    基础信息
+                </div>
+                <div class="item item-text-wrap">
+                    <div class="item item-input item-select">
+                        <div class="input-label">
+                            性别
+                        </div>
+                        <select>
+                            <option>男</option>
+                            <option>女</option>
+                        </select>
+                    </div>
+                    <label class="item item-input">
+                        <span class="input-label">邮箱：</span>
+                        <input type="email">
+                    </label>
+                    <label class="item item-input">
+                        <span class="input-label">详细地址：</span>
+                        <input type="text">
+                    </label>
+                </div>
+                <div class="item item-divider">
+                    详细信息
+                </div>
+                <div class="item item-text-wrap">
+                    <label class="item item-input">
+                        <span class="input-label">真实姓名：</span>
+                        <input type="email">
+                    </label>
+                    <label class="item item-input">
+                        <span class="input-label">身份证号：</span>
+                        <input type="email">
+                    </label>
+                    <label class="item item-input">
+                        <span class="input-label">职业职位：</span>
+                        <input type="text">
+                    </label>
+                </div>
+            </div>
+            <div class="col">
+                <button class="button btn-common" ng-click="updateSubmit()">
+                    确认提交
+                </button>
+            </div>
+        </div>
+
+        <ul class="padding myVipPackage hidden">
+            <li class="card">
+                <div class="item item-divider">
+                    <span>私人法律顾问</span>
+                    <span class="energized-bg">使用中</span>
+                </div>
+                <div class="item-text-wrap">
+                    <a class="item item-avatar" href="#">
+                        <img src="http://www.runoob.com/try/demo_source/blue-album.jpg">
+                        <h2>三旬老汉</h2>
+                        <p>昆山</p>
+                        <p>执照号：xxx</p>
+                        <p class="text-right"><button class="button btn-small">查看详情</button></p>
+                    </a>
+                </div>
+            </li>
+            <li class="card">
+                <div class="item item-divider">
+                    <span>私人法律顾问</span>
+                    <span class="energized-bg">使用中</span>
+                </div>
+                <div class="item-text-wrap">
+                    <a class="item item-avatar" href="#">
+                        <img src="http://www.runoob.com/try/demo_source/blue-album.jpg">
+                        <h2>name</h2>
+                        <p>city</p>
+                        <p>执照号：xxx</p>
+                        <p class="text-right"><button class="button btn-small">查看详情</button></p>
+                    </a>
+                </div>
+            </li>
+        </ul>
+
+        <div class="list padding myVipPackageDetail hidden">
+            <div class="item item-divider">
+                套餐详情
+            </div>
+            <div class="item">
+                <h2>私人法律顾问</h2>
+                <div class="row margin-b-5">
+                    <div class="col">
+                        <p>提问咨询</p>
+                        <p>（20次）</p>
+                    </div>
+                    <div class="col" style="margin: 0 1rem">
+                        <p>电话咨询</p>
+                        <p>（20次）</p>
+                    </div>
+                    <div class="col">
+                        <p>预约律师</p>
+                        <p>（20次）</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p>文书下载</p>
+                        <p>（20次）</p>
+                    </div>
+                    <div class="col" style="margin: 0 1rem">
+                        <p>文书起草</p>
+                        <p>（20次）</p>
+                    </div>
+                    <div class="col">
+                        <p>文书审查</p>
+                        <p>（20次）</p>
+                    </div>
+                </div>
+            </div>
+            <div class="item item-divider">
+                律师详情
+            </div>
+            <a class="item item-avatar" href="#">
+                <img src="http://www.runoob.com/try/demo_source/blue-album.jpg">
+                <h2>name</h2>
+                <p>执照号：xxx</p>
+                <p>擅长领域：xxx</p>
+            </a>
+        </div>
+
+        <ul class="padding myOrder hidden">
+            <div class="row button-bar-header">
+                <a class="col active">全部</a>
+                <a class="col">待接单</a>
+                <a class="col">办理中</a>
+                <a class="col">已完成</a>
+            </div>
+            <li class="card">
+                <div class="item item-divider">
+                    <span class="energized-bg label-parallelogram">待接单</span>
+                    <span class="float-right">6000元</span>
+                </div>
+                <div class="item-text-wrap">
+                    <a class="item item-avatar" href="#">
+                        <img src="http://www.runoob.com/try/demo_source/blue-album.jpg">
+                        <h2>姓名：xxx</h2>
+                        <p>订单类型：xxx</p>
+                        <p>订单编号：xxx</p>
+                    </a>
+                    <a ng-if="Done" class="item" href="#">
+                        <p>订单类型：xxx</p>
+                        <p>订单编号：xxx</p>
+                    </a>
+                    <p class="buttons">
+                        <span>2017-11-11 11:11:11</span>
+                        <button class="button btn-small float-right ">查看详情</button>
+                    </p>
+                </div>
+            </li>
+            <li class="card">
+                <div class="item item-divider">
+                    <span class="balanced-bg label-parallelogram">已完成</span>
+                    <span class="float-right">6000元</span>
+                </div>
+                <div class="item-text-wrap">
+                    <a class="item" href="#">
+                        <p>订单类型：xxx</p>
+                        <p>订单编号：xxx</p>
+                    </a>
+                    <p class="buttons">
+                        <span>2017-11-11 11:11:11</span>
+                        <button class="button btn-small float-right ">查看详情</button>
+                    </p>
+                </div>
+            </li>
+        </ul>
+
+        <div class="serviceJudge hidden">
+            <div class="user-info">
+                <img src="http://www.runoob.com/try/demo_source/blue-album.jpg">
+                <p class="name">三旬老汉</p>
+                <div class="right">
+                    <p>签约量：666</p>
+                    <p>人气量：666</p>
+                    <p>好评量：666</p>
+                    <p>诚信量：666</p>
+                </div>
+            </div>
+            <div class="padding list">
+                <div class="row">
+                    <div class="col-25">执照号：</div>
+                    <div class="col-75">xxxxxxxxxxxxx</div>
+                </div>
+                <div class="row">
+                    <div class="col-25">擅长领域：</div>
+                    <div class="col-75">擅长领域：民事纠纷、金融协调、离婚纠纷</div>
+                </div>
+                <div class="row">
+                    <div class="col-25">评价：</div>
+                    <div class="col-75 level">
+                        <span class="active"><i class="icon ion-heart active"></i>好评(111)</span>
+                        <span class="margin-lf-5"><i class="icon ion-heart-broken"></i>一般(111)</span>
+                        <span><i class="icon ion-heart-broken"></i>较差(111)</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">详情：</div>
+                    <div class="col-75"><textarea></textarea></div>
+                </div>
+                <div class="padding">
+                    <button class="button btn-common" ng-click="updateSubmit()">
+                        确认评价
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <ul class="padding myLawsuit hidden">
+            <div class="row button-bar-header">
+                <a class="col active">全部</a>
+                <a class="col">处理中</a>
+                <a class="col">已完成</a>
+            </div>
+            <li class="card">
+                <div class="item item-divider">
+                    <span>诉讼标题xxx</span>
+                    <span class="energized-bg label-parallelogram float-right">处理中</span>
+                </div>
+                <div class="item-text-wrap">
+                    <a class="item" href="#">
+                        <p>姓名：xxx</p>
+                        <p>电话：xxx</p>
+                        <p>地点：xxx</p>
+                        <p class="text-right"><button class="button btn-small">查看详情</button></p>
+                    </a>
+                </div>
+            </li>
+            <li class="card">
+                <div class="item item-divider">
+                    <span>诉讼标题xxx</span>
+                    <span class="balanced-bg label-parallelogram float-right">已完成</span>
+                </div>
+                <div class="item-text-wrap">
+                    <a class="item" href="#">
+                        <p>姓名：xxx</p>
+                        <p>电话：xxx</p>
+                        <p>地点：xxx</p>
+                        <p class="text-right"><button class="button btn-small">查看详情</button></p>
+                    </a>
+                </div>
+            </li>
+        </ul>
+
+        <ul class="list padding myLawsuitDetail hidden">
+            <li class="card">
+                <div class="item item-divider">
+                    <span >案件详情</span>
+                    <span class="energized-bg label-parallelogram float-right">处理中</span>
+                </div>
+                <div class="item-text-wrap">
+                    <div class="row">
+                        <div class="col-25">标题：</div>
+                        <div class="col-75">xxxxxxxxxxxxx</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">姓名：</div>
+                        <div class="col-75">xxxxxxxxxxxxx</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">联系电话：</div>
+                        <div class="col-75">xxxxxxxxxxxxx</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">地址：</div>
+                        <div class="col-75">xxxxxxxxxxxxx</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">时间：</div>
+                        <div class="col-75">xxxxxxxxxxxxx</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">案件内容：</div>
+                        <div class="col-75">腾讯体育讯 北京时间12月24日，NBA常规赛继续进行，勇士在主场以81-96负于掘金，
+                            之前的11连胜宣告终结。在输掉这场比赛之后，
+                            勇士丢掉了联盟第一的宝座，本场他们在三分线外27投仅3中，在三分线外一度连打20铁。</div>
+                    </div>
+                </div>
+                <div class="item item-divider">
+                    <span >服务律师</span>
+                </div>
+                <div class="item-text-wrap">
+                    <a class="item item-avatar" href="#">
+                        <img src="http://www.runoob.com/try/demo_source/blue-album.jpg">
+                        <h2>name</h2>
+                        <p>执照号：xxx</p>
+                    </a>
+                </div>
+            </li>
+            <div class="row buttons margin-b-5">
+                <a class="col button btn-small">咨询回复</a>
+                <a class="col button btn-small margin-lf-5">电话预约律师</a>
+                <a class="col button btn-small">委托支付</a>
+            </div>
+            <div class="row buttons">
+                <a class="col button btn-small">办理进展</a>
+                <a class="col button btn-small margin-lf-5">我的资料</a>
+                <a class="col button btn-small">律师的资料</a>
+            </div>
+        </ul>
+
+        <ul class="list padding myLawsuitDetail consultReply">
+            <li class="card">
+                <div class="item item-divider">
+                    <span >案件详情</span>
+                </div>
+                <div class="item-text-wrap">
+                    <div class="row">
+                        <div class="col-25">标题：</div>
+                        <div class="col-75">xxxxxxxxxxxxx</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">姓名：</div>
+                        <div class="col-75">xxxxxxxxxxxxx</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">联系电话：</div>
+                        <div class="col-75">xxxxxxxxxxxxx</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">地址：</div>
+                        <div class="col-75">xxxxxxxxxxxxx</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">时间：</div>
+                        <div class="col-75">xxxxxxxxxxxxx</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">案件内容：</div>
+                        <div class="col-75">腾讯体育讯 北京时间12月24日，NBA常规赛继续进行，勇士在主场以81-96负于掘金，
+                            之前的11连胜宣告终结。在输掉这场比赛之后，
+                            勇士丢掉了联盟第一的宝座，本场他们在三分线外27投仅3中，在三分线外一度连打20铁。</div>
+                    </div>
+                </div>
+                <div class="item item-divider">
+                    <span >案件进展</span>
+                </div>
+                <div class="item-text-wrap">
+                    <textarea placeholder="请输入回复内容"></textarea>
+                    <p class="overflow-hidden padding-r-5">
+                        <button class="button btn-small float-right">回复</button>
+                    </p>
+                </div>
+                <ul class="content padding">
+                    <li>
+                        <p><span class="energized">我说</span><span class="float-right">2017-11-11 11:11:11</span></p>
+                        <div>通过使用 text-indent 属性，所有元素的第一行都可以缩进一个给定的长度，甚至该长度可以是负值。
+                            这个属性最常见的用途是将段落的首行缩进。</div>
+                    </li>
+                    <li>
+                        <p><span class="positive">律师说</span><span class="float-right">2017-11-11 11:11:11</span></p>
+                        <div>好玩不过嫂子</div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
     </ion-content>
 </ion-view>
 
