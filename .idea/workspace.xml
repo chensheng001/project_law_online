@@ -2,22 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3fc4986d-3e90-4362-a2a7-db79682646c6" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/law-online/personal-center/applyJoinLawyer.html" afterPath="$PROJECT_DIR$/law-online/personal-center/applyJoinLawyer.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/css/common.css" afterPath="$PROJECT_DIR$/static/css/common.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/law-online/personal-center/my-lawsuit/consultReply.html" afterPath="$PROJECT_DIR$/law-online/personal-center/my-lawsuit/consultReply.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/law-online/personal-center/my-information/my-information.html" afterPath="$PROJECT_DIR$/law-online/personal-center/my-information/my-information.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/law-online/personal-center/orgIdentify.html" afterPath="$PROJECT_DIR$/law-online/personal-center/orgIdentify.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/law-online/personal-center/recharge.html" afterPath="$PROJECT_DIR$/law-online/personal-center/recharge.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/law-online/personal-center.css" afterPath="$PROJECT_DIR$/law-online/personal-center.css" />
     </list>
-    <list id="0abd8d85-885b-4fa2-a047-e4c447421ada" name="New changelist" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.html" afterPath="$PROJECT_DIR$/test.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list id="0abd8d85-885b-4fa2-a047-e4c447421ada" name="New changelist" comment="" />
     <ignored path="project_law_online.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <file path="$PROJECT_DIR$/.idea/workspace.xml" ignored="false" />
-    <file path="$PROJECT_DIR$/test.html" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,15 +24,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="test.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="test.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.24177949">
-              <caret line="478" column="14" selection-start-line="478" selection-start-column="14" selection-end-line="478" selection-end-column="14" />
+            <state vertical-scroll-proportion="-1.6290323">
+              <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="280" selection-end-column="12" />
               <folding>
+                <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="e#529#783#0" expanded="false" />
                 <element signature="e#824#917#0" expanded="false" />
                 <element signature="e#966#1036#0" expanded="false" />
+                <element signature="n#ion-view#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#0;n#ion-content#0;n#ion-view#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#0;n#div#0;n#ion-content#0;n#ion-view#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#1;n#ion-content#0;n#ion-view#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -59,6 +51,20 @@
                 <element signature="n#ul#2;n#ion-content#0;n#ion-view#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#ul#3;n#ion-content#0;n#ion-view#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#ul#4;n#ion-content#0;n#ion-view#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="personal-center.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/law-online/personal-center.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.56836903">
+              <caret line="30" column="1" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
+              <folding>
+                <element signature="e#37#227#0" expanded="false" />
+                <element signature="e#260#321#0" expanded="false" />
+                <element signature="e#362#408#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -153,7 +159,6 @@
         <option value="$PROJECT_DIR$/law-online/personal-center/my-order/list.html" />
         <option value="$PROJECT_DIR$/law-online/personal-center/my-lawsuit/list.html" />
         <option value="$PROJECT_DIR$/law-online/personal-center/my-lawsuit/details.html" />
-        <option value="$PROJECT_DIR$/law-online/personal-center.css" />
         <option value="$PROJECT_DIR$/law-online/personal-center/applyJoinLawyer.html" />
         <option value="$PROJECT_DIR$/law-online/personal-center/orgIdentify.html" />
         <option value="$PROJECT_DIR$/law-online/personal-center/recharge.html" />
@@ -161,6 +166,7 @@
         <option value="$PROJECT_DIR$/static/css/common.css" />
         <option value="$PROJECT_DIR$/law-online/personal-center/my-lawsuit/consultReply.html" />
         <option value="$PROJECT_DIR$/test.html" />
+        <option value="$PROJECT_DIR$/law-online/personal-center.css" />
       </list>
     </option>
   </component>
@@ -613,18 +619,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/law-online/personal-center.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.5">
-          <caret line="78" column="18" selection-start-line="78" selection-start-column="18" selection-end-line="78" selection-end-column="18" />
-          <folding>
-            <element signature="e#36#226#0" expanded="false" />
-            <element signature="e#259#320#0" expanded="false" />
-            <element signature="e#361#407#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/law-online/personal-center/personal-center.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0">
@@ -764,22 +758,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/common.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.5">
-          <caret line="75" column="8" selection-start-line="75" selection-start-column="1" selection-end-line="75" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24177949">
-          <caret line="478" column="14" selection-start-line="478" selection-start-column="14" selection-end-line="478" selection-end-column="14" />
+        <state vertical-scroll-proportion="-1.6290323">
+          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="280" selection-end-column="12" />
           <folding>
+            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
             <element signature="e#529#783#0" expanded="false" />
             <element signature="e#824#917#0" expanded="false" />
             <element signature="e#966#1036#0" expanded="false" />
+            <element signature="n#ion-view#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#0;n#ion-content#0;n#ion-view#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#0;n#div#0;n#ion-content#0;n#ion-view#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#1;n#ion-content#0;n#ion-view#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -796,6 +784,26 @@
             <element signature="n#ul#2;n#ion-content#0;n#ion-view#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#ul#3;n#ion-content#0;n#ion-view#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#ul#4;n#ion-content#0;n#ion-view#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/common.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.5">
+          <caret line="75" column="8" selection-start-line="75" selection-start-column="1" selection-end-line="75" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/law-online/personal-center.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.56836903">
+          <caret line="30" column="1" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
+          <folding>
+            <element signature="e#37#227#0" expanded="false" />
+            <element signature="e#260#321#0" expanded="false" />
+            <element signature="e#362#408#0" expanded="false" />
           </folding>
         </state>
       </provider>
