@@ -48,15 +48,24 @@ audio, video {
     height: 5rem;
     z-index: 999;
 }
-.btn-common{
+.button.btn-common{
+    border-color: transparent;
+    background-color: #33cd5f;
+    color: #fff;
     width: 100%;
-    height: 2rem;
-    min-height: 2rem;
-    line-height: 2rem;
-    background: #2cd2ec;
-    font-size: 0.8rem;
+}
+.btn-small{
+    height: 1rem;
+    background: #33cd5f;
+    padding: 0 0.3rem;
+    line-height: 1rem;
+    min-height: 1.5rem;
     color: #fff;
 }
+
 .width-100{
     width: 100%;
+}
+.padding-tb-5{
+    padding: 0.5rem 0;
 }
