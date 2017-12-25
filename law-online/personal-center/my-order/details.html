@@ -1,7 +1,11 @@
 <ion-view view-title="订单详情">
+    <ion-header-bar class="bar bar-header bar-positive">
+        <h1 class="title">详情</h1>
+        <button class="button button-clear button-primary" ng-click="modal.hide()">关闭</button>
+    </ion-header-bar>
     <ion-content>
         <ul class="myOrderDetails">
-            <li class="card">
+            <li class="card margin-lr-0">
                 <div class="item item-divider">
                     <span >订单信息</span>
                     <span class="energized-bg label-parallelogram float-right">待处理</span>
@@ -14,8 +18,6 @@
                         <p>订单时间：xxx</p>
                     </a>
                 </div>
-            </li>
-            <li class="card">
                 <div class="item item-divider">
                     <span>服务律师</span>
                 </div>
@@ -26,8 +28,6 @@
                         <p>执照号：xxx</p>
                     </a>
                 </div>
-            </li>
-            <li class="card">
                 <div class="item item-divider">
                     <span>咨询详情</span>
                 </div>
@@ -48,8 +48,8 @@
             </li>
             <li class="buttons row">
                 <a class="col button btn-small">确认服务完成</a>
-                <a class="col button btn-small margin-lf-5">服务评价</a>
-                <a class="col button btn-small">撤销订单</a>
+                <a class="col button btn-small margin-lf-5 assertive-bg">服务评价</a>
+                <a class="col button btn-small energized-bg">撤销订单</a>
             </li>
         </ul>
     </ion-content>
