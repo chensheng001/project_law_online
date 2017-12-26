@@ -1,7 +1,10 @@
 
 /*最新资讯*/
+#information .list .item {
+    margin-bottom: 2rem;
+}
 #information .list .item h2{
-    font-size: 0.8rem;
+    font-size: 1.6rem;
     overflow : hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
@@ -11,12 +14,15 @@
 }
 #information .list .item .bottom{
     position: absolute;
-    bottom: 5px;
+    bottom: 0.5rem;
     width: 100%;
 }
 #information .list .item .bottom .number{
     color: #00c1e0;
-    margin-right: 5px;
+    margin-right: 0.5rem;
+}
+h2{
+    font-size: 1.6rem;
 }
 
 /*个人中心*/
@@ -104,7 +110,7 @@
     border-right: 1px solid rgba(255, 255, 255, 0.6);
 }
 
-/*我的资料*/
+/*�ҵ�����*/
 .bg-blue{
     background: #387ef5;
     color: #fff;;
@@ -116,7 +122,7 @@
     color: #fff;
 }
 
-/*申请加入*/
+/*我的资料*/
 .uploadImg{
     position: relative;
     height: 10rem;
@@ -136,7 +142,7 @@
     min-width: 10rem;
 }
 
-/*充值金额*/
+/*充值*/
 .btn-money{
     display: block !important;
     border: 1px solid #ccc !important;
@@ -186,7 +192,7 @@
     color: #fff;;
 }
 
-/*我的订单 */
+/*我的订单*/
 .button-bar a.btn-active{
     color: #33cd5f
 }
@@ -241,7 +247,7 @@
     color: #ef473a;
 }
 
-/*诉讼详情*/
+/*我的诉讼*/
 .myLawsuitDetail .card .row{
     padding: 1.6rem 1.2rem;
     border-bottom: 1px solid #ccc;;

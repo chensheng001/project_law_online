@@ -32,6 +32,12 @@ audio, video {
     font-size: 1.4rem;
     color: #666;
 }
+a{
+    text-decoration: none;
+}
+.ion-android-arrow-back{
+    color: #fff;
+}
 .hidden{
     display: none !important;
 }
@@ -58,7 +64,7 @@ audio, video {
     color: #fff;
     width: 100%;
 }
-.btn-small{
+.button.btn-small{
     background: #33cd5f;
     padding: 0 0.6rem;
     line-height: 3rem;
@@ -86,6 +92,7 @@ audio, video {
     display: inline-block;
     transform: skew(-20deg);
     padding: 0 1rem;
+    color: #fff;
 }
 .margin-lf-5{
     margin: 0 1rem;
@@ -98,4 +105,11 @@ audio, video {
 }
 .padding-r-5{
     padding-right: 1rem;
+}
+.margin-lr-0{
+    margin-left: 0;
+    margin-right: 0;
+}
+.item h2,.item{
+    font-size: 1.4rem;
 }

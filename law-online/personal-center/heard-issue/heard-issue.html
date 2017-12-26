@@ -1,0 +1,33 @@
+<ion-view view-title="我听过的问题">
+    <ion-content>
+        <ion-refresher pulling-text="下拉刷新..." on-refresh="que.doRefresh()"></ion-refresher>
+            <div class="card" ng-repeat="item in que.page.list">
+                <div ng-click="modalShow(item.id)">
+                    <div class="item item-divider">
+                        <span>问题描述</span>
+                    </div>
+                    <div class="item item-text-wrap">
+                        {{item.content}}
+                    </div>
+                    <a class="item item-avatar" href="#">
+                        <img ng-src="{{item.photoUrl}}">
+                        <h2>{{item.realName}}{{item.lawyerType}}</h2>
+                        <p>查听时间{{item.time | javaDate:'yyyy-MM-dd HH:mm:ss'}}</p>
+                    </a>
+                    <div class="item item-divider" style="line-height: 30px">
+                        <span style="float: right;">￥{{item.amount}}</span>
+                        <button class="button button-positive button-small button-outline " ng-if="item.type == 1">
+                            日常法典
+                        </button>
+                        <button class="button button-positive button-small button-outline " ng-if="item.type == 2">
+                            法聚观点
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <ion-infinite-scroll ng-if="que.page.currPage<que.page.pages" on-infinite="que.loadMore()"
+                                 distance="1%">
+            </ion-infinite-scroll>
+    </ion-content>
+
+</ion-view>
