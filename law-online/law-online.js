@@ -3229,6 +3229,23 @@ lawApp.controller('MyCtrl', function ($scope, $ionicSideMenuDelegate, $ionicModa
     .controller('myLawsuit',function($scope,$state){
         $scope.getDetails=function(){
             $state.go("myLawsuit.details");
+        };
+
+        $scope.suitProgress=[{content:"都结束了呀，老铁",date:"2017-11-11 11:11:11"},
+            {content:"都凉了呀，老铁",date:"2017-11-11 11:11:11"},
+            {content:"都结束了呀，老铁",date:"2017-11-11 11:11:11"}];
+        $scope.myDatas=[{title:"都结束了呀，老铁1",date:"2017-11-11 11:11:11",uuid:"1"},
+            {title:"都凉了呀，老铁2",date:"2017-11-11 11:11:11",uuid:"2"},
+            {title:"都结束了呀，老铁3",date:"2017-11-11 11:11:11",uuid:"3"}];
+        $scope.lawyerDatas=[{title:"都结束了呀，老铁1",date:"2017-11-11 11:11:11",uuid:"1"},
+            {title:"都凉了呀，老铁2",date:"2017-11-11 11:11:11",uuid:"2"},
+            {title:"都结束了呀，老铁3",date:"2017-11-11 11:11:11",uuid:"3"}];
+        $scope.removePic=function(item){
+            angular.forEach($scope.myDatas,function(value,index){
+                if(item.uuid==value.uuid){
+                    $scope.myDatas.splice(index,1);
+                }
+            })
         }
     })
 

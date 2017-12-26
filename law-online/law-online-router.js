@@ -179,6 +179,42 @@ angular.module('lawOnline')
                     }
                 }
             })
+            .state('myLawsuit.consignPay', {
+                url: '/consignPay',
+                views: {
+                    'myLawsuit': {
+                        templateUrl: 'personal-center/my-lawsuit/consignPay.html',
+                        controller: 'myLawsuit'
+                    }
+                }
+            })
+            .state('myLawsuit.suitProgress', {
+                url: '/suitProgress',
+                views: {
+                    'myLawsuit': {
+                        templateUrl: 'personal-center/my-lawsuit/suitProgress.html',
+                        controller: 'myLawsuit'
+                    }
+                }
+            })
+            .state('myLawsuit.myData', {
+                url: '/myData',
+                views: {
+                    'myLawsuit': {
+                        templateUrl: 'personal-center/my-lawsuit/myData.html',
+                        controller: 'myLawsuit'
+                    }
+                }
+            })
+            .state('myLawsuit.lawyerData', {
+                url: '/lawyerData',
+                views: {
+                    'myLawsuit': {
+                        templateUrl: 'personal-center/my-lawsuit/lawyerData.html',
+                        controller: 'myLawsuit'
+                    }
+                }
+            })
 
 
 
@@ -193,7 +229,6 @@ angular.module('lawOnline')
                     }
                 }
             })
-            // 列表
             .state('latestInformation.index', {
                 url: '/index',
                 views: {
