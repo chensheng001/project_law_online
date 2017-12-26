@@ -1,6 +1,18 @@
+/*登录*/
+#login .item-input i{
+    font-size: 2rem;
+    color: #387ef5;
+    margin-right: 2rem;
+}
+#login .item{
+    height: 5rem;
+}
 /*最新资讯*/
+#information .list .item {
+    margin-bottom: 2rem;
+}
 #information .list .item h2{
-    font-size: 0.8rem;
+    font-size: 1.6rem;
     overflow : hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
@@ -10,15 +22,19 @@
 }
 #information .list .item .bottom{
     position: absolute;
-    bottom: 5px;
+    bottom: 0.5rem;
     width: 100%;
 }
 #information .list .item .bottom .number{
     color: #00c1e0;
-    margin-right: 5px;
+    margin-right: 0.5rem;
+}
+h2{
+    font-size: 1.6rem;
 }
 
 /*个人中心*/
+
 .list-inset{
     margin: 0;
 }
@@ -28,59 +44,62 @@
     margin: 0;
 }
 .item-icon-left.item-icon-right .icon:first-child {
-    font-size: 1rem;
+    font-size: 2rem;
 }
 .ion-chevron-right{
-    font-size: 0.5rem !important;
+    font-size: 1rem !important;
     color: #989797;
 }
 .user-info{
-    background: url("../static/img/photo_bg.png") no-repeat center;
+    background: url("../static/img/personal-center-bg.png") no-repeat center;
 }
 .user-info .level{
     position: absolute;
-    width: 2rem;
-    top: 1rem;
+    width: 4rem;
+    top: 2rem;
     background: #eeea49;
     text-align: left;
-    padding-left: 0.2rem;
+    padding-left: 0.4rem;
     color: #a8a045;
-    border-top-right-radius: 0.6rem;
-    line-height: 1.2rem;
-    border-bottom-right-radius: 0.6rem;
+    border-top-right-radius: 1.2rem;
+    line-height: 2.4rem;
+    border-bottom-right-radius: 1.2rem;
 }
 .user-info .name{
     margin: 1rem auto;
 }
 .user-info .name i{
-    width: 1.2rem;
-    height: 1.2rem;
-    border-radius: 0.6rem;
+    width: 2.4rem;
+    height: 2.4rem;
+    border-radius: 1.2rem;
     background: rgba(190, 193, 16, 0.38);
     color: #fff;
-    margin-left: 5px;
-    line-height: 1.2rem;
+    margin-left: 0.5rem;
+    line-height: 2.4rem;
 }
 .user-info .photo{
     margin: 0 auto;
-    width: 4rem;
-    height: 4rem;
+    width: 8rem;
+    height: 10rem;
 }
 .user-info .photo img{
-    border-radius: 2rem;
+    border-radius: 4rem;
     background: pink;
-    width: 4rem;
-    height: 4rem;
-    margin-top: 0.5rem;
+    width: 8rem;
+    height: 8rem;
+    margin-top: 1rem;
 }
 .user-info .photo input{
-    width: 6rem;height: 6rem;
-    opacity: 0.01;position: relative;
-    top: -7rem;z-index: 99
+    width: 8rem;
+    height: 8rem;
+    opacity: 0.01;
+    position: relative;
+    top: -8rem;
+    z-index: 99
 }
 .btn-group{
     background: #fff;
-    margin-bottom: 0.6rem;
+    margin-bottom: 1.2rem;
     text-align: center;
 }
 .user-info .btn-apply{
@@ -93,14 +112,185 @@
 }
 .user-info .btn-apply a i{
     color: rgba(255, 255, 255, 1);
-    margin-right: 0.2rem;
+    margin-right: 0.4rem;
 }
 .user-info .btn-apply a:first-child{
     border-right: 1px solid rgba(255, 255, 255, 0.6);
 }
 
+
 /*我的资料*/
-.item-divider{
-    background: rgba(0, 193, 224, 0.56);
+.uploadImg{
+    position: relative;
+    height: 10rem;
+    overflow: hidden;
+}
+.uploadImg img{
+    max-width: 100%;
+    height: 10rem;
+}
+.uploadImg input{
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    height: 10rem;
+    z-index: 999;
+    min-width: 10rem;
+}
+
+/*充值*/
+.btn-money{
+    display: block !important;
+    border: 1px solid #ccc !important;
+    text-align: center;
+    line-height: 4rem !important;
+    color: #666 !important;
+    height: 4rem !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+}
+
+/*积分商城*/
+.scoreMail ul li{
+    width: 48%;
+    float: left;
+    min-height: 26rem;
+    border: 1px solid #ddd;
+    margin: 1%;
+    padding: 1.2rem;
+    position: relative;
+}
+.scoreMail img{
+    max-width: 100%;
+    max-height: 16rem;
+}
+.scoreMail .bottom{
+    line-height: 3rem;
+    overflow: hidden;
+    position: absolute;
+    bottom: 1.2rem;
+    width: 90%;
+}
+.scoreMail .bottom button{
+    float: right;
+}
+
+/*我的会员套餐*/
+.myVipPackage .item-divider span{
+    line-height: 2rem;
+}
+.myVipPackageDetail .row .col{
+    text-align: center;
+    color: #fff;
+    background: #33cd5f;
+}
+.myVipPackageDetail .row .col p{
     color: #fff;;
+}
+
+/*我的订单*/
+.button-bar a.btn-active{
+    color: #33cd5f
+}
+.myOrder .item-divider span{
+    line-height: 2.8rem;
+}
+.myOrder .buttons{
+    line-height: 5rem;
+    padding: 0 2rem;
+}
+.myOrder .buttons button{
+    top: 1rem;
+}
+.myOrderDetails .card p{
+    line-height: 2.8rem;
+}
+
+/*服务评价*/
+.serviceJudge .user-info{
+    height: 16rem;
+    position: relative;
+    text-align: center;
+}
+.serviceJudge .user-info img{
+    border-radius: 4rem;
+    background: pink;
+    width: 8rem;
+    height: 8rem;
+    margin-top: 1rem;
+}
+.serviceJudge .right{
+    position: absolute;
+    right: 1rem;
+    top: 4rem;
+}
+.serviceJudge .list .row{
+    padding:1.6rem 1.2rem;
+    border-bottom: 1px solid #ccc;;
+}
+.serviceJudge .list .row:last-child{
+    border: 0;
+}
+.serviceJudge textarea{
+    width: 100%;
+    border: 1px solid #ccc;
+    height: 8rem;
+}
+.serviceJudge .level span i{
+    margin-right: 0.4rem;
+}
+.serviceJudge .level .active{
+    color: #ef473a;
+}
+
+/*我的诉讼*/
+.myLawsuitDetail .card .row{
+    padding: 1.6rem 1.2rem;
+    border-bottom: 1px solid #ccc;;
+}
+.myLawsuitDetail textarea{
+    width: 100%;
+    height: 8rem;
+    padding: 1rem;
+}
+.myLawsuitDetail .content{
+    border-top: 1px solid #ccc;
+    margin-top: 1rem;
+}
+.myLawsuitDetail .content li{
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #ccc;
+}
+/*我的资料*/
+.myData li{
+    width: 48%;
+    float: left;
+    min-height: 20rem;
+    border: 1px solid #ddd;
+    margin: 1%;
+    padding: 1.2rem;
+    position: relative;
+}
+.myData li i.fa-remove{
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 2rem;
+}
+.myData li img{
+    max-width: 100%;
+    height: 10rem;
+}
+.myData .btn-upload{
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+.myData .btn-upload i{
+    font-size: 6rem;
+    color: #dddddd;
 }

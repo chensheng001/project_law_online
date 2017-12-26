@@ -5,7 +5,11 @@
       <paths name="localhost">
         <serverdata>
           <mappings>
+<<<<<<< HEAD
             <mapping local="$PROJECT_DIR$/.." web="/" />
+=======
+            <mapping local="F:/" web="/" />
+>>>>>>> 47800cfc4f1d91b5c83c2451f682e5473eb6693d
           </mappings>
         </serverdata>
       </paths>

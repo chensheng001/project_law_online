@@ -1,0 +1,56 @@
+<ion-view view-title="订单详情">
+    <ion-header-bar class="bar bar-header bar-positive">
+        <h1 class="title">详情</h1>
+        <button class="button button-clear button-primary" ng-click="modal.hide()">关闭</button>
+    </ion-header-bar>
+    <ion-content>
+        <ul class="myOrderDetails">
+            <li class="card margin-lr-0">
+                <div class="item item-divider">
+                    <span >订单信息</span>
+                    <span class="energized-bg label-parallelogram float-right">待处理</span>
+                </div>
+                <div class="item-text-wrap">
+                    <a class="item" href="#">
+                        <p>订单类型：xxx</p>
+                        <p>订单价格：xxx</p>
+                        <p>订单编号：xxx</p>
+                        <p>订单时间：xxx</p>
+                    </a>
+                </div>
+                <div class="item item-divider">
+                    <span>服务律师</span>
+                </div>
+                <div class="item-text-wrap">
+                    <a class="item item-avatar" href="#">
+                        <img src="http://www.runoob.com/try/demo_source/blue-album.jpg">
+                        <h2>name</h2>
+                        <p>执照号：xxx</p>
+                    </a>
+                </div>
+                <div class="item item-divider">
+                    <span>咨询详情</span>
+                </div>
+                <div class="item-text-wrap">
+                    <a class="item row" href="#">
+                        <p class="col-25">咨询内容：</p>
+                        <p class="col-75">xxxxxxxxxxxxxxaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+                    </a>
+                    <a class="item row" href="#">
+                        <p class="col-25">文字回复：</p>
+                        <p class="col-75">xxxxxxxxxxxxxx</p>
+                    </a>
+                    <a class="item row" href="#">
+                        <p class="col-25">语音回复：</p>
+                        <p class="col-75">xxxxxxxxxxxxxx</p>
+                    </a>
+                </div>
+            </li>
+            <li class="buttons row">
+                <a class="col button btn-small">确认服务完成</a>
+                <a ui-sref="myOrder.judge" class="col button btn-small margin-lf-5 assertive-bg">服务评价</a>
+                <a class="col button btn-small energized-bg">撤销订单</a>
+            </li>
+        </ul>
+    </ion-content>
+</ion-view>
