@@ -1,14 +1,5 @@
 <ion-view view-title="设置">
     <ion-content>
-        <div class="item item-button-right">
-            绑定微信
-            <button class="button button-stable" ng-click="bindwx()" ng-if="!user.wxOpenId">
-                <i class="icon ion-iphone"></i>
-            </button>
-            <button class="button button-balanced" ng-if="user.wxOpenId">
-                <i class="icon ion-iphone"></i>
-            </button>
-        </div>
         <div class="padding">
             <button class="button button-assertive button-block" ng-click="outLogin()">
                 退出当前账号

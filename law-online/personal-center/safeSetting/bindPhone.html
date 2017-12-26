@@ -1,0 +1,28 @@
+<ion-view view-title="绑定手机">
+    <ion-content>
+        <div class="assertive item">
+            温馨提示：绑定手机号可用于登录账号和找回账户
+        </div>
+        <div class="list" id="login">
+            <label class="item item-input">
+                <i class="fa fa-phone"></i>
+                <input type="number" placeholder="手机号码" ng-model="info.phone">
+            </label>
+            <div class="item item-input">
+                <div class="col-30">
+                    <i class="fa fa-unlock"></i>
+                </div>
+                <div class="col-30">
+                    <input placeholder="验证码" type="text" ng-model="info.code">
+                </div>
+                <div class="col-40 padding-right">
+                    <checkcode></checkcode>
+                </div>
+            </div>
+            <div class="row text-center">
+                <button class="button button-block button-assertive">确认提交</button>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
+

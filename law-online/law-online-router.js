@@ -215,6 +215,74 @@ angular.module('lawOnline')
                     }
                 }
             })
+            // 我听过的问题（个人）
+            .state('heardIssue', {
+                url: '/heardIssue',
+                views: {
+                    'main': {
+                        template: '<ion-nav-view name="heardIssue"></ion-nav-view>',
+                        abstract: true
+                    }
+                }
+            })
+            .state('heardIssue.index', {
+                url: '/index',
+                views: {
+                    'heardIssue': {
+                        templateUrl: 'personal-center/heard-issue/heard-issue.html',
+                        controller: 'heardIssue'
+                    }
+                }
+            })
+            .state('heardIssue.details', {
+                url: '/details',
+                views: {
+                    'heardIssue': {
+                        templateUrl: 'personal-center/heard-issue/heard-issue-details.html',
+                        controller: 'heardIssue'
+                    }
+                }
+            })
+            // 设置
+            .state('personalCenter.setting', {
+                url: '/setting',
+                views: {
+                    'pc': {
+                        templateUrl: 'personal-center/setting/setting.html',
+                        controller: 'personalSetting'
+                    }
+                }
+            })
+            // 安全设置
+            .state('personalCenter.safeSetting', {
+                url: '/safeSetting',
+                views: {
+                    'pc': {
+                        templateUrl: 'personal-center/safeSetting/setting.html',
+                        controller: 'personalSetting'
+                    }
+                }
+            })
+            // 绑定手机啊
+            .state('personalCenter.bindPhone', {
+                url: '/bindPhone',
+                views: {
+                    'pc': {
+                        templateUrl: 'personal-center/safeSetting/bindPhone.html',
+                        controller: 'personalSetting'
+                    }
+                }
+            })
+            // 我的推荐
+            .state('personalCenter.recommend', {
+                url: '/recommend',
+                views: {
+                    'pc': {
+                        templateUrl: 'personal-center/recommend/recommend.html',
+                        controller: 'myRecommend'
+                    }
+                }
+            })
 
 
 
@@ -275,16 +343,7 @@ angular.module('lawOnline')
                 }
             })
 
-            // 我听过的问题（个人）
-            .state('personalCenter.heardIssue', {
-                url: '/heardIssue',
-                views: {
-                    'pc': {
-                        templateUrl: 'personal-center/heard-issue/heard-issue.html',
-                        controller: 'heardIssue'
-                    }
-                }
-            })
+
             // 案件列表（个人）
             .state('personalCenter.caseList', {
                 url: '/caseList',
@@ -305,16 +364,7 @@ angular.module('lawOnline')
                     }
                 }
             })
-            // 设置（个人）
-            .state('personalCenter.setting', {
-                url: '/setting',
-                views: {
-                    'pc': {
-                        templateUrl: 'personal-center/setting/setting.html',
-                        controller: 'personalSetting'
-                    }
-                }
-            })
+
 
 
 
