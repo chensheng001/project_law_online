@@ -1,7 +1,18 @@
-
+/*登录*/
+#login .item-input i{
+    font-size: 2rem;
+    color: #387ef5;
+    margin-right: 2rem;
+}
+#login .item{
+    height: 5rem;
+}
 /*最新资讯*/
+#information .list .item {
+    margin-bottom: 2rem;
+}
 #information .list .item h2{
-    font-size: 0.8rem;
+    font-size: 1.6rem;
     overflow : hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
@@ -11,12 +22,15 @@
 }
 #information .list .item .bottom{
     position: absolute;
-    bottom: 5px;
+    bottom: 0.5rem;
     width: 100%;
 }
 #information .list .item .bottom .number{
     color: #00c1e0;
-    margin-right: 5px;
+    margin-right: 0.5rem;
+}
+h2{
+    font-size: 1.6rem;
 }
 
 /*个人中心*/
@@ -104,19 +118,8 @@
     border-right: 1px solid rgba(255, 255, 255, 0.6);
 }
 
+
 /*我的资料*/
-.bg-blue{
-    background: #387ef5;
-    color: #fff;;
-}
-.bg-blue{
-
-}
-.bg-blue span{
-    color: #fff;
-}
-
-/*申请加入*/
 .uploadImg{
     position: relative;
     height: 10rem;
@@ -136,7 +139,7 @@
     min-width: 10rem;
 }
 
-/*充值金额*/
+/*充值*/
 .btn-money{
     display: block !important;
     border: 1px solid #ccc !important;
@@ -186,7 +189,7 @@
     color: #fff;;
 }
 
-/*我的订单 */
+/*我的订单*/
 .button-bar a.btn-active{
     color: #33cd5f
 }
@@ -241,7 +244,7 @@
     color: #ef473a;
 }
 
-/*诉讼详情*/
+/*我的诉讼*/
 .myLawsuitDetail .card .row{
     padding: 1.6rem 1.2rem;
     border-bottom: 1px solid #ccc;;
@@ -258,4 +261,36 @@
 .myLawsuitDetail .content li{
     margin-bottom: 1rem;
     border-bottom: 1px solid #ccc;
+}
+/*我的资料*/
+.myData li{
+    width: 48%;
+    float: left;
+    min-height: 20rem;
+    border: 1px solid #ddd;
+    margin: 1%;
+    padding: 1.2rem;
+    position: relative;
+}
+.myData li i.fa-remove{
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 2rem;
+}
+.myData li img{
+    max-width: 100%;
+    height: 10rem;
+}
+.myData .btn-upload{
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+.myData .btn-upload i{
+    font-size: 6rem;
+    color: #dddddd;
 }

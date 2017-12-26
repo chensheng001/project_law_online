@@ -1,14 +1,16 @@
 <ion-view view-title="最新资讯">
-    <div class="content " id="information">
-        <ul class="list">
-            <li class="item item-thumbnail-right" href="#" ng-repeat="item in informations">
-                <img src="http://www.runoob.com/try/demo_source/blue-album.jpg">
-                <h2>{{item.name}}</h2>
-                <p class="bottom">
-                    <span>{{item.date}}</span>
-                    <span class="col-offset-10"><i class="number">{{item.person}}</i>已浏览</span>
-                </p>
-            </li>
-        </ul>
-    </div>
+    <ion-content>
+        <div class="content padding" id="information">
+            <ul class="list">
+                <li class="item item-thumbnail-right" ng-click="getDetails()" ng-repeat="item in list">
+                    <img src="http://www.runoob.com/try/demo_source/blue-album.jpg">
+                    <h2>{{item.title}}</h2>
+                    <p class="bottom">
+                        <span>{{item.date}}</span>
+                        <span class="col-offset-10"><i class="number">{{item.person}}</i>已浏览</span>
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </ion-content>
 </ion-view>

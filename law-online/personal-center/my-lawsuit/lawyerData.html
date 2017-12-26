@@ -1,0 +1,23 @@
+<ion-view view-title="律师的资料">
+    <ion-content>
+        <ul class="myData">
+            <li ng-repeat="item in lawyerDatas">
+                <div ><img src="http://www.runoob.com/try/demo_source/blue-album.jpg"></div>
+                <h2 class="text-center">{{item.title}}</h2>
+                <div class="text-center">{{item.date}}</div>
+            </li>
+        </ul>
+        <div class="row">
+            <div class="col">
+                <button class="button  button-block button-balanced" ng-click="get()">
+                    获取诉讼方案
+                </button>
+            </div>
+            <div class="col">
+                <button class="button  button-block button-positive" ng-click="get()">
+                    获取上诉方案
+                </button>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

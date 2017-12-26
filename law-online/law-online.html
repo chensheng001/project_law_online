@@ -4,9 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
     <title>法律在线</title>
-    <link href="../ionic-v1-master/ionic-v1-master/release/css/ionic.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/ionic/1.3.2/css/ionic.css" rel="stylesheet">
+    <link href="../static/css/font-awesome.css" rel="stylesheet">
     <link href="personal-center.css" rel="stylesheet">
-    <script src="../ionic-v1-master/ionic-v1-master/release/js/ionic.bundle.js"></script>
+    <link href="../static/css/common.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/ionic/1.3.2/js/ionic.bundle.min.js"></script>
     <script src="law-online.js"></script>
     <script src="law-online-router.js"></script>
     <script src="law-online-service.js"></script>
@@ -37,12 +39,10 @@
 
     <!--图标文件-->
     <link rel="stylesheet" href="//at.alicdn.com/t/font_291853_5gp8apz83g0evcxr.css">
-    <!--maincss-->
-    <link rel="stylesheet" href="../static/css/law-main.css">
 
 </head>
 <body ng-controller="MyCtrl">
-<ion-nav-bar class="bar-balanced">
+<ion-nav-bar class="bar-dark">
     <ion-nav-buttons side="left">
         <div ng-include="'citySelect.html'" ng-if="isShowCitySelect"></div>
     </ion-nav-buttons>
@@ -82,6 +82,15 @@
                         <i class="ion ion-help"></i>
                         预约咨询
                     </a>
+                    <a class="item" menu-close ui-sref="personalCenter.index">
+                        <i class="ion ion-help"></i>
+                        登录中心
+                    </a>
+                    <a class="item" menu-close ui-sref="latestInformation.index">
+                        <i class="ion ion-help"></i>
+                        最新资讯
+                    </a>
+
                     <a class="item" menu-close ui-sref="share.daily">
                         <i class="ion ion-share"></i>
                         精选分享
@@ -141,8 +150,3 @@
 
 </body>
 </html>
-<style>
-    .bar-balanced {
-        border: none;
-    }
-</style>

@@ -1,17 +1,21 @@
 <ion-view view-title="个人登录">
     <ion-content>
-        <div class="list">
+        <div class="list" id="login">
             <label class="item item-input">
-                <span style="color:red;">*&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                <i class="fa fa-phone"></i>
                 <input type="number" placeholder="手机号码" ng-model="$parent.mobile">
             </label>
-            <label class="item item-input">
-                <span style="color:red;">*&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                <input type="password" placeholder="密码" ng-model="$parent.password">
-            </label>
-            <label class="item item-input">
-                <input type="text" placeholder="补填推荐人账号" ng-model="$parent.recommMobile">
-            </label>
+            <div class="item item-input">
+                <div class="col-30">
+                    <i class="fa fa-unlock"></i>
+                </div>
+                <div class="col-30">
+                    <input placeholder="验证码" type="text" ng-model="info.code">
+                </div>
+                <div class="col-40 padding-right">
+                    <checkcode></checkcode>
+                </div>
+            </div>
             <div class="item item-toggle">
                 我已阅读并同意
                 <a class="assertive" href ng-click="modal.show()" style="pointer-events: auto">《电子合同条款》</a>
@@ -24,20 +28,13 @@
             </div>
             <div class="row">
                 <div class="col">
-                    <button class="button button-block button-balanced" ng-click="login()">
-                        登录
-                    </button>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <button class="button button-small button-block button-balanced" ng-click="wxLogin()">
+                    <button class="button  button-block button-balanced" ng-click="wxLogin()">
                         微信快捷登录
                     </button>
                 </div>
                 <div class="col">
-                    <button class="button button-small button-block button-positive" ui-sref="lawyerCenter.login">
-                        律师登录
+                    <button class="button  button-block button-positive" ui-sref="lawyerCenter.login">
+                        登录
                     </button>
                 </div>
             </div>
