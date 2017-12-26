@@ -2,15 +2,19 @@
 /* css reset*/
 /*初始化*/
 html{
-    font-size: 125%
+    font-size: 62.5%
 }
 @media only screen and (min-width: 561px){
     html {
-        font-size: 150%!important;
+        font-size: 75%!important;
     }
 }
-body, div, span, object, iframe,h1, h2,
-h3, h4, h5, h6, p, blockquote, pre,abbr, address, cite, code,del, dfn,
+@media only screen and (max-width: 350px){
+    html {
+        font-size: 50%!important;
+    }
+}
+body, div, span, object, iframe, p, blockquote, pre,abbr, address, cite, code,del, dfn,
 em, img, ins,kbd, q, samp,small, strong, sub, sup, var,b, i,dl, dt, dd,
 ol, ul, li,fieldset, form, label, legend,table, caption, tbody,
 tfoot,thead,tr, th, td,article, aside, canvas, details, figcaption,
@@ -25,8 +29,8 @@ audio, video {
     outline-style:none;
     font-family: "Microsoft YaHei","sans-serif";
     -webkit-font-smoothing: antialiased;
-    font-size: 0.7rem;
-    color: #666;
+    font-size: 1.4rem;
+    color: #101010;
 }
 .hidden{
     display: none !important;
