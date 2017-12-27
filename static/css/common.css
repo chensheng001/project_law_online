@@ -113,3 +113,6 @@ a{
 .item h2,.item{
     font-size: 1.4rem;
 }
+.margin-auto{
+    margin: 0 auto;
+}
