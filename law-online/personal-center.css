@@ -47,8 +47,16 @@ h2{
     font-size: 2rem;
 }
 .ion-chevron-right{
-    font-size: 1rem !important;
     color: #989797;
+}
+#personalCenter .ion-chevron-right{
+    font-size: 1rem;
+}
+.icon-sm-size{
+    font-size: 1rem !important;
+}
+#personalCenter{
+    background: #ddd;
 }
 .user-info{
     background: url("../static/img/personal-center-bg.png") no-repeat center;
@@ -293,4 +301,13 @@ h2{
 .myData .btn-upload i{
     font-size: 6rem;
     color: #dddddd;
+}
+/*我的钱包*/
+#myMoney ul li.item{
+    position: relative;
+}
+#myMoney ul li.item span{
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
 }

@@ -1,0 +1,19 @@
+<ion-view view-title="我的钱包">
+    <ion-content>
+        <div id="myMoney">
+            <div class="item item-button-right">
+                当前余额：{{cash}}
+                <a ui-sref="personalCenter.withdraw" class="button btn-small">
+                    我要提现
+                </a>
+            </div>
+            <ul class="list">
+                <li class="item" ng-repeat="i in list">
+                    <h2>{{i.title}}</h2>
+                    <p>{{i.date}}</p>
+                    <span>{{i.money}}</span>
+                </li>
+            </ul>
+        </div>
+    </ion-content>
+</ion-view>

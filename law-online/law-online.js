@@ -324,7 +324,31 @@ lawApp.controller('MyCtrl', function ($scope, $ionicSideMenuDelegate, $ionicModa
     .controller('myRecommend',function($scope,$state){
         $scope.list=[{date:"2017-11-11",name:"闪电侠"},{date:"2017-11-11",name:"闪电侠"}]
     })
+    //我的钱包
+    .controller('myMoney',function($scope,$state){
+        $scope.cash=5000000;
+        $scope.list=[{title:"体现",date:"2017-11-11",money:"+13元"},
+            {title:"体现",date:"2017-11-11",money:"+13元"}];
+        $scope.listType=["支付宝","银行卡"];
 
+        //切换体现方式
+        $scope.byType1=true;
+        $scope.byType2=false;
+        $scope.Type1=function(){
+            $scope.byType1=true;
+            $scope.byType2=false;
+        };
+        $scope.Type2=function(){
+            $scope.byType1=false;
+            $scope.byType2=true;
+        }
+    })
+    //我的企业互助
+    .controller('myEnterpriseHelp',function($scope,$state){
+        $scope.myProductList=function(){
+            $state.go("personalCenter.ProductList");
+        }
+    })
 ;
 
 
