@@ -39,7 +39,10 @@
             height: 160px;
         }
         .textSize-14{
-            font-size: 14px !important;
+            font-size: 1.4rem !important;
+        }
+        .textSize-20{
+            font-size: 2rem !important;
         }
         .border-radius-5{
             border-radius: 5px !important;
@@ -63,3 +66,20 @@
             padding: 2px 5px;
             margin-bottom: 5px;
         }
+        /*会员活动*/
+        .vip-activity-list li.list{
+            padding-bottom: 0px;
+            margin-bottom: 0px;
+        }
+        /*普法视频*/
+        /*.law-video-list>.list>.item{
+            border-bottom: none;
+            padding-bottom: 5px;
+        }
+        .law-video-list>.list .list-bottom{
+            width: 90%;
+            margin:0 auto;
+            padding: 0 20px;
+            border-top: 2px solid #ddd;
+        }
+*/
