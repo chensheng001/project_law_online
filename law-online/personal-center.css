@@ -136,6 +136,7 @@ h2{
 .uploadImg img{
     max-width: 100%;
     height: 10rem;
+    width: 10rem;
 }
 .uploadImg input{
     position: absolute;
@@ -144,7 +145,7 @@ h2{
     opacity: 0;
     height: 10rem;
     z-index: 999;
-    min-width: 10rem;
+    width: 10rem;
 }
 
 /*充值*/
@@ -310,4 +311,9 @@ h2{
     position: absolute;
     right: 2rem;
     top: 2rem;
+}
+
+/*我的企业互助*/
+.addProduct textarea,.applyAccess textarea{
+    height: 6rem;
 }

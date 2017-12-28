@@ -243,6 +243,43 @@ angular.module('lawOnline')
                     }
                 }
             })
+            //我观看过的视频
+            .state('watchedIssue', {
+                url: '/watchedIssue',
+                views: {
+                    'main': {
+                        template: '<ion-nav-view name="watchedIssue"></ion-nav-view>',
+                        abstract: true
+                    }
+                }
+            })
+            .state('watchedIssue.index', {
+                url: '/index',
+                views: {
+                    'watchedIssue': {
+                        templateUrl: 'personal-center/watched-issue/list.html',
+                        controller: 'watchedIssue'
+                    }
+                }
+            })
+            .state('watchedIssue.details', {
+                url: '/details',
+                views: {
+                    'watchedIssue': {
+                        templateUrl: 'personal-center/watched-issue/details.html',
+                        controller: 'watchedIssue'
+                    }
+                }
+            })
+            .state('watchedIssue.comment', {
+                url: '/comment',
+                views: {
+                    'watchedIssue': {
+                        templateUrl: 'personal-center/watched-issue/commentEdit.html',
+                        controller: 'watchedIssue'
+                    }
+                }
+            })
             // 设置
             .state('personalCenter.setting', {
                 url: '/setting',
@@ -310,6 +347,15 @@ angular.module('lawOnline')
                 views: {
                     'pc': {
                         templateUrl: 'personal-center/myEnterpriseHelp/index.html',
+                        controller: 'myEnterpriseHelp'
+                    }
+                }
+            })
+            .state('personalCenter.applyAccess', {
+                url: '/applyAccess',
+                views: {
+                    'pc': {
+                        templateUrl: 'personal-center/myEnterpriseHelp/applyAccess.html',
                         controller: 'myEnterpriseHelp'
                     }
                 }

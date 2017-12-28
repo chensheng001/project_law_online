@@ -314,6 +314,11 @@ lawApp.controller('MyCtrl', function ($scope, $ionicSideMenuDelegate, $ionicModa
         $scope.list=[{content:"wwww",name:"jjj",address:"dddd",license_no:"110",listen_num:55}];
         $scope.detail={content:"wwww",name:"jjj",address:"dddd",license_no:"110",listen_num:55,reply:'哈哈哈'};
     })
+    //我查看过的视频
+    .controller('watchedIssue',function($scope,$state){
+        $scope.list=[{content:"wwww",name:"jjj",address:"dddd",license_no:"110",listen_num:55}];
+        $scope.detail={content:"wwww",name:"jjj",address:"dddd",license_no:"110",listen_num:55,reply:'哈哈哈'};
+    })
     //设置、安全设置
     .controller('personalSetting',function($scope,$state){
         $scope.bindPhone=function(){
@@ -348,6 +353,11 @@ lawApp.controller('MyCtrl', function ($scope, $ionicSideMenuDelegate, $ionicModa
         $scope.myProductList=function(){
             $state.go("personalCenter.ProductList");
         }
+        $scope.applyAccess=function(){
+            $state.go("personalCenter.applyAccess");
+        }
+        $scope.list=["企业注册","企业管理","财税服务"]
+        $scope.a=22;
     })
 ;
 
