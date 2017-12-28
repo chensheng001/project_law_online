@@ -1,0 +1,43 @@
+<ion-view view-title="我要提现">
+    <ion-content>
+        <div id="withdraw">
+            <div class="list">
+                <p class="item item-input"><span class="input-label">当前余额：</span>{{cash}} </p>
+                <p style="padding: 0" class="item">
+                    <label class="item item-input">
+                        <span class="input-label">体现金额：</span>
+                        <input type="number">
+                    </label>
+                </p>
+                <p class="item item-input">
+                    <span class="input-label">打款方式：</span>
+                    <span style="margin-right: 2rem" ng-click="Type1()"><i class="fa fa-cny"></i>支付宝</span>
+                    <span ng-click="Type2()"><i class="fa fa-credit-card"></i>银行卡</span>
+                </p>
+                <p class="item" ng-if="byType1">
+                    <label class="item item-input">
+                        <span class="input-label">支付宝账号：</span>
+                        <input type="number">
+                    </label>
+                    <label class="item item-input">
+                        <span class="input-label">支付宝姓名：</span>
+                        <input type="text">
+                    </label>
+                </p>
+                <p class="item" ng-if="byType2">
+                    <label class="item item-input">
+                        <span class="input-label">银行卡账号：</span>
+                        <input type="number">
+                    </label>
+                    <label class="item item-input">
+                        <span class="input-label">银行卡姓名：</span>
+                        <input type="text">
+                    </label>
+                </p>
+                <div class="text-center padding" style="margin-top: 1rem">
+                    <button class="button button-block button-assertive">提交申请</button>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

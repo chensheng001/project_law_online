@@ -283,6 +283,67 @@ angular.module('lawOnline')
                     }
                 }
             })
+            // 我的钱包
+            .state('personalCenter.myMoney', {
+                url: '/myMoney',
+                views: {
+                    'pc': {
+                        templateUrl: 'personal-center/myMoney/list.html',
+                        controller: 'myMoney'
+                    }
+                }
+            })
+            // 我的提现
+            .state('personalCenter.withdraw', {
+                url: '/withdraw',
+                views: {
+                    'pc': {
+                        templateUrl: 'personal-center/myMoney/withdraw.html',
+                        controller: 'myMoney'
+                    }
+                }
+            })
+
+            // 我的企业互助
+            .state('personalCenter.myEnterpriseHelp', {
+                url: '/myEnterpriseHelp',
+                views: {
+                    'pc': {
+                        templateUrl: 'personal-center/myEnterpriseHelp/index.html',
+                        controller: 'myEnterpriseHelp'
+                    }
+                }
+            })
+            // 产品列表
+            .state('personalCenter.ProductList', {
+                url: '/ProductList',
+                views: {
+                    'pc': {
+                        templateUrl: 'personal-center/myEnterpriseHelp/ProductList.html',
+                        controller: 'myEnterpriseHelp'
+                    }
+                }
+            })
+            // 产品详情
+            .state('personalCenter.productDetails', {
+                url: '/productDetails',
+                views: {
+                    'pc': {
+                        templateUrl: 'personal-center/myEnterpriseHelp/productDetails.html',
+                        controller: 'myEnterpriseHelp'
+                    }
+                }
+            })
+            // 添加产品
+            .state('personalCenter.addProduct', {
+                url: '/addProduct',
+                views: {
+                    'pc': {
+                        templateUrl: 'personal-center/myEnterpriseHelp/addProduct.html',
+                        controller: 'myEnterpriseHelp'
+                    }
+                }
+            })
 
 
 
