@@ -31,3 +31,10 @@ vipApp.controller('MyCtrl', ['$scope','$state','$ionicSideMenuDelegate',
 .controller('activityInfoCtrl', ['$scope','$state',function ($scope,$state) {}])
 
 .controller('lawVideoCtrl', ['$scope','$state',function ($scope,$state) {}])
+.controller('lawVideoInfoCtrl', ['$scope','$state',function ($scope,$state) {}])
+.controller('lawVideoCommentCtrl', ['$scope','$state',function ($scope,$state) {}])
+
+.controller('bbsCtrl', ['$scope','$state',function ($scope,$state) {}])
+.controller('bbsListCtrl', ['$scope','$state',function ($scope,$state) {}])
+.controller('bbsListInfoCtrl', ['$scope','$state',function ($scope,$state) {}])
+.controller('bbsListInfoCommentCtrl', ['$scope','$state',function ($scope,$state) {}])

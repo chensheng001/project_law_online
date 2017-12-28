@@ -20,6 +20,9 @@
         .color-666{
             color: #666 !important;
         }
+        .color-b3{
+            color: #b3b3b3 !important;
+        }
 
         .ellipsis-text{
             overflow: hidden;
@@ -72,14 +75,12 @@
             margin-bottom: 0px;
         }
         /*普法视频*/
-        /*.law-video-list>.list>.item{
-            border-bottom: none;
-            padding-bottom: 5px;
+        /*会员论坛*/
+        .vip-bbs-list .tag{
+            line-height: 5rem;
         }
-        .law-video-list>.list .list-bottom{
-            width: 90%;
-            margin:0 auto;
-            padding: 0 20px;
-            border-top: 2px solid #ddd;
+        .vip-bbs-list img{
+            vertical-align: middle;
         }
-*/
+       
+

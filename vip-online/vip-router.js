@@ -48,7 +48,7 @@ angular.module('vipApp')
                 url: '/agentAccountEdit',
                 views: {
                     'pc': {
-                        templateUrl: 'mutual-assistance-of-enterprises/agentAccountEdit.html',
+                        templateUrl: 'mutual-assistance-of-enterprises/commentEdit.html',
                         controller: 'agentAccountEditCtrl'
                     }
                 }
@@ -84,6 +84,66 @@ angular.module('vipApp')
                     }
                 }
             })
+            .state('vip.lawVideoInfo',{
+                url: '/lawVideoInfo',
+                views: {
+                    'pc': {
+                        templateUrl: 'law-video/info.html',
+                        controller: 'lawVideoInfoCtrl'
+                    }
+                }
+            })
+            .state('vip.lawVideoComment',{
+                url: '/lawVideoComment',
+                views: {
+                    'pc': {
+                        templateUrl: 'law-video/commentEdit.html',
+                        controller: 'lawVideoCommentCtrl'
+                    }
+                }
+            })
+
+            // 会员论坛
+            .state('vip.bbs',{
+                url: '/bbs',
+                views: {
+                    'pc': {
+                        templateUrl: 'vip-bbs/homepage.html',
+                        controller: 'bbsCtrl'
+                    }
+                }
+            })
+            .state('vip.bbsList',{
+                url: '/bbsList',
+                views: {
+                    'pc': {
+                        templateUrl: 'vip-bbs/bbsList.html',
+                        controller: 'bbsListCtrl'
+                    }
+                }
+            })
+            .state('vip.bbsListInfo',{
+                url: '/bbsListInfo',
+                views: {
+                    'pc': {
+                        templateUrl: 'vip-bbs/bbsListInfo.html',
+                        controller: 'bbsListInfoCtrl'
+                    }
+                }
+            })
+            .state('vip.bbsListInfoComment',{
+                url: '/bbsListInfoComment',
+                views: {
+                    'pc': {
+                        templateUrl: 'vip-bbs/CommentEdit.html',
+                        controller: 'bbsListInfoCommentCtrl'
+                    }
+                }
+            })
+
+
+
+
 
 
     });
