@@ -1,0 +1,19 @@
+<ion-view view-title="我的推荐">
+    <ion-content>
+        <div class="pic item">
+            <p class="text-center"><img style="max-width: 60%" src="../static/img/becomeMember.jpg"></p>
+            <h2 class="text-center">我的二维码</h2>
+        </div>
+        <ul>
+            <li class="row item">
+                <h2 class="col text-center">推荐时间</h2>
+                <h2 class="col text-center">推荐人</h2>
+            </li>
+            <li class="row" ng-repeat="item in list">
+                <div class="col text-center">{{item.date}}</div>
+                <div class="col text-center">{{item.name}}</div>
+            </li>
+        </ul>
+    </ion-content>
+</ion-view>
+

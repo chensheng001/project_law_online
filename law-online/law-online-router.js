@@ -215,6 +215,181 @@ angular.module('lawOnline')
                     }
                 }
             })
+            // 我听过的问题（个人）
+            .state('heardIssue', {
+                url: '/heardIssue',
+                views: {
+                    'main': {
+                        template: '<ion-nav-view name="heardIssue"></ion-nav-view>',
+                        abstract: true
+                    }
+                }
+            })
+            .state('heardIssue.index', {
+                url: '/index',
+                views: {
+                    'heardIssue': {
+                        templateUrl: 'personal-center/heard-issue/heard-issue.html',
+                        controller: 'heardIssue'
+                    }
+                }
+            })
+            .state('heardIssue.details', {
+                url: '/details',
+                views: {
+                    'heardIssue': {
+                        templateUrl: 'personal-center/heard-issue/heard-issue-details.html',
+                        controller: 'heardIssue'
+                    }
+                }
+            })
+            //我观看过的视频
+            .state('watchedIssue', {
+                url: '/watchedIssue',
+                views: {
+                    'main': {
+                        template: '<ion-nav-view name="watchedIssue"></ion-nav-view>',
+                        abstract: true
+                    }
+                }
+            })
+            .state('watchedIssue.index', {
+                url: '/index',
+                views: {
+                    'watchedIssue': {
+                        templateUrl: 'personal-center/watched-issue/list.html',
+                        controller: 'watchedIssue'
+                    }
+                }
+            })
+            .state('watchedIssue.details', {
+                url: '/details',
+                views: {
+                    'watchedIssue': {
+                        templateUrl: 'personal-center/watched-issue/details.html',
+                        controller: 'watchedIssue'
+                    }
+                }
+            })
+            .state('watchedIssue.comment', {
+                url: '/comment',
+                views: {
+                    'watchedIssue': {
+                        templateUrl: 'personal-center/watched-issue/commentEdit.html',
+                        controller: 'watchedIssue'
+                    }
+                }
+            })
+            // 设置
+            .state('personalCenter.setting', {
+                url: '/setting',
+                views: {
+                    'pc': {
+                        templateUrl: 'personal-center/setting/setting.html',
+                        controller: 'personalSetting'
+                    }
+                }
+            })
+            // 安全设置
+            .state('personalCenter.safeSetting', {
+                url: '/safeSetting',
+                views: {
+                    'pc': {
+                        templateUrl: 'personal-center/safeSetting/setting.html',
+                        controller: 'personalSetting'
+                    }
+                }
+            })
+            // 绑定手机啊
+            .state('personalCenter.bindPhone', {
+                url: '/bindPhone',
+                views: {
+                    'pc': {
+                        templateUrl: 'personal-center/safeSetting/bindPhone.html',
+                        controller: 'personalSetting'
+                    }
+                }
+            })
+            // 我的推荐
+            .state('personalCenter.recommend', {
+                url: '/recommend',
+                views: {
+                    'pc': {
+                        templateUrl: 'personal-center/recommend/recommend.html',
+                        controller: 'myRecommend'
+                    }
+                }
+            })
+            // 我的钱包
+            .state('personalCenter.myMoney', {
+                url: '/myMoney',
+                views: {
+                    'pc': {
+                        templateUrl: 'personal-center/myMoney/list.html',
+                        controller: 'myMoney'
+                    }
+                }
+            })
+            // 我的提现
+            .state('personalCenter.withdraw', {
+                url: '/withdraw',
+                views: {
+                    'pc': {
+                        templateUrl: 'personal-center/myMoney/withdraw.html',
+                        controller: 'myMoney'
+                    }
+                }
+            })
+
+            // 我的企业互助
+            .state('personalCenter.myEnterpriseHelp', {
+                url: '/myEnterpriseHelp',
+                views: {
+                    'pc': {
+                        templateUrl: 'personal-center/myEnterpriseHelp/index.html',
+                        controller: 'myEnterpriseHelp'
+                    }
+                }
+            })
+            .state('personalCenter.applyAccess', {
+                url: '/applyAccess',
+                views: {
+                    'pc': {
+                        templateUrl: 'personal-center/myEnterpriseHelp/applyAccess.html',
+                        controller: 'myEnterpriseHelp'
+                    }
+                }
+            })
+            // 产品列表
+            .state('personalCenter.ProductList', {
+                url: '/ProductList',
+                views: {
+                    'pc': {
+                        templateUrl: 'personal-center/myEnterpriseHelp/ProductList.html',
+                        controller: 'myEnterpriseHelp'
+                    }
+                }
+            })
+            // 产品详情
+            .state('personalCenter.productDetails', {
+                url: '/productDetails',
+                views: {
+                    'pc': {
+                        templateUrl: 'personal-center/myEnterpriseHelp/productDetails.html',
+                        controller: 'myEnterpriseHelp'
+                    }
+                }
+            })
+            // 添加产品
+            .state('personalCenter.addProduct', {
+                url: '/addProduct',
+                views: {
+                    'pc': {
+                        templateUrl: 'personal-center/myEnterpriseHelp/addProduct.html',
+                        controller: 'myEnterpriseHelp'
+                    }
+                }
+            })
 
 
 
@@ -275,16 +450,7 @@ angular.module('lawOnline')
                 }
             })
 
-            // 我听过的问题（个人）
-            .state('personalCenter.heardIssue', {
-                url: '/heardIssue',
-                views: {
-                    'pc': {
-                        templateUrl: 'personal-center/heard-issue/heard-issue.html',
-                        controller: 'heardIssue'
-                    }
-                }
-            })
+
             // 案件列表（个人）
             .state('personalCenter.caseList', {
                 url: '/caseList',
@@ -305,16 +471,7 @@ angular.module('lawOnline')
                     }
                 }
             })
-            // 设置（个人）
-            .state('personalCenter.setting', {
-                url: '/setting',
-                views: {
-                    'pc': {
-                        templateUrl: 'personal-center/setting/setting.html',
-                        controller: 'personalSetting'
-                    }
-                }
-            })
+
 
 
 

@@ -1,0 +1,86 @@
+/*最新资讯*/
+
+
+        /*vip*/
+        .margin-0{
+            margin: 0px !important;
+        }
+        .margin-bottom-0{
+            margin-bottom: 0px !important;
+        }
+        .padding-0{
+            padding: 0;
+        }
+        .fl{
+            float: left;
+        }
+        .fr{
+            float: right;
+        }
+        .color-666{
+            color: #666 !important;
+        }
+        .color-b3{
+            color: #b3b3b3 !important;
+        }
+
+        .ellipsis-text{
+            overflow: hidden;
+            text-overflow: ellipsis;
+            /*display: -webkit-box;*/
+            /*-webkit-line-clamp:1;*/
+            /*-webkit-box-orient:vertical;*/
+            white-space: normal;
+        }
+        .not-white-space{
+            white-space:normal !important;
+        }
+        ._timeText91{
+            color: #919191 !important;
+        }
+        .vip-slider-box{
+            height: 160px;
+        }
+        .textSize-14{
+            font-size: 1.4rem !important;
+        }
+        .textSize-20{
+            font-size: 2rem !important;
+        }
+        .border-radius-5{
+            border-radius: 5px !important;
+        }
+        .small-item{
+            padding: 5px 10px !important;
+        }
+        /* 企业互助*/
+        .classification_title{
+            border-bottom: 1px dotted #999;
+            margin-bottom: 5px;
+        }
+        
+        .agent-accout-list .item-box:not(:nth-child(2)){
+            margin-top: 5px;
+        }
+
+        .vip-activity-info input{
+            width: 100%;
+            border: 1px solid #ddd;
+            padding: 2px 5px;
+            margin-bottom: 5px;
+        }
+        /*会员活动*/
+        .vip-activity-list li.list{
+            padding-bottom: 0px;
+            margin-bottom: 0px;
+        }
+        /*普法视频*/
+        /*会员论坛*/
+        .vip-bbs-list .tag{
+            line-height: 5rem;
+        }
+        .vip-bbs-list img{
+            vertical-align: middle;
+        }
+       
+

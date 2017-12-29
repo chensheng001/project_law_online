@@ -1,0 +1,62 @@
+<ion-view view-title="论坛详情">
+    <ion-content>
+        <h2 class="textSize-20 text-center" style="margin-top: 10px">我要离婚</h2>
+
+        <div class="card list vip-bbsListInfo-card">
+          <div class="item item-avatar">
+            <img src="../static/img/portrait.jpg">
+            <p>发帖人：叭叭叭粑粑</p>
+            <p>时间：2018-1-1</p>
+          </div>
+          <div class="item item-body">
+            <p>如果你无法简洁的表达你的想法，那只说明你还不够了解它。</p>
+            <p>  -- 阿尔伯特·爱因斯坦</p>
+            <img class="fl" src="../static/img/becomeMember-jcqy.jpg" width="48%">
+            <img class="fr" src="../static/img/becomeMember-jcqy.jpg" width="48%">
+          </div>
+        </div>
+
+         <!-- 评论列表 -->
+            <div class="list agent-accout-list">
+                <div class="item item-avatar">
+                    <img src="../static/img/portrait.jpg">
+                    <div class="item-box">
+                        <h3>李老师</h3>
+                        <p class="not-white-space">如果你无法简洁的表达你的想法，那只说明你还不够了解它。</p>
+                        <p class="_timeText91">2017年12月24日23:05:00</p>
+                    </div>
+                </div>
+                <div class="item item-avatar">
+                    <img src="../static/img/portrait.jpg">
+                    <div class="item-box">
+                        <h3>李老师</h3>
+                        <p class="not-white-space">如果你无法简洁的表达你的想法，那只说明你还不够了解它。</p>
+                        <p class="_timeText91">2017年12月24日23:05:00</p>
+                    </div>
+                    <div class="item-box">
+                        <h3>作者回复</h3>
+                        <p class="not-white-space">如果你无法简洁的表达你的想法，那只说明你还不够了解它。</p>
+                        <p class="_timeText91">2017年12月24日23:05:00</p>
+                    </div>
+                </div>
+                <div class="item item-avatar" ng-repeat='v in comment'>
+                    <img src="../static/img/portrait.jpg">
+                    <div class="item-box">
+                        <h3>李老师</h3>
+                        <p class="not-white-space">{{v.content}}</p>
+                        <p class="_timeText91">{{v.creatTime}}</p>
+                    </div>
+                </div>
+                <div class="padding-0 col col-33 col-offset-67">
+                    <button ng-click="jump('vip.bbsListInfoComment')" class="button button-block button-balanced" style="margin-left: -20px">发表评论</button>
+                </div>
+            </div>
+
+
+
+
+
+
+
+    </ion-content>
+</ion-view>

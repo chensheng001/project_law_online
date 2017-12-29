@@ -1,0 +1,14 @@
+<ion-view>
+    <ion-header-bar class="bar bar-header bar-stable">
+        <h1 class="title">发表评论</h1>
+        <button class="button button-outline button-stable" ng-click="modal.hide()" style="margin-right: 10px">取消</button>
+    </ion-header-bar>
+    <ion-content class="padding">
+        <div class="list">
+            <label class="item item-inpit" style="height: 10rem">
+                <textarea ng-model="newComment" placeholder="请输入..."></textarea>
+            </label>
+            <button class="button button-block button-balanced" ng-click="jump('vip.lawVideoInfo')">提交</button>
+        </div>
+    </ion-content>
+</ion-view>

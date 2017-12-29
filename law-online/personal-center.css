@@ -47,8 +47,16 @@ h2{
     font-size: 2rem;
 }
 .ion-chevron-right{
-    font-size: 1rem !important;
     color: #989797;
+}
+#personalCenter .ion-chevron-right{
+    font-size: 1rem;
+}
+.icon-sm-size{
+    font-size: 1rem !important;
+}
+#personalCenter{
+    background: #ddd;
 }
 .user-info{
     background: url("../static/img/personal-center-bg.png") no-repeat center;
@@ -128,6 +136,7 @@ h2{
 .uploadImg img{
     max-width: 100%;
     height: 10rem;
+    width: 10rem;
 }
 .uploadImg input{
     position: absolute;
@@ -136,7 +145,7 @@ h2{
     opacity: 0;
     height: 10rem;
     z-index: 999;
-    min-width: 10rem;
+    width: 10rem;
 }
 
 /*充值*/
@@ -293,4 +302,18 @@ h2{
 .myData .btn-upload i{
     font-size: 6rem;
     color: #dddddd;
+}
+/*我的钱包*/
+#myMoney ul li.item{
+    position: relative;
+}
+#myMoney ul li.item span{
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+}
+
+/*我的企业互助*/
+.addProduct textarea,.applyAccess textarea{
+    height: 6rem;
 }

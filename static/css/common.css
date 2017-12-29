@@ -1,5 +1,6 @@
-@charset "utf-8";
+﻿@charset "utf-8";
 /* css reset*/
+
 /*初始化*/
 html{
     font-size: 62.5%
@@ -30,7 +31,7 @@ audio, video {
     font-family: "Microsoft YaHei","sans-serif";
     -webkit-font-smoothing: antialiased;
     font-size: 1.4rem;
-    color: #666;
+    color: #101010;
 }
 a{
     text-decoration: none;
@@ -112,4 +113,7 @@ a{
 }
 .item h2,.item{
     font-size: 1.4rem;
+}
+.margin-auto{
+    margin: 0 auto;
 }
