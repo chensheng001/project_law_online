@@ -31,7 +31,7 @@ audio, video {
     font-family: "Microsoft YaHei","sans-serif";
     -webkit-font-smoothing: antialiased;
     font-size: 1.4rem;
-    color: #101010;
+    /*color: #101010;*/
 }
 a{
     text-decoration: none;
@@ -116,4 +116,7 @@ a{
 }
 .margin-auto{
     margin: 0 auto;
+}
+.padding-0{
+    padding: 0 !important;
 }

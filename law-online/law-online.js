@@ -1,143 +1,14 @@
 /**
  * Created by xieiqng on 2017/6/23.
  */
-lawApp = angular.module('lawOnline', ['ionic', 'ionic-citypicker', 'ngTouch']);
-
-// 拦截器配置
-lawApp.factory('httpInterceptor', function ($q, $rootScope) {
-    var httpInterceptor = {
-        'responseError': function (response) {
-            return $q.reject(response);
-        },
-        'response': function (response) {
-            if (response.data.code == -800) {
-                $rootScope.$emit('checkOut');
-                return $q.reject(response);
-            } else {
-                return response;
-            }
-        },
-        'request': function (config) {
-            if (config.method == 'POST' && localStorage.law_token) {
-                config.headers.token = localStorage.law_token;
-            }
-            return config;
-        },
-        'requestError': function (config) {
-            return $q.reject(config);
-        }
-    };
-    return httpInterceptor;
-});
-
-// 拦截器注入
-lawApp.config(['$httpProvider', function ($httpProvider) {
-    $httpProvider.defaults.transformRequest = function (obj) {
-        var str = [];
-        for (var p in obj) {
-            str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
-        }
-        return str.join("&");
-    };
-    $httpProvider.defaults.headers.post = {'Content-Type': 'application/x-www-form-urlencoded'};
-    $httpProvider.interceptors.push('httpInterceptor');
-}]);
-
-lawApp.run(['$rootScope', '$state', 'commService', '$templateCache', function ($rootScope, $state, commService, $templateCache) {
-
-    $templateCache.put('citySelect.html', '<ionic-city-picker options="vm.CityPickData"></ionic-city-picker>');
-
-    $rootScope.api_host = 'http://www.gdfxzx.com/fxzx';
-    // $rootScope.api_host = 'http://127.0.0.1:8080/fxlb';
-
-    $rootScope.$on('checkOut', function () {
-        localStorage.law_token = '';
-        localStorage.law_role = '';
-        $rootScope._role = null;
-        //commService.alertPopup(-1, '请先登录')
-    });
-
-    var GetUrlParams = function (name) {
-        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
-        if (window.location.href.split('?').length <= 1) {
-            return null;
-        } else {
-            var r = window.location.href.split('?')[1].match(reg);
-            if (r != null) return (r[2]);
-            return null;
-        }
-    };
-    var wecharCode = GetUrlParams('code');
-    if (wecharCode) {
-        commService.codeToOpenId({code: wecharCode}).then(function (res) {
-            if (res.code >= 0) {
-                localStorage.wxopenId = res.data.openId;
-            }
-        });
-    }
-
-    commService.cityPickers().then(function (rep) {
-        localStorage.cityPickers = JSON.stringify(rep.data.pickers)
-    });
-
-    commService.systemOptions().then(function (res) {
-        $rootScope._so = res.data.so;
-    });
-
-    localStorage.defaultCity = "";
-    $rootScope._role = localStorage.law_role ? localStorage.law_role : null;
-
-    $rootScope.$on('$stateChangeStart',
-        function (event, toState, toParams, fromState, fromParams) {
-            if (toState.name == "consult.index") {
-                $rootScope.isShowCitySelect = true;
-            } else {
-                $rootScope.isShowCitySelect = false;
-            }
-        });
-
-
-    // top颜色变化的狗比需求
-    $rootScope.topColor = 'bar-positive'
-    $rootScope.$on('$stateChangeStart', function (event, toState, toParams, fromState, fromParams) {
-        /*        if (toState.name.indexOf('consult') == 0){
-         $rootScope.topColor = 'bar-energized'
-         }*/
-
-    })
-
-}]);
-
-lawApp.filter('javaDate', function ($filter) {
-    return function (input, format) {
-        if (input) {
-            var timestamp = input.time;
-            return $filter("date")(timestamp, format);
-        } else {
-            return "";
-        }
-    }
-});
+lawApp = angular.module('lawOnline', ['ionic']);
 
 lawApp.controller('MyCtrl', function ($scope, $ionicSideMenuDelegate, $ionicModal) {
     $scope.toggleRight = function () {
         $ionicSideMenuDelegate.toggleRight();
     };
-    var vm = $scope.vm = {};
-    vm.CityPickData = {
-        areaData: [localStorage.defaultCity && localStorage.defaultCity != 'undefined' ? localStorage.defaultCity : '选择城市'],
-        selectLevel: 1,
-        iconClass: 'ion-location',
-        cssClass: 'button ',
-        spanClass: 'item-note item-note-white',
-        hardwareBackButtonClose: false,
-        cityPickers: localStorage.cityPickers,
-        buttonClicked: function () {
-            localStorage.defaultCity = vm.CityPickData.areaData[0];
-        }
-    };
-
 })
+    //登录
     .controller('personalLogin', function ($rootScope, $scope, userService, commService, $ionicModal, $state) {
         $ionicModal.fromTemplateUrl('personal-center/personallogin/user-agreement.html', {
             scope: $scope,
@@ -195,55 +66,6 @@ lawApp.controller('MyCtrl', function ($scope, $ionicSideMenuDelegate, $ionicModa
                 });
             }
         }
-
-    })
-    .controller('personalRegist', function ($q, $scope, userService, commService, $ionicModal, $state) {
-        var vm = $scope.vm = {};
-        vm.CityPickData = {
-            areaData: ['请选择城市'],
-            title: '地区',
-            defaultAreaData: ['北京市', '北京市', '东城区'],
-            hardwareBackButtonClose: false,
-            cityPickers: localStorage.cityPickers
-        };
-
-        $scope.info = {
-            mobile: '',
-            code: '',
-            password: '',
-            email: '',
-            sex: '1',
-            recommMobile: ''
-        }
-
-        $scope.getCode = function () {
-            var deferred = $q.defer();
-            commService.sendMobileCode({mobile: $scope.info.mobile}).then(function (res) {
-                deferred.resolve(res.code);
-                commService.alertPopup(res.code, res.msg)
-            });
-            return deferred.promise;
-        };
-
-        $scope.userRegister = function () {
-            userService.register({
-                mobile: $scope.info.mobile,
-                password: $scope.info.password,
-                email: $scope.info.email,
-                sex: $scope.info.sex,
-                province: $scope.vm.CityPickData.areaData[0],
-                city: $scope.vm.CityPickData.areaData[1],
-                area: $scope.vm.CityPickData.areaData[2],
-                recommMobile: $scope.info.recommMobile,
-                code: $scope.info.code
-            }).then(function (res) {
-                commService.alertPopup(res.code, res.msg).then(function (rep) {
-                    if (res.code >= 0) {
-                        $state.go('personalCenter.personalLogin')
-                    }
-                })
-            })
-        };
 
     })
     //用户个人中心
@@ -358,6 +180,13 @@ lawApp.controller('MyCtrl', function ($scope, $ionicSideMenuDelegate, $ionicModa
         }
         $scope.list=["企业注册","企业管理","财税服务"]
         $scope.a=22;
+    })
+
+    //咨询预约
+    .controller('consultIndex',function($scope,$state){
+        $scope.domains=[{name:"婚姻家庭",id:"ddd"},{name:"婚姻家庭",id:"ddd"},{name:"婚姻家庭",id:"ddd"},{name:"婚姻家庭",id:"ddd"}
+        ,{name:"婚姻家庭",id:"ddd"},{name:"婚姻家庭",id:"ddd"},{name:"婚姻家庭",id:"ddd"},{name:"婚姻家庭",id:"ddd"},{name:"婚姻家庭",id:"ddd"}]
+        $scope.list=[{name:"三旬老汉律师",province:"湖北",city:"黄冈",licenseNo:"11",domainNames:"离婚"}]
     })
 ;
 

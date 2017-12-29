@@ -317,3 +317,20 @@ h2{
 .addProduct textarea,.applyAccess textarea{
     height: 6rem;
 }
+
+/*预约咨询*/
+._col-25{
+    width: 25%;
+    float: left;
+}
+.label-des{
+    display: inline-block;
+    width: 4rem;
+    height: 1.6rem;
+    line-height: 1.6rem;
+    text-align: center;
+    border: 1px solid #33cd5f;
+    border-radius: 1rem;
+    margin-left: 0.8rem;
+    font-size: 1.2rem;
+}
