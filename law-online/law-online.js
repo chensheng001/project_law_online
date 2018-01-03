@@ -9,7 +9,7 @@ lawApp.controller('MyCtrl', function ($scope, $ionicSideMenuDelegate, $ionicModa
     };
 })
     //登录
-    .controller('personalLogin', function ($rootScope, $scope, userService, commService, $ionicModal, $state) {
+    .controller('personalLogin', function ($rootScope, $scope, $ionicModal, $state) {
         $ionicModal.fromTemplateUrl('personal-center/personallogin/user-agreement.html', {
             scope: $scope,
             animation: 'slide-in-up'
@@ -17,9 +17,6 @@ lawApp.controller('MyCtrl', function ($scope, $ionicSideMenuDelegate, $ionicModa
             $scope.modal = modal;
         });
 
-        commService.getNews({newId: -1001}).then(function (rep) {
-            $scope.loginAgree = rep.data.news;
-        });
 
         $scope.isAgree = false;
 
@@ -27,60 +24,21 @@ lawApp.controller('MyCtrl', function ($scope, $ionicSideMenuDelegate, $ionicModa
             if (!$scope.isAgree) {
                 commService.alertPopup(-1, '请阅读并同意电子合同条款')
             } else {
-                userService.login({
-                    mobile: $scope.mobile == undefined ? "" : $scope.mobile,
-                    password: $scope.password == undefined ? "" : $scope.password,
-                    recommMobile: $scope.recommMobile == undefined ? "" : $scope.recommMobile
-                }).then(function (rep) {
-                    if (rep.code >= 0) {
-                        localStorage.law_token = rep.data.token;
-                        localStorage.law_role = "user";
-                        $rootScope._role = "user";
-                    }
-                    commService.alertPopup(rep.code, rep.msg).then(function (res) {
-                        if (rep.code >= 0) {
-                            $state.go('personalCenter.centerList');
-                        }
-                    });
-                });
+
             }
         };
 
-        $scope.wxLogin = function () {
-            if (!$scope.isAgree) {
-                commService.alertPopup(-1, '请阅读并同意电子合同条款')
-            } else {
-                userService.wxLogin({
-                    openId: localStorage.wxopenId ? localStorage.wxopenId : ''
-                }).then(function (res) {
-                    if (res.code >= 0) {
-                        localStorage.law_token = res.data.token;
-                        localStorage.law_role = "user";
-                        $rootScope._role = "user";
-                    }
-                    commService.alertPopup(res.code, res.msg).then(function () {
-                        if (res.code >= 0) {
-                            $state.go('personalCenter.centerList')
-                        }
-                    })
-                });
-            }
-        }
 
     })
     //用户个人中心
-    .controller('personalCenter', function ($scope, userService, commService) {
+    .controller('personalCenter', function ($scope) {
 
         $scope.fileChanged = function (ele) {
             commService.uploadFile(ele.files[0]).then(function (res) {
                 $scope.user.photoUrl = res;
-                userService.updateUserPhoto({photoUrl: res}).then(function (rep) {
-                });
+
             });
         };
-        userService.userCenter().then(function (res) {
-            $scope.user = res.data.user;
-        });
 
 
     })
@@ -179,14 +137,30 @@ lawApp.controller('MyCtrl', function ($scope, $ionicSideMenuDelegate, $ionicModa
             $state.go("personalCenter.applyAccess");
         }
         $scope.list=["企业注册","企业管理","财税服务"]
-        $scope.a=22;
     })
 
     //咨询预约
     .controller('consultIndex',function($scope,$state){
         $scope.domains=[{name:"婚姻家庭",id:"ddd"},{name:"婚姻家庭",id:"ddd"},{name:"婚姻家庭",id:"ddd"},{name:"婚姻家庭",id:"ddd"}
         ,{name:"婚姻家庭",id:"ddd"},{name:"婚姻家庭",id:"ddd"},{name:"婚姻家庭",id:"ddd"},{name:"婚姻家庭",id:"ddd"},{name:"婚姻家庭",id:"ddd"}]
-        $scope.list=[{name:"三旬老汉律师",province:"湖北",city:"黄冈",licenseNo:"11",domainNames:"离婚"}]
+        $scope.list=[{name:"三旬老汉律师",province:"湖北",city:"黄冈",licenseNo:"11",domainNames:"离婚"}];
+
+        //打赏咨询
+        $scope.rewardConsultShow=function(id){
+            $state.go("consult.rewardConsult");
+        }
+        //电话咨询
+        $scope.phoneConsultShow=function(id){
+            $state.go("consult.phoneConsult");
+        }
+        //预约会面
+        $scope.meetShow=function(id){
+            $state.go("consult.appointmentMeeting");
+        }
+        //更多服务
+        $scope.getMoreService=function(id){
+            $state.go("consult.moreService");
+        }
     })
 ;
 

@@ -457,31 +457,50 @@ angular.module('lawOnline')
                     'consult': {
                         templateUrl: 'consult/consult.html',
                         controller: 'consultIndex'
-                    },
+                    }
                 }
             })
-            // 律师详情
-            .state('consult.details', {
-                url: '/index/:id',
+            // 打赏咨询
+            .state('consult.rewardConsult', {
+                url: '/rewardConsult',
                 views: {
                     'consult': {
-                        templateUrl: 'consult/consult-details/consult-details.html',
-                        controller: 'consultDetails'
+                        templateUrl: 'consult/reward-consult.html',
+                        controller: 'consultIndex'
                     }
+                }
+            })
+            // 电话咨询
+            .state('consult.phoneConsult', {
+                url: '/phoneConsult',
+                views: {
+                    'consult': {
+                        templateUrl: 'consult/phone-consult.html',
+                        controller: 'consultIndex'
+                    }
+                }
+            })
+            //预约会面
+            .state('consult.appointmentMeeting', {
+                url: '/appointmentMeeting',
+                views: {
+                    'consult': {
+                        templateUrl: 'consult/appointment-meeting.html',
+                        controller: 'consultIndex'
+                    }
+                }
+            })
+            //更多服务
+            .state('consult.moreService', {
+                url: '/moreService',
+                views: {
+                    'consult': {
+                        templateUrl: 'consult/more-service.html',
+                        controller: 'consultIndex'
+                    }
+                }
+            })
 
-                }
-            })
-            // 过往案例列表
-            .state('consult.pastCaseList', {
-                url: '/pastCaseList/:id',
-                views: {
-                    'consult': {
-                        templateUrl: 'consult/past-case-list/past-case-list.html',
-                        controller: 'pastCaseList'
-                    }
-                }
-            })
-            // 预约咨询模块结束
 
 
             // 精选分享
@@ -515,7 +534,6 @@ angular.module('lawOnline')
                 }
             })
 
-            // 分享模块结束
 
             // 产品服务模块开始
             .state('proService', {
