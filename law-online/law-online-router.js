@@ -522,125 +522,69 @@ angular.module('lawOnline')
                     }
                 }
             })
-
-
-
-
-            // 精选分享
-
-            .state('share', {
-                url: '/share',
+            .state('consult.myCaseDetails', {
+                url: '/myCaseDetails',
                 views: {
-                    'main': {
-                        template: '<ion-nav-view name="share"></ion-nav-view>'
-                    }
-                }
-            })
-            // 日常法典
-            .state('share.daily', {
-                url: '/daily',
-                views: {
-                    'share': {
-                        templateUrl: 'share/daily/daily.html',
-                        controller: 'daily'
-                    }
-                }
-            })
-            // 法据观点
-            .state('share.lawyerViewPoint', {
-                url: '/lawyerViewPoint/:id',
-                views: {
-                    'share': {
-                        templateUrl: 'share/lawyer-viewpoint/lawyer-viewpoint.html',
-                        controller: 'lawyerViewPoint'
+                    'consult': {
+                        templateUrl: 'consult/more-service/myCaseDetails.html',
+                        controller: 'consultIndex'
                     }
                 }
             })
 
-
-            // 产品服务模块开始
-            .state('proService', {
-                url: '/proService',
+            //私人法律顾问
+            .state('consult.personalLawAdviser', {
+                url: '/personalLawAdviser',
                 views: {
-                    'main': {
-                        template: '<ion-nav-view name="product"></ion-nav-view>',
-                        abstract: true
+                    'consult': {
+                        templateUrl: 'consult/more-service/personalLawAdviser.html',
+                        controller: 'consultIndex'
                     }
                 }
             })
-            // 产品服务
-            .state('proService.menu', {
-                url: '/menu',
+            //家庭法律顾问
+            .state('consult.familyLawAdviser', {
+                url: '/personalLawAdviser',
                 views: {
-                    'product': {
-                        templateUrl: 'product-service/download-menu.html',
-                        controller: 'proServiceMenu'
+                    'consult': {
+                        templateUrl: 'consult/more-service/familyLawAdviser.html',
+                        controller: 'consultIndex'
                     }
                 }
             })
-            // 合同下载
-            .state('proService.download', {
-                url: '/download',
+            //企业法律顾问
+            .state('consult.enterpriseLawAdviser', {
+                url: '/personalLawAdviser',
                 views: {
-                    'product': {
-                        templateUrl: 'product-service/download/download.html',
-                        controller: 'download'
+                    'consult': {
+                        templateUrl: 'consult/more-service/enterpriseLawAdviser.html',
+                        controller: 'consultIndex'
                     }
                 }
             })
-            // 产品服务
-            .state('proService.product', {
-                url: '/product/:id',
+            //诉讼服务
+            .state('consult.lawsuitService', {
+                url: '/lawsuitService',
                 views: {
-                    'product': {
-                        templateUrl: 'product-service/product/product-detail.html',
-                        controller: 'productDetail'
+                    'consult': {
+                        templateUrl: 'consult/more-service/lawsuitService.html',
+                        controller: 'consultIndex'
                     }
                 }
             })
-
-            // 查询助手模块开始
-            .state('selectUtil', {
-                url: '/selectUtil',
+            //诉讼服务
+            .state('consult.lawyerLetterService', {
+                url: '/lawyerLetterService',
                 views: {
-                    'main': {
-                        template: '<ion-nav-view name="select"></ion-nav-view>',
-                        abstract: true
+                    'consult': {
+                        templateUrl: 'consult/more-service/lawyerLetterService.html',
+                        controller: 'consultIndex'
                     }
                 }
             })
-            // 产品服务
-            .state('selectUtil.menu', {
-                url: '/menu',
-                views: {
-                    'select': {
-                        templateUrl: 'select-util/select-list.html',
-                        controller: 'selectUtils'
-                    }
-                }
-            })
-            // 查询助手结束
 
 
-            // 委托代办
-            .state('concierge', {
-                url: '/concierge',
-                views: {
-                    'main': {
-                        template: '<ion-nav-view name="concierge"></ion-nav-view>',
-                        abstract: true
-                    }
-                }
-            })
-            .state('concierge.list', {
-                url: '/list',
-                views: {
-                    'concierge': {
-                        templateUrl: 'concierge/concierge.html',
-                        controller: 'concierge'
-                    }
-                }
-            })
+
 
 
             // 关于我们

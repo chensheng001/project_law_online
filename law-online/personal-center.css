@@ -347,3 +347,15 @@ h2{
 .deepGray-bg{
     background: #ddd;
 }
+.lawyerIntroduction img,.caseDetails img{
+    width: 100%;
+}
+.myCase .content{
+    font-size: 1.2rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+}
