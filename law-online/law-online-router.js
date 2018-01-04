@@ -495,11 +495,34 @@ angular.module('lawOnline')
                 url: '/moreService',
                 views: {
                     'consult': {
-                        templateUrl: 'consult/more-service.html',
+                        templateUrl: 'consult/more-service/index.html',
                         controller: 'consultIndex'
                     }
                 }
             })
+
+            //律师简介
+            .state('consult.lawyerIntroduction', {
+                url: '/lawyerIntroduction',
+                views: {
+                    'consult': {
+                        templateUrl: 'consult/more-service/lawyerIntroduction.html',
+                        controller: 'consultIndex'
+                    }
+                }
+            })
+
+            //我的案例
+            .state('consult.myCase', {
+                url: '/myCase',
+                views: {
+                    'consult': {
+                        templateUrl: 'consult/more-service/myCase.html',
+                        controller: 'consultIndex'
+                    }
+                }
+            })
+
 
 
 

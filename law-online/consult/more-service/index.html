@@ -17,17 +17,20 @@
                 </div>
             </ion-slide>
         </ion-slide-box>
-        <div class="card">
+        <div class="card more-service">
             <div class="item item-divider">
                 <span>律师信息</span>
                 <span class="fa fa-heart"></span>
+                <span ><i class="online-state deepGray-bg"></i>离线</span>
+                <span ng-if="false"><i class="online-state balanced-bg"></i>在线</span>
                 <button class="btn-border float-right"><i class="fa fa-plus"></i>关注</button>
             </div>
             <div class="item item-text-wrap">
                 <div class="item item-avatar ">
                     <img src="../static/img/becomeMember.jpg">
                     <h2>
-                        {{item.name}}<span class="label-des level">LV3</span><span class="label-des recommend">推荐</span>
+                        {{item.name}}<span class="label-des level">LV3</span>
+                        <span class="label-des recommend">推荐</span>
                     </h2>
                     <p>执照号：{{item.licenseNo}}</p>
                     <p>擅长领域：{{item.domainNames}}</p>
@@ -44,8 +47,8 @@
                 </p>
             </div>
             <div class="item  text-right">
-                <a class="button btn-small"><i class="fa fa-user"></i>律师简介</a>
-                <a class="button btn-small"><i class="fa fa-user"></i>我的案例</a>
+                <a ui-sref="consult.lawyerIntroduction" class="button button-small button-balanced"><i class="fa fa-user"></i>律师简介</a>
+                <a ui-sref="consult.myCase" class="button button-small button-balanced"><i class="fa fa-user"></i>我的案例</a>
             </div>
 
             <div class="item item-divider">
@@ -53,13 +56,13 @@
         </div>
             <div class="item item-text-wrap row">
                 <div class="col text-center">
-                    <a class="button btn-small">提问咨询</a>
+                    <a ui-sref="consult.rewardConsult" class="button button-small button-balanced">打赏咨询</a>
                 </div>
                 <div class="col text-center">
-                    <a class="button btn-small">电话咨询</a>
+                    <a ui-sref="consult.phoneConsult" class="button button-small button-balanced">电话咨询</a>
                 </div>
                 <div class="col text-center">
-                    <a class="button btn-small">预约会面</a>
+                    <a ui-sref="consult.appointmentMeeting" class="button button-small button-balanced">预约会面</a>
                 </div>
             </div>
 
@@ -69,24 +72,24 @@
             <div class="item item-text-wrap">
                 <div class="row">
                     <div class="col text-center">
-                        <a class="button btn-small">私人法律顾问</a>
+                        <a ui-sref="consult.personalLawAdviser" class="button button-small button-balanced">私人法律顾问</a>
                     </div>
                     <div class="col text-center">
-                        <a class="button btn-small">家庭法律顾问</a>
+                        <a ui-sref="consult.familyLawAdviser" class="button button-small button-balanced">家庭法律顾问</a>
                     </div>
                     <div class="col text-center">
-                        <a class="button btn-small">企业法律顾问</a>
+                        <a ui-sref="consult.enterpriseLawAdviser" class="button button-small button-balanced">企业法律顾问</a>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col text-center">
-                        <a class="button btn-small">自建套餐1</a>
+                        <a ui-sref="consult.manualPackage" class="button button-small button-balanced">自建套餐1</a>
                     </div>
                     <div class="col text-center">
-                        <a class="button btn-small">自建套餐2</a>
+                        <a class="button button-small button-balanced">自建套餐2</a>
                     </div>
                     <div class="col text-center">
-                        <a class="button btn-small">自建套餐3</a>
+                        <a class="button button-small button-balanced">自建套餐3</a>
                     </div>
                 </div>
             </div>
@@ -97,10 +100,13 @@
             <div class="item item-text-wrap">
                 <div class="row">
                     <div class="col text-center">
-                        <a class="button btn-small">诉讼服务</a>
+                        <a class="button button-small button-balanced">诉讼服务</a>
                     </div>
                     <div class="col text-center">
-                        <a class="button btn-small">律师函服务</a>
+                        <a class="button button-small button-balanced">律师函服务</a>
+                    </div>
+                    <div class="col text-center">
+                        <a class="button button-small button-balanced">律师函服务</a>
                     </div>
                 </div>
             </div>

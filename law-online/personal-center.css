@@ -334,3 +334,16 @@ h2{
     margin-left: 0.8rem;
     font-size: 1.2rem;
 }
+.more-service a{
+    width: 7rem;
+}
+.online-state{
+    display: inline-block;
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 0.4rem;
+    margin: 0 0.4rem 0 4rem;
+}
+.deepGray-bg{
+    background: #ddd;
+}
