@@ -359,3 +359,10 @@ h2{
     -webkit-box-orient: vertical;
     white-space: normal;
 }
+.contractDownload .content{
+    display: none;
+}
+.contractDownload .content p{
+    line-height: 30px;
+    margin-top:0.5rem
+}

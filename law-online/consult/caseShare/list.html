@@ -1,0 +1,25 @@
+<ion-view view-title="案例分享">
+    <ion-content>
+        <div class="card" ng-repeat="item in shares">
+            <div class="item-text-wrap item">
+                {{item.content}}
+            </div>
+            <div class="item item-avatar ">
+                <img src="../static/img/becomeMember.jpg">
+                <h2>
+                    {{item.name}}
+                </h2>{{item.address}}</p>
+                <p>执照号：{{item.license_no}}</p>
+            </div>
+            <div class="buttons row">
+                <div class="col-25">
+                    <p class=" button button-small button-dark button-block button-clear">{{item.listen_num}}人听过</p>
+                </div>
+                <div class="col">
+                    <a ui-sref="consult.analysisShareDetails" class="button btn-small float-right">1元偷偷看答案</a>
+                </div>
+            </div>
+
+        </div>
+    </ion-content>
+</ion-view>

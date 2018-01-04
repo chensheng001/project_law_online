@@ -140,28 +140,63 @@ lawApp.controller('MyCtrl', function ($scope, $ionicSideMenuDelegate, $ionicModa
     })
 
     //咨询预约
-    .controller('consultIndex',function($scope,$state){
+    .controller('consultIndex',function($scope,$state,$location){
         $scope.domains=[{name:"婚姻家庭",id:"ddd"},{name:"婚姻家庭",id:"ddd"},{name:"婚姻家庭",id:"ddd"},{name:"婚姻家庭",id:"ddd"}
         ,{name:"婚姻家庭",id:"ddd"},{name:"婚姻家庭",id:"ddd"},{name:"婚姻家庭",id:"ddd"},{name:"婚姻家庭",id:"ddd"},{name:"婚姻家庭",id:"ddd"}]
         $scope.list=[{name:"三旬老汉律师",province:"湖北",city:"黄冈",licenseNo:"11",domainNames:"离婚"}];
         $scope.item={name:"三旬老汉律师",province:"湖北",city:"黄冈",licenseNo:"11",domainNames:"离婚"};
 
+        //解答分享
+        $scope.analysisShare=function(){
+            $state.go("consult.analysisShare");
+        };
+        $scope.shares=[{content:"请问律师，对甲方而言，这样一份婚前协议是否有效，如果两人离婚了甲方打算按第二条履行起来会有什么问题？",
+            name:"老汉",address:"广东省",license_no:"110",listen_num:55},{content:"请问律师，对甲方而言，这样一份婚前协议是否有效，如果两人离婚了甲方打算按第二条履行起来会有什么问题？",
+            name:"老汉",address:"广东省",license_no:"110",listen_num:55}];
+        $scope.detail={content:"wwww",name:"jjj",address:"dddd",license_no:"110",listen_num:55,reply:'哈哈哈'};
+
+        //案例分享
+        $scope.caseShare=function() {
+            $state.go("consult.caseShare");
+        };
+
+        //普法视频
+        $scope.lawVideo=function(){
+            window.location.href="/project_law_online/vip-online/vip.html#/vip/lawVideoIndex";
+        };
+
+
+        //合同下载
+        $scope.contractDownload=function(){
+            $state.go("consult.contractDownload");
+        };
+        $scope.contracts=[{name:"劳动人事",list:["房屋出租协议","房屋购买合同"]},{name:"劳动人事"},{name:"劳动人事"},{name:"劳动人事"},{name:"劳动人事"}];
+        $scope.itemToggle=function(event){
+            angular.element(event.target).parent().find("section").toggle();
+            if(angular.element(event.target).parent().find("span").hasClass("ion-chevron-right")){
+                angular.element(event.target).parent().find("span").addClass("ion-chevron-down").removeClass("ion-chevron-right");
+            }else {
+                angular.element(event.target).parent().find("span").addClass("ion-chevron-right").removeClass("ion-chevron-down");
+            }
+        };
+
+
         //打赏咨询
         $scope.rewardConsultShow=function(id){
             $state.go("consult.rewardConsult");
-        }
+        };
         //电话咨询
         $scope.phoneConsultShow=function(id){
             $state.go("consult.phoneConsult");
-        }
+        };
         //预约会面
         $scope.meetShow=function(id){
             $state.go("consult.appointmentMeeting");
-        }
+        };
         //更多服务
         $scope.getMoreService=function(id){
             $state.go("consult.moreService");
-        }
+        };
 
         //我的案例
         $scope.cases=[{title:"哈哈哈哈哈哈哈哈哈哈哈dfgdsdddddddddddddd电热翁二翁翁翁无翁",content:"呵呵呵呵呵呵咕咕咕咕过过过过过过过过过过呵呵呵呵呵" +

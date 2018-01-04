@@ -1,0 +1,18 @@
+<ion-view view-title="合同下载">
+    <ion-content>
+        <ul class="contractDownload">
+            <li class="item" ng-repeat="item in contracts" ng-click="itemToggle($event)">
+                <div class="">
+                    {{item.name}}
+                    <span class="icon ion-chevron-right float-right"></span>
+                </div>
+                <section class="content">
+                    <p class="" ng-repeat="i in item.list">
+                        {{i}}
+                        <a ui-sref="consult.contractDownloadDetails" class="float-right button button-small button-balanced">查看详情</a>
+                    </p>
+                </section>
+            </li>
+        </ul>
+    </ion-content>
+</ion-view>

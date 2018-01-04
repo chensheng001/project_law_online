@@ -582,6 +582,65 @@ angular.module('lawOnline')
                     }
                 }
             })
+            // 解答分享
+            .state('consult.analysisShare', {
+                url: '/analysisShare',
+                views: {
+                    'consult': {
+                        templateUrl: 'consult/analysisShare/list.html',
+                        controller: 'consultIndex'
+                    }
+                }
+            })
+            // 解答分享-答案
+            .state('consult.analysisShareDetails', {
+                url: '/analysisShareDetails',
+                views: {
+                    'consult': {
+                        templateUrl: 'consult/analysisShare/details.html',
+                        controller: 'consultIndex'
+                    }
+                }
+            })
+            // 案例分享
+            .state('consult.caseShare', {
+                url: '/caseShare',
+                views: {
+                    'consult': {
+                        templateUrl: 'consult/caseShare/list.html',
+                        controller: 'consultIndex'
+                    }
+                }
+            })
+            // 案例分享-答案
+            .state('consult.caseShareDetails', {
+                url: '/caseShareDetails',
+                views: {
+                    'consult': {
+                        templateUrl: 'consult/caseShare/details.html',
+                        controller: 'consultIndex'
+                    }
+                }
+            })
+            // 合同下载
+            .state('consult.contractDownload', {
+                url: '/contractDownload',
+                views: {
+                    'consult': {
+                        templateUrl: 'consult/contractDownload/list.html',
+                        controller: 'consultIndex'
+                    }
+                }
+            })
+            .state('consult.contractDownloadDetails', {
+                url: '/contractDownloadDetails',
+                views: {
+                    'consult': {
+                        templateUrl: 'consult/contractDownload/details.html',
+                        controller: 'consultIndex'
+                    }
+                }
+            })
 
 
 
