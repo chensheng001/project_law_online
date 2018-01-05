@@ -1,17 +1,17 @@
 <!doctype html>
-<html ng-app="lawOnline">
+<html ng-app="fxOnline">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
     <title>法律在线</title>
     <link href="https://cdn.bootcss.com/ionic/1.3.2/css/ionic.css" rel="stylesheet">
     <link href="../static/css/font-awesome.css" rel="stylesheet">
-    <link href="law-online.css" rel="stylesheet">
+    <link href="fx-online.css" rel="stylesheet">
     <link href="../static/css/common.css" rel="stylesheet">
     <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
     <script src="https://cdn.bootcss.com/ionic/1.3.2/js/ionic.bundle.min.js"></script>
-    <script src="law-online.js"></script>
-    <script src="law-online-router.js"></script>
+    <script src="fx-online.js"></script>
+    <script src="fx-online-router.js"></script>
     <script src="../static/js/ionic-citypicker.min.js"></script>
     <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
 
@@ -77,46 +77,23 @@
                         <i class="ion ion-navicon-round"></i>
                         网站导航
                     </div>
-                    <a class="item" menu-close ui-sref="consult.index">
+                    <a class="item" menu-close  ui-sref="queryUser.index">
                         <i class="ion ion-help"></i>
-                        预约咨询
+                        用户查询
                     </a>
-                    <a class="item" menu-close ui-sref="personalCenter.index">
+                    <a class="item"  menu-close ui-sref="fxOfficial.index">
                         <i class="ion ion-help"></i>
-                        登录中心
+                        丰信办公
                     </a>
-                    <a class="item" menu-close ui-sref="latestInformation.index">
+                    <a class="item" menu-close ui-sref="aboutUs.about">
                         <i class="ion ion-help"></i>
-                        最新资讯
+                        关于我们
+                    </a>
+                    <a class="item" menu-close ui-sref="contribution.index">
+                        <i class="ion ion-help"></i>
+                        投稿合作
                     </a>
 
-
-                    <div class="item item-divider" style="color:#8CC540;">
-                        <i class="ion ion-navicon-round"></i>
-                        会员导航
-                    </div>
-                    <div ng-if="!_role">
-                        <a class="item" menu-close ui-sref="personalCenter.personalLogin">
-                            <i class="ion ion-log-in"></i>
-                            登录
-                        </a>
-                    </div>
-                    <div ng-if="_role == 'user'">
-                        <a class="item" menu-close ui-sref="personalCenter.centerList">
-                            <i class="ion ion-ios-person"></i>
-                            个人中心
-                        </a>
-                    </div>
-                    <div ng-if="_role == 'lawyer'">
-                        <a class="item" menu-close ui-sref="lawyerCenter.centerList">
-                            <i class="ion ion-university"></i>
-                            个人中心
-                        </a>
-                        <a class="item" menu-close ui-sref="concierge.list">
-                            <i class="ion ion-android-calendar"></i>
-                            委托代办
-                        </a>
-                    </div>
                 </div>
 
             </ion-content>
