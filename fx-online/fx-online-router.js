@@ -36,6 +36,46 @@ angular.module('fxOnline')
                     }
                 }
             })
+            //通知交流
+            .state('queryUser.communication', {
+                url: '/communication',
+                views: {
+                    'queryUser': {
+                        templateUrl: 'query-user/communication.html',
+                        controller: 'queryUserCtrl'
+                    }
+                }
+            })
+            //办案进展
+            .state('queryUser.caseSpeed', {
+                url: '/caseSpeed',
+                views: {
+                    'queryUser': {
+                        templateUrl: 'query-user/caseSpeed.html',
+                        controller: 'queryUserCtrl'
+                    }
+                }
+            })
+            //添加进展
+            .state('queryUser.addCaseSpeed', {
+                url: '/addCaseSpeed',
+                views: {
+                    'queryUser': {
+                        templateUrl: 'query-user/addCaseSpeed.html',
+                        controller: 'queryUserCtrl'
+                    }
+                }
+            })
+            //相关资料
+            .state('queryUser.relateData', {
+                url: '/relateData',
+                views: {
+                    'queryUser': {
+                        templateUrl: 'query-user/relateData.html',
+                        controller: 'queryUserCtrl'
+                    }
+                }
+            })
 
             // 丰信办公
             .state('fxOfficial', {

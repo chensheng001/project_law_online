@@ -48,7 +48,9 @@ lawApp.controller('MyCtrl', function ($scope, $ionicSideMenuDelegate, $ionicModa
 })
     //用户查询
     .controller('queryUserCtrl', function ($rootScope, $scope, $ionicModal, $state) {
-
+        $scope.myDatas=[{title:"都结束了呀，老铁1",date:"2017-11-11 11:11:11",uuid:"1"},
+            {title:"都凉了呀，老铁2",date:"2017-11-11 11:11:11",uuid:"2"},
+            {title:"都结束了呀，老铁3",date:"2017-11-11 11:11:11",uuid:"3"}];
     })
 
     //用户查询

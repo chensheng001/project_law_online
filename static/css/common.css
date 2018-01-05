@@ -127,3 +127,7 @@ a{
     color: #666;
     border-radius: 0.2rem;
 }
+.breakWord{
+    word-wrap:break-word;
+    white-space: normal
+}
