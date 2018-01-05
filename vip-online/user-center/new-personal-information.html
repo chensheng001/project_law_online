@@ -1,0 +1,23 @@
+<ion-view view-title="会员论坛-我要发帖">
+    <ion-content class="vip-user-newInfo">
+		<div class="list">
+			<label class="item item-input img-upload" >
+				<span class="input-label text-center">头像：</span>
+				<!-- <label for="fileBtn"><img src="../static/img/uploadImg.png" id="img"/></label> -->
+				<label  for="fileBtn" onclick="javascript:clickInput()"><img onclick="javascript:clickInput()" src="../static/img/uploadImg.png" id="img"/></label>
+				<input id="fileBtn" type="file" onchange="upload('#fileBtn', '#img');" accept="image/*"  capture="camera">
+				<!-- <input id="fileBtn" type="file" onchange="upload('#fileBtn', '#img');" accept="image/*"  capture="camera" multiple="true"/> -->
+			</label>
+			<label class="item item-input">
+				<span class="input-label text-center">昵称：</span>
+				<input type="text">
+			</label>
+		</div>
+      	<div class="padding">
+        	<button class="button button-block button-balanced">保存提交</button>
+      	</div>
+
+      
+        
+    </ion-content>
+</ion-view>

@@ -38,3 +38,39 @@ vipApp.controller('MyCtrl', ['$scope','$state','$ionicSideMenuDelegate',
 .controller('bbsListCtrl', ['$scope','$state',function ($scope,$state) {}])
 .controller('bbsListInfoCtrl', ['$scope','$state',function ($scope,$state) {}])
 .controller('bbsListInfoCommentCtrl', ['$scope','$state',function ($scope,$state) {}])
+
+.controller('bbsUserCenterCtrl', ['$scope','$state',function ($scope,$state) {}])
+.controller('bbsNewInfoCtrl', ['$scope','$state',function ($scope,$state) {
+
+	console.log(121212)
+
+
+document.getElementById("photo").addEventListener("click", function()
+{
+    console.log(123)
+});
+
+
+
+
+
+	var clickInput = function(){
+		console.log('123321')
+	}
+
+	var upload = function(c, d){
+	    "use strict";
+
+	    var $c = document.querySelector(c),
+        	$d = document.querySelector(d),
+        	file = $c.files[0],
+        	reader = new FileReader();
+
+	    reader.readAsDataURL(file);
+	    reader.onload = function(e){
+	        $d.setAttribute("src", e.target.result);
+	    };
+	};
+
+}])
+.controller('postCtrl', ['$scope','$state',function ($scope,$state) {}])

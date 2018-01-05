@@ -141,6 +141,37 @@ angular.module('vipApp')
                 }
             })
 
+            // 会员论坛 -个人中心
+            .state('vip.bbsUserCenter',{
+                url: '/bbsUserCenter',
+                views: {
+                    'pc': {
+                        templateUrl: 'user-center/homepage.html',
+                        controller: 'bbsUserCenterCtrl'
+                    }
+                }
+            })
+            .state('vip.bbsNewInfo',{
+                url: '/bbsNewInfo',
+                views: {
+                    'pc': {
+                        templateUrl: 'user-center/new-personal-information.html',
+                        controller: 'bbsNewInfoCtrl'
+                    }
+                }
+            })
+            .state('vip.post',{
+                url: '/post',
+                views: {
+                    'pc': {
+                        templateUrl: 'user-center/post.html',
+                        controller: 'postCtrl'
+                    }
+                }
+            })
+
+
+
 
 
 

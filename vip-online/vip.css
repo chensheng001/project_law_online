@@ -82,5 +82,64 @@
         .vip-bbs-list img{
             vertical-align: middle;
         }
-       
+
+        /*会员论坛-个人中心*/
+       .vip-user-center .photo{
+            height: 14rem;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+       }
+       .vip-user-center .photo img{
+            width: 8rem;
+            border-radius: 50%;
+            margin-top: 1.4rem;
+       }
+       .vip-user-center .photo p{
+            margin-top: 0.5rem;
+       }
+       .vip-user-center .tagList a{
+            font-size: 1.6rem;
+            padding-left: 45px;
+       }
+       .vip-user-center .tagList a i.iconLeft{
+            font-size: 2.8rem;
+            
+       }
+       .vip-user-center .tagList a i.iconRight{
+            font-size: 2rem;
+            color: #666;
+       }
+       .vip-user-newInfo span.input-label{
+            width: 25%;
+       }
+       .vip-user-newInfo .img-upload input{
+            /*display: none;*/
+            width: 100%;
+            height: 100%;
+            /*visibility: hidden;*/
+            /*position: relative;*/
+
+       }
+       .vip-user-post .item{
+            border: none;
+       }
+       .vip-user-post .item-input{
+            padding-right: 16px;
+       }
+       .vip-user-post .hasBorder{  
+            resize:none; 
+            margin-top: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+       }
+       .vip-user-post textarea{
+            height: 10rem;
+       }
+       .vip-user-post textarea,
+       .vip-user-post input
+       {
+            padding: 5px 8px;
+       }
+
+
 
