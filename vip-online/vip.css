@@ -112,13 +112,27 @@
        .vip-user-newInfo span.input-label{
             width: 25%;
        }
-       .vip-user-newInfo .img-upload input{
-            /*display: none;*/
-            width: 100%;
-            height: 100%;
-            /*visibility: hidden;*/
-            /*position: relative;*/
-
+       .img-upload{
+            width: 8rem;
+            height: 10rem;
+            position: relative;
+       }
+       .img-upload img{
+            background: pink;
+            width: 8rem;
+            height: 8rem;
+            margin-top: 1rem;
+            position: absolute;
+            left: 0;
+       }
+       .img-upload input{
+            width: 8rem !important;
+            height: 8rem;
+            margin-top: 1rem;
+            opacity: 0.01;
+            position: absolute;
+            left: 0;
+            z-index: 99;
        }
        .vip-user-post .item{
             border: none;

@@ -169,8 +169,33 @@ angular.module('vipApp')
                     }
                 }
             })
-
-
+            .state('vip.myBbsList',{
+                url: '/myBbsList',
+                views: {
+                    'pc': {
+                        templateUrl: 'user-center/myBbsList.html',
+                        controller: 'myBbsListCtrl'
+                    }
+                }
+            })
+            .state('vip.myBbsListInfo',{
+                url: '/myBbsListInfo',
+                views: {
+                    'pc': {
+                        templateUrl: 'user-center/myBbsListInfo.html',
+                        controller: 'myBbsListInfoCtrl'
+                    }
+                }
+            })
+            .state('vip.myBbsListInfoComment',{
+                url: '/myBbsListInfoComment',
+                views: {
+                    'pc': {
+                        templateUrl: 'user-center/CommentEdit.html',
+                        controller: 'myBbsListInfoCommentCtrl'
+                    }
+                }
+            })
 
 
 
