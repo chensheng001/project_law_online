@@ -366,3 +366,22 @@ h2{
     line-height: 30px;
     margin-top:0.5rem
 }
+.circle{
+    display: inline-block;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 1.5rem;
+    background: #33cd5f;
+    text-align: center;
+    line-height: 3rem;
+    color: #fff;
+}
+p.stepText{
+    color: #999999;
+    margin-top: 0.5rem;
+}
+.step i{
+    font-size: 2rem;
+    margin-top: 2rem;
+    color: #000;
+}
