@@ -1,90 +1,105 @@
 <ion-view view-title="预约咨询">
     <ion-content>
-        <ion-refresher pulling-text="下拉刷新..." on-refresh="consult.doRefresh()">
-        </ion-refresher>
-        <div class="list">
-
-            <div class="item item-input-inset">
-                <label class="item-input-wrapper">
-                    <input type="text" placeholder="名称" ng-model="consult.keyWord">
-                </label>
-                <button class="button button-small button-dark-yellow" ng-click="consult.searchKeyWord()">
-                    搜索
-                </button>
+        <div class="consult">
+            <div class="link row">
+                <div class="col text-center" ng-click="analysisShare()">
+                    <p><i class="fa fa-question-circle"></i></p>
+                    <p>解答分享</p>
+                </div>
+                <div class="col text-center" ng-click="caseShare()">
+                    <p><i class="fa fa-eye"></i></p>
+                    <p>案例分享</p>
+                </div>
+                <div class="col text-center" ng-click="lawVideo()">
+                    <p><i class="fa fa-video-camera"></i></p>
+                    <p>普法视频</p>
+                </div>
+                <div class="col text-center" ng-click="contractDownload()">
+                    <p><i class="fa fa-download"></i></p>
+                    <p>合同下载</p>
+                </div>
             </div>
+            <div class="list">
 
-        </div>
-        <!--hot导航-->
-        <div class="card">
-            <div class="item item-divider item-stable">
-                全部分类
+                <div class="item item-input-inset">
+                    <label class="item-input-wrapper">
+                        <input type="text" placeholder="名称" ng-model="consult.keyWord">
+                    </label>
+                    <button class="button button-small button-dark-yellow" ng-click="consult.searchKeyWord()">
+                        搜索
+                    </button>
+                </div>
+
             </div>
-            <div class="item" style="padding: 0.3rem;">
-                <div class="padding text-center ">
-                    <div class="_col-25">
-                        <p ng-click="consult.searchDomain(0)" class="button button-clear button-assertive button-small">
-                            全部
-                        </p>
+            <!--hot导航-->
+            <div class="card">
+                <div class="item item-divider item-stable">
+                    全部分类
+                </div>
+                <div class="item" style="padding: 0.3rem;">
+                    <div class="padding text-center ">
+                        <div class="_col-25">
+                            <p ng-click="consult.searchDomain(0)" class="button button-clear button-assertive button-small">
+                                全部
+                            </p>
+                        </div>
+                        <div class="_col-25" ng-repeat="item in domains">
+                            <p ng-click="consult.searchDomain(item.id)"
+                               class="button button-clear button-dark button-small">
+                                {{item.name}}
+                            </p>
+                        </div>
                     </div>
-                    <div class="_col-25" ng-repeat="item in domains">
-                        <p ng-click="consult.searchDomain(item.id)"
-                           class="button button-clear button-dark button-small">
-                            {{item.name}}
-                        </p>
+                </div>
+            </div>
+            <!--列表-->
+            <div class="card" ng-repeat=" item in list">
+                <div class="item item-avatar ">
+                    <img src="../static/img/becomeMember.jpg">
+                    <h2>
+                        {{item.name}}<span class="label-des level">LV3</span><span class="label-des recommend">推荐</span>
+                    </h2>
+                    <p>{{item.province}}-{{item.city}}</p>
+                    <p>执照号：{{item.licenseNo}}</p>
+                    <p>擅长领域：{{item.domainNames}}</p>
+                    <p class="row padding-0">
+                        <span class="col-50">签约量：<i class="assertive">108</i></span>
+                        <span class="col-50">人气量：<i class="assertive">108</i></span>
+                    </p>
+                    <p class="row padding-0">
+                        <span class="col-50">好评量：<i class="assertive">108</i></span>
+                        <span class="col-50">诚信量：<i class="assertive">108</i></span>
+                    </p>
+                </div>
+                <div class="buttons row">
+                    <div class="col">
+
+                        <button class=" button button-small button-energized button-block "
+                                style="background-color: #f5762d"
+                                ng-click="rewardConsultShow(item.id)">
+                            打赏咨询
+                        </button>
+                    </div>
+                    <div class="col">
+                        <button class=" button button-small button-balanced button-block"
+                                ng-click="phoneConsultShow(item.id)">电话咨询
+                        </button>
+                    </div>
+                    <div class="col">
+                        <button class=" button button-small button-dark button-block"
+                                ng-click="meetShow(item.id)">
+                            预约会面
+                        </button>
+                    </div>
+                    <div class="col">
+
+                        <button class=" button button-small button-calm button-block"
+                                ng-click="getMoreService(item.id)">
+                            更多服务
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
-        <!--列表-->
-        <div class="card" ng-repeat=" item in consult.page.list">
-            <div class="item item-avatar " ui-sref="consult.details({id:item.id})">
-                <img ng-src="{{item.photoUrl}}">
-                <h2>
-                    {{item.realName}}{{item.type}}
-                    <div style="float:right;" class="energized">
-                        <evaluate-star star-num="item.evaluateGrade"></evaluate-star>
-                    </div>
-                </h2>
-                <p>{{item.province}}-{{item.city}}</p>
-                <p>执照号：{{item.licenseNo}}</p>
-                <p>擅长领域：{{item.domainNames}}</p>
-            </div>
-            <div class="buttons row">
-                <div class="col">
-
-                    <button class=" button button-small button-energized button-block "
-                            style="background-color: #f5762d"
-                            ng-click="rewardConsultShow(item.id)">
-                        <!--<i class="icon-zixun2 iconfont"></i>-->
-                        打赏咨询
-                    </button>
-                </div>
-                <div class="col">
-                    <button class=" button button-small button-balanced button-block"
-                            ng-click="phoneConsultShow(item.id)">电话咨询
-                    </button>
-
-                </div>
-                <div class="col">
-                    <button class=" button button-small button-energized button-block" style="background-color: #f5762d"
-                            ng-click="meetShow(item.id)">
-                        预约会面
-                    </button>
-
-                </div>
-                <div class="col">
-
-                    <button class=" button button-small button-balanced button-block"
-                            ng-click="evaluateListShow(item.id)">
-                        用户评价
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <ion-infinite-scroll ng-if="consult.page.currPage<consult.page.pages" on-infinite="consult.loadMore()"
-                             distance="1%">
-        </ion-infinite-scroll>
-
     </ion-content>
 </ion-view>

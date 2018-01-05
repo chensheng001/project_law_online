@@ -65,7 +65,7 @@ angular.module('lawOnline')
                     }
                 }
             })
-            //我的信息
+            //我的资料
             .state('personalCenter.myInformation', {
                 url: '/myInformation',
                 views: {
@@ -215,6 +215,7 @@ angular.module('lawOnline')
                     }
                 }
             })
+
             // 我听过的问题（个人）
             .state('heardIssue', {
                 url: '/heardIssue',
@@ -240,6 +241,43 @@ angular.module('lawOnline')
                     'heardIssue': {
                         templateUrl: 'personal-center/heard-issue/heard-issue-details.html',
                         controller: 'heardIssue'
+                    }
+                }
+            })
+            //我观看过的视频
+            .state('watchedIssue', {
+                url: '/watchedIssue',
+                views: {
+                    'main': {
+                        template: '<ion-nav-view name="watchedIssue"></ion-nav-view>',
+                        abstract: true
+                    }
+                }
+            })
+            .state('watchedIssue.index', {
+                url: '/index',
+                views: {
+                    'watchedIssue': {
+                        templateUrl: 'personal-center/watched-issue/list.html',
+                        controller: 'watchedIssue'
+                    }
+                }
+            })
+            .state('watchedIssue.details', {
+                url: '/details',
+                views: {
+                    'watchedIssue': {
+                        templateUrl: 'personal-center/watched-issue/details.html',
+                        controller: 'watchedIssue'
+                    }
+                }
+            })
+            .state('watchedIssue.comment', {
+                url: '/comment',
+                views: {
+                    'watchedIssue': {
+                        templateUrl: 'personal-center/watched-issue/commentEdit.html',
+                        controller: 'watchedIssue'
                     }
                 }
             })
@@ -314,6 +352,15 @@ angular.module('lawOnline')
                     }
                 }
             })
+            .state('personalCenter.applyAccess', {
+                url: '/applyAccess',
+                views: {
+                    'pc': {
+                        templateUrl: 'personal-center/myEnterpriseHelp/applyAccess.html',
+                        controller: 'myEnterpriseHelp'
+                    }
+                }
+            })
             // 产品列表
             .state('personalCenter.ProductList', {
                 url: '/ProductList',
@@ -344,8 +391,6 @@ angular.module('lawOnline')
                     }
                 }
             })
-
-
 
 
             // 最新资讯
@@ -393,165 +438,6 @@ angular.module('lawOnline')
                 }
             })
 
-            // 注册（个人）
-            .state('personalCenter.personalRegist', {
-                url: '/personalRegist',
-                views: {
-                    'pc': {
-                        templateUrl: 'personal-center/personalregist/personalregist.html',
-                        controller: 'personalRegist'
-                    }
-                }
-            })
-
-
-            // 案件列表（个人）
-            .state('personalCenter.caseList', {
-                url: '/caseList',
-                views: {
-                    'pc': {
-                        templateUrl: 'personal-center/case-list/case-list.html',
-                        controller: 'caseList'
-                    }
-                }
-            })
-            // 关于平台（个人）
-            .state('personalCenter.aboutPlatform', {
-                url: '/aboutPlatform',
-                views: {
-                    'pc': {
-                        templateUrl: 'personal-center/about-platform/about-platform.html',
-                        controller: 'aboutPlatform'
-                    }
-                }
-            })
-
-
-
-
-            // 个人中心
-            //
-            // 律师
-            .state('lawyerCenter', {
-                url: '/lawyerCenter',
-                views: {
-                    'main': {
-                        template: '<ion-nav-view name="lc"></ion-nav-view>',
-                        abstract: true
-                    }
-                }
-            })
-            // 登录（律师）
-            .state('lawyerCenter.login', {
-                url: '/lawyerLogin',
-                views: {
-                    'lc': {
-                        templateUrl: 'lawyer-center/personallogin/personal-login.html',
-                        controller: 'lawyerLogin'
-                    }
-                }
-            })
-            // 注册（律师）
-            .state('lawyerCenter.regist', {
-                url: '/lawyerRegist',
-                views: {
-                    'lc': {
-                        templateUrl: 'lawyer-center/personalregist/personalregist.html',
-                        controller: 'lawyerRegist'
-                    }
-                }
-            })
-            // 我的个人中心（律师）
-            .state('lawyerCenter.centerList', {
-                url: '/centerList',
-                views: {
-                    'lc': {
-                        templateUrl: 'lawyer-center/lawyer-center.html',
-                        controller: 'lawyerCenter'
-                    }
-                }
-            })
-            // 我的资料（律师）
-            .state('lawyerCenter.myInfo', {
-                url: '/myInfo',
-                views: {
-                    'lc': {
-                        templateUrl: 'lawyer-center/my-information/my-information.html',
-                        controller:'lawyerInfo'
-                    }
-                }
-            })
-            // 过往案例（律师）
-            .state('lawyerCenter.pastCase', {
-                url: '/pastCase',
-                views: {
-                    'lc': {
-                        templateUrl: 'lawyer-center/pastCase/pastCase.html',
-                        controller: 'lawyerPastCase'
-                    }
-                }
-            })
-            // 我的订单（律师）
-            .state('lawyerCenter.lawyerOrders', {
-                url: '/orders',
-                views: {
-                    'lc': {
-                        templateUrl: 'lawyer-center/my-orders/my-orders.html',
-                        controller: 'lawyerOrders'
-                    }
-                }
-            })
-            // 我的钱包（律师）
-            .state('lawyerCenter.myWallet', {
-                url: '/myWallet',
-                views: {
-                    'lc': {
-                        templateUrl: 'lawyer-center/my-wallet/my-wallet.html',
-                        controller: 'myWallet'
-                    }
-                }
-            })
-            .state('lawyerCenter.caseList', {
-                url: '/caseList',
-                views: {
-                    'lc': {
-                        templateUrl: 'lawyer-center/case-list/case-list.html',
-                        controller: 'lawyerCaseList'
-                    }
-                }
-            })
-            // 我的代办（律师）
-            .state('lawyerCenter.lawyerAgency', {
-                url: '/lawyerAgency',
-                views: {
-                    'lc': {
-                        templateUrl: 'lawyer-center/my-agency/my-orders.html',
-                        controller: 'lawyerAgency'
-                    }
-                }
-            })
-            // 关于平台（律师）
-            .state('lawyerCenter.aboutPlatform', {
-                url: '/aboutPlatform',
-                views: {
-                    'lc': {
-                        templateUrl: 'personal-center/about-platform/about-platform.html',
-                        controller: 'lawyerAboutPlatform'
-                    }
-                }
-            })
-            // 设置（律师）
-            .state('lawyerCenter.setting', {
-                url: '/setting',
-                views: {
-                    'lc': {
-                        templateUrl: 'lawyer-center/setting/setting.html',
-                        controller:'lawyerSetting'
-                    }
-                }
-            })
-
-            // 个人中心结束
 
 
             // 预约咨询模块
@@ -571,149 +457,193 @@ angular.module('lawOnline')
                     'consult': {
                         templateUrl: 'consult/consult.html',
                         controller: 'consultIndex'
-                    },
+                    }
                 }
             })
-            // 律师详情
-            .state('consult.details', {
-                url: '/index/:id',
+            // 打赏咨询
+            .state('consult.rewardConsult', {
+                url: '/rewardConsult',
                 views: {
                     'consult': {
-                        templateUrl: 'consult/consult-details/consult-details.html',
-                        controller: 'consultDetails'
+                        templateUrl: 'consult/reward-consult.html',
+                        controller: 'consultIndex'
                     }
-
                 }
             })
-            // 过往案例列表
-            .state('consult.pastCaseList', {
-                url: '/pastCaseList/:id',
+            // 电话咨询
+            .state('consult.phoneConsult', {
+                url: '/phoneConsult',
                 views: {
                     'consult': {
-                        templateUrl: 'consult/past-case-list/past-case-list.html',
-                        controller: 'pastCaseList'
+                        templateUrl: 'consult/phone-consult.html',
+                        controller: 'consultIndex'
                     }
                 }
             })
-            // 预约咨询模块结束
-
-
-            // 精选分享
-
-            .state('share', {
-                url: '/share',
+            //预约会面
+            .state('consult.appointmentMeeting', {
+                url: '/appointmentMeeting',
                 views: {
-                    'main': {
-                        template: '<ion-nav-view name="share"></ion-nav-view>'
+                    'consult': {
+                        templateUrl: 'consult/appointment-meeting.html',
+                        controller: 'consultIndex'
                     }
                 }
             })
-            // 日常法典
-            .state('share.daily', {
-                url: '/daily',
+            //更多服务
+            .state('consult.moreService', {
+                url: '/moreService',
                 views: {
-                    'share': {
-                        templateUrl: 'share/daily/daily.html',
-                        controller: 'daily'
-                    }
-                }
-            })
-            // 法据观点
-            .state('share.lawyerViewPoint', {
-                url: '/lawyerViewPoint/:id',
-                views: {
-                    'share': {
-                        templateUrl: 'share/lawyer-viewpoint/lawyer-viewpoint.html',
-                        controller: 'lawyerViewPoint'
+                    'consult': {
+                        templateUrl: 'consult/more-service/index.html',
+                        controller: 'consultIndex'
                     }
                 }
             })
 
-            // 分享模块结束
-
-            // 产品服务模块开始
-            .state('proService', {
-                url: '/proService',
+            //律师简介
+            .state('consult.lawyerIntroduction', {
+                url: '/lawyerIntroduction',
                 views: {
-                    'main': {
-                        template: '<ion-nav-view name="product"></ion-nav-view>',
-                        abstract: true
+                    'consult': {
+                        templateUrl: 'consult/more-service/lawyerIntroduction.html',
+                        controller: 'consultIndex'
                     }
                 }
             })
-            // 产品服务
-            .state('proService.menu', {
-                url: '/menu',
+
+            //我的案例
+            .state('consult.myCase', {
+                url: '/myCase',
                 views: {
-                    'product': {
-                        templateUrl: 'product-service/download-menu.html',
-                        controller: 'proServiceMenu'
+                    'consult': {
+                        templateUrl: 'consult/more-service/myCase.html',
+                        controller: 'consultIndex'
+                    }
+                }
+            })
+            .state('consult.myCaseDetails', {
+                url: '/myCaseDetails',
+                views: {
+                    'consult': {
+                        templateUrl: 'consult/more-service/myCaseDetails.html',
+                        controller: 'consultIndex'
+                    }
+                }
+            })
+
+            //私人法律顾问
+            .state('consult.personalLawAdviser', {
+                url: '/personalLawAdviser',
+                views: {
+                    'consult': {
+                        templateUrl: 'consult/more-service/personalLawAdviser.html',
+                        controller: 'consultIndex'
+                    }
+                }
+            })
+            //家庭法律顾问
+            .state('consult.familyLawAdviser', {
+                url: '/personalLawAdviser',
+                views: {
+                    'consult': {
+                        templateUrl: 'consult/more-service/familyLawAdviser.html',
+                        controller: 'consultIndex'
+                    }
+                }
+            })
+            //企业法律顾问
+            .state('consult.enterpriseLawAdviser', {
+                url: '/personalLawAdviser',
+                views: {
+                    'consult': {
+                        templateUrl: 'consult/more-service/enterpriseLawAdviser.html',
+                        controller: 'consultIndex'
+                    }
+                }
+            })
+            //诉讼服务
+            .state('consult.lawsuitService', {
+                url: '/lawsuitService',
+                views: {
+                    'consult': {
+                        templateUrl: 'consult/more-service/lawsuitService.html',
+                        controller: 'consultIndex'
+                    }
+                }
+            })
+            //诉讼服务
+            .state('consult.lawyerLetterService', {
+                url: '/lawyerLetterService',
+                views: {
+                    'consult': {
+                        templateUrl: 'consult/more-service/lawyerLetterService.html',
+                        controller: 'consultIndex'
+                    }
+                }
+            })
+            // 解答分享
+            .state('consult.analysisShare', {
+                url: '/analysisShare',
+                views: {
+                    'consult': {
+                        templateUrl: 'consult/analysisShare/list.html',
+                        controller: 'consultIndex'
+                    }
+                }
+            })
+            // 解答分享-答案
+            .state('consult.analysisShareDetails', {
+                url: '/analysisShareDetails',
+                views: {
+                    'consult': {
+                        templateUrl: 'consult/analysisShare/details.html',
+                        controller: 'consultIndex'
+                    }
+                }
+            })
+            // 案例分享
+            .state('consult.caseShare', {
+                url: '/caseShare',
+                views: {
+                    'consult': {
+                        templateUrl: 'consult/caseShare/list.html',
+                        controller: 'consultIndex'
+                    }
+                }
+            })
+            // 案例分享-答案
+            .state('consult.caseShareDetails', {
+                url: '/caseShareDetails',
+                views: {
+                    'consult': {
+                        templateUrl: 'consult/caseShare/details.html',
+                        controller: 'consultIndex'
                     }
                 }
             })
             // 合同下载
-            .state('proService.download', {
-                url: '/download',
+            .state('consult.contractDownload', {
+                url: '/contractDownload',
                 views: {
-                    'product': {
-                        templateUrl: 'product-service/download/download.html',
-                        controller: 'download'
+                    'consult': {
+                        templateUrl: 'consult/contractDownload/list.html',
+                        controller: 'consultIndex'
                     }
                 }
             })
-            // 产品服务
-            .state('proService.product', {
-                url: '/product/:id',
+            .state('consult.contractDownloadDetails', {
+                url: '/contractDownloadDetails',
                 views: {
-                    'product': {
-                        templateUrl: 'product-service/product/product-detail.html',
-                        controller: 'productDetail'
+                    'consult': {
+                        templateUrl: 'consult/contractDownload/details.html',
+                        controller: 'consultIndex'
                     }
                 }
             })
 
-            // 查询助手模块开始
-            .state('selectUtil', {
-                url: '/selectUtil',
-                views: {
-                    'main': {
-                        template: '<ion-nav-view name="select"></ion-nav-view>',
-                        abstract: true
-                    }
-                }
-            })
-            // 产品服务
-            .state('selectUtil.menu', {
-                url: '/menu',
-                views: {
-                    'select': {
-                        templateUrl: 'select-util/select-list.html',
-                        controller: 'selectUtils'
-                    }
-                }
-            })
-            // 查询助手结束
 
 
-            // 委托代办
-            .state('concierge', {
-                url: '/concierge',
-                views: {
-                    'main': {
-                        template: '<ion-nav-view name="concierge"></ion-nav-view>',
-                        abstract: true
-                    }
-                }
-            })
-            .state('concierge.list', {
-                url: '/list',
-                views: {
-                    'concierge': {
-                        templateUrl: 'concierge/concierge.html',
-                        controller: 'concierge'
-                    }
-                }
-            })
 
 
             // 关于我们

@@ -1,0 +1,56 @@
+/*交流通知*/
+.communication ul{
+    margin-bottom: 0;
+}
+.communication .bar-getMore{
+    text-align: center;
+    padding: 0.2rem 0;
+    background: #ececec;
+    color: #666;
+}
+.communication .comment{
+    padding: 1rem 2rem;
+    text-align: center;
+}
+.communication .comment textarea{
+    width: 100%;
+    height: 8rem;
+    border: 1px solid #ccc;
+    padding: 0.2rem;
+}
+.communication .comment p{
+    margin-top: 1rem;
+}
+
+/*相关*/
+.myData li{
+    width: 48%;
+    float: left;
+    min-height: 20rem;
+    border: 1px solid #ddd;
+    margin: 1%;
+    padding: 1.2rem;
+    position: relative;
+}
+.myData li i.fa-remove{
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 2rem;
+}
+.myData li img{
+    max-width: 100%;
+    height: 10rem;
+}
+.myData .btn-upload{
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+.myData .btn-upload i{
+    font-size: 6rem;
+    color: #dddddd;
+}

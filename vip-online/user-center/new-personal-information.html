@@ -4,7 +4,7 @@
 			<label class="item item-input img-upload" >
 				<span class="input-label text-center">头像：</span>
 				<!-- <label for="fileBtn"><img src="../static/img/uploadImg.png" id="img"/></label> -->
-				<label  for="fileBtn" onclick="javascript:clickInput()"><img onclick="javascript:clickInput()" src="../static/img/uploadImg.png" id="img"/></label>
+				<label  for="fileBtn"><img id="photo" onclick="javascript:clickInput()" src="../static/img/uploadImg.png" id="img"/></label>
 				<input id="fileBtn" type="file" onchange="upload('#fileBtn', '#img');" accept="image/*"  capture="camera">
 				<!-- <input id="fileBtn" type="file" onchange="upload('#fileBtn', '#img');" accept="image/*"  capture="camera" multiple="true"/> -->
 			</label>

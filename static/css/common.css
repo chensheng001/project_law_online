@@ -1,5 +1,6 @@
-@charset "utf-8";
+﻿@charset "utf-8";
 /* css reset*/
+
 /*初始化*/
 html{
     font-size: 62.5%
@@ -30,7 +31,7 @@ audio, video {
     font-family: "Microsoft YaHei","sans-serif";
     -webkit-font-smoothing: antialiased;
     font-size: 1.4rem;
-    color: #101010;
+    /*color: #101010;*/
 }
 a{
     text-decoration: none;
@@ -115,4 +116,18 @@ a{
 }
 .margin-auto{
     margin: 0 auto;
+}
+.padding-0{
+    padding: 0 !important;
+}
+.btn-border{
+    border: 1px solid #ddd;
+    background: none;
+    padding: 0.2rem 0.5rem;
+    color: #666;
+    border-radius: 0.2rem;
+}
+.breakWord{
+    word-wrap:break-word;
+    white-space: normal
 }
