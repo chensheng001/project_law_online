@@ -54,3 +54,329 @@
     font-size: 6rem;
     color: #dddddd;
 }
+
+
+
+/*丰信办公 登录页*/
+.clearFloat{
+    overflow: hidden;
+}
+.fx-offcial-home input{
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 2px 5px;
+}
+.fx-offcial-home .row{
+    margin-top: 2rem;
+}
+.fx-offcial-home .codeBox{
+    text-align: center;
+}
+.fx-offcial-home .codeBox span{
+    display: inline-block;
+    width: 80%;
+    height: 34px;
+    line-height: 34px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.fx-offcial-home .btn-box{
+    margin-top:50px;
+}
+/*丰信办公 首页*/
+.fx-offcial-homepage .topTip{
+    text-align: center;
+    height: 2rem;
+    line-height: 2rem;
+    background: #bdbbbd;
+    color: #787478;   
+}
+.fx-offcial-homepage .contentBox{
+    margin-top: 2rem;
+}
+.fx-offcial-homepage .contentBox ._title{
+    font-size: 1.6rem;
+    padding-left: 2rem;
+    height: 3rem;
+    line-height: 3rem;
+    border-bottom: 1px solid #ddd;
+}
+.fx-offcial-homepage .contentBox ul {
+    padding: 3rem 2rem 0;
+
+}
+.fx-offcial-homepage .contentBox ul li{
+    float: left;
+    width: 25%;
+    height: 7rem;
+    text-align: center;
+}
+.fx-offcial-homepage .contentBox ul li p{
+    width: 100%;
+    height: 4rem;
+}
+.fx-offcial-homepage .contentBox ul li i{
+    display: inline-block;
+    font-size: 4rem;
+}
+
+.calendaringBox>li>span{
+    display: inline-block;
+    width: 12rem;
+    height: 3rem;
+    line-height: 3rem;
+    border: 1px solid #b2b2b2;
+    border-radius: .5rem;
+    margin-top: 1rem;
+}
+.calendaringInfo-title{
+    height: 3rem;
+    line-height: 3rem;
+    border-bottom: 1px dotted #ddd;
+    margin-top: 1rem;
+}
+.calendaringInfoBox>li{
+    padding: 10px 20px;
+    border-bottom: 1px dotted #ddd;
+}
+.calendaringInfoBox ol{
+    padding-left: 50px;
+}
+.calendaringInfoBox ol span{
+    font-size: 1.2rem;
+    display: inline-block;
+    vertical-align: top;
+}
+.calendaringInfoBox ol ._time{
+    width: 20%;
+}
+.calendaringInfoBox ol ._name{
+    width: 25%;
+}
+.calendaringInfoBox ol ._thing{
+    padding-left: 20px;
+}
+.meeting-summary ._search{
+    padding: 8px 0 5px 10px;
+
+}
+.meeting-summary ._search input{
+    display: inline-block;
+    width: 42%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 0 5px;
+    font-size: 1.2rem;
+}
+.meeting-summary ._search b{
+    margin:0 5px;
+    color: #111;
+}
+.meeting-summary ._search span{
+    display: inline-block;
+    width: 10%;
+    font-size: 3rem;
+    text-align: center;
+    vertical-align: middle;
+}
+.meeting-summary .meetingList{
+    margin: 10px 0;
+}
+.meeting-summary .meetingList ._add{
+    margin-bottom: 10px;
+    margin-right: 20px;
+}
+.meeting-summary .meetingList ._add span{
+    display: inline-block;
+    width: 13rem;
+    height: 3.5rem;
+    line-height: 3.5rem;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+.meeting-summary .meetingList .item i{
+    font-size: 2.6rem;
+}
+.meeting-summary .meetingList .item span{
+    display: inline-block;
+    color: #fff;
+    background: #8cc1ff;
+    width: 10rem;
+    height: 3rem;
+    line-height: 3rem;
+    text-align: center;
+    border: 1px solid #8cc1ff;
+    border-radius: 5px;
+}
+
+.add-meeting-summary .item{
+    border: none;
+}
+.add-meeting-summary .item-input{
+    padding-right: 16px;
+}
+.add-meeting-summary .hasBorder{  
+    resize:none; 
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.add-meeting-summary textarea{
+    height: 10rem;
+}
+.add-meeting-summary textarea,
+.add-meeting-summary input
+{
+    padding: 5px 8px;
+}
+.add-meeting-summary .record-btn,
+.meeting-summary-info ._play
+{
+    display: inline-block;
+    width: 8rem;
+    height: 3rem;
+    line-height: 3rem;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.meeting-summary-info ._footer{
+    background: #fff;
+}
+.meeting-summary-info .note-box span{
+    font-size: 1.2rem;
+    display: inline-block;
+}
+.meeting-summary-info .note-box span:first-child{
+    width: 7rem;
+    text-align: right;
+}
+
+.companySeal ._list,
+.customer ._list,
+.customerInfo ._list
+{
+    margin: 20px 0 10px;
+}
+.companySeal ._list ._add{
+    margin-bottom: 10px;
+    margin-right: 20px;
+}
+.companySeal ._list ._add span,
+.customerInfo ._list ._add span
+{
+    display: inline-block;
+    width: 13rem;
+    height: 3.5rem;
+    line-height: 3.5rem;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+.companySeal ._list .item span,
+.customer ._list .item span{
+    display: inline-block;
+    color: #fff;
+    background: #8cc1ff;
+    width: 10rem;
+    height: 3rem;
+    line-height: 3rem;
+    text-align: center;
+    border: 1px solid #8cc1ff;
+    border-radius: 5px;
+}
+.companySeal ._list .item b{
+    display: block;
+    font-size: 1rem;
+    color: #8cc1ff;
+    background: #fff;
+    border: 1px solid #8cc1ff;
+    width: 5rem;
+    height: 2rem;
+    line-height: 2rem;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.img-upload{
+    width: 8rem;
+    height: 10rem;
+    position: relative;
+}
+.img-upload img{
+    background: pink;
+    width: 8rem;
+    height: 8rem;
+    margin-top: 1rem;
+    position: absolute;
+    left: 0;
+}
+.img-upload input{
+    width: 8rem !important;
+    height: 8rem;
+    margin-top: 1rem;
+    opacity: 0.01;
+    position: absolute;
+    left: 0;
+    z-index: 99;
+}
+.meeting-summary-info .imgBox img{
+    float: left;
+    width: 5rem;
+    height: 5rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+.customer ._list .item b{
+    display: inline-block;
+    font-size: 1.6rem;
+    margin-bottom: 5px;
+}
+.customer .classification_title li:not(:last-child){
+    border-right: 1px solid #ddd;
+}
+.customer ._list .item span{
+    display: block;
+    margin-bottom: 10px;
+}
+.customerInfo ._list .item div._title{
+    width: 2rem;
+}
+.customerInfo ._list ._add{
+    margin-right: 20px;
+}
+.customerInfo .col-20{
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 15%;
+    -moz-box-flex: 0;
+    -moz-flex: 0 0 15%;
+    -ms-flex: 0 0 15%;
+    flex: 0 0 15%;
+    max-width: 15%;
+    padding-right: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

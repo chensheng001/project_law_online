@@ -41,10 +41,14 @@ lawApp.directive('checkcode', function ($interval) {
     }
 });
 
-lawApp.controller('MyCtrl', function ($scope, $ionicSideMenuDelegate, $ionicModal) {
+lawApp.controller('MyCtrl', function ($scope, $ionicSideMenuDelegate, $ionicModal,$state) {
     $scope.toggleRight = function () {
         $ionicSideMenuDelegate.toggleRight();
     };
+
+    $scope.jump = (e)=>{
+        $state.go(e)
+    }
 })
     //用户查询
     .controller('queryUserCtrl', function ($rootScope, $scope, $ionicModal, $state) {
@@ -53,10 +57,25 @@ lawApp.controller('MyCtrl', function ($scope, $ionicSideMenuDelegate, $ionicModa
             {title:"都结束了呀，老铁3",date:"2017-11-11 11:11:11",uuid:"3"}];
     })
 
-    //用户查询
-    .controller('fxOfficialCtrl', function ($rootScope, $scope, $ionicModal, $state) {
+    //封信办公 登录页
+    .controller('fxOfficialCtrl', function ($rootScope, $scope, $ionicModal, $state) {})
+    //封信办公 主页
+    .controller('homepageCtrl', function ($rootScope, $scope, $ionicModal, $state) {})
 
-    })
+    .controller('calendaringCtrl', function ($rootScope, $scope, $ionicModal, $state) {})
+    .controller('calendaringInfoCtrl', function ($rootScope, $scope, $ionicModal, $state) {})
+
+    .controller('meetingSummaryCtrl', function ($rootScope, $scope, $ionicModal, $state) {})
+    .controller('addMeetingSummaryCtrl', function ($rootScope, $scope, $ionicModal, $state) {})
+    .controller('meetingSummaryInfoCtrl', function ($rootScope, $scope, $ionicModal, $state) {})
+
+    .controller('companySealCtrl', function ($rootScope, $scope, $ionicModal, $state) {})
+    .controller('addCompanySealCtrl', function ($rootScope, $scope, $ionicModal, $state) {})
+    .controller('acompanySealInfoCtrl', function ($rootScope, $scope, $ionicModal, $state) {})
+
+    .controller('customerCtrl', function ($rootScope, $scope, $ionicModal, $state) {})
+    .controller('customerInfoCtrl', function ($rootScope, $scope, $ionicModal, $state) {})
+    .controller('addCustomerInfoCtrl', function ($rootScope, $scope, $ionicModal, $state) {})
 ;
 
 

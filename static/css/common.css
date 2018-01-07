@@ -86,6 +86,9 @@ a{
 .margin-b-5{
     margin-bottom: 1rem;
 }
+.float-left{
+    float: left;
+}
 .float-right{
     float: right;
 }
@@ -130,4 +133,7 @@ a{
 .breakWord{
     word-wrap:break-word;
     white-space: normal
+}
+.text-align{
+    text-align: center;
 }

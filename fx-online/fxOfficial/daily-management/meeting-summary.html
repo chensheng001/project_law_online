@@ -1,0 +1,29 @@
+<ion-view view-title="丰信办公-会议纪要">
+    <ion-content class="meeting-summary">
+        <div class="_search">
+            <input type="text" name="startTime" placeholder="起始日期"><b>&ndash;</b>
+            <input type="text" name="endTime" placeholder="结束日期"><span class="icon ion-android-search"></span>
+        </div>
+        <ul class="list meetingList">
+            <li class="_add clearFloat">
+                <span ng-click="jump('fxOfficial.addMeetingSummary')" class="float-right">创建新会议</span>
+            </li>
+            <li class="item item-icon-left">
+                <i class="icon ion-locked"></i>
+                <span ng-click="jump('fxOfficial.meetingSummaryInfo')" class="float-right">详情</span>
+                <div>
+                    <p>以开展线上推广为讨论</p>
+                    <p>会议日期：2017-01-01</p>
+                </div>
+            </li>
+
+            <li class="item">
+                <span ng-click="jump('fxOfficial.meetingSummaryInfo')" class="float-right">详情</span>
+                <div>
+                    <p>以开展线上推广为讨论</p>
+                    <p>会议日期：2017-01-01</p>
+                </div>
+            </li>
+        </ul>
+    </ion-content>
+</ion-view>

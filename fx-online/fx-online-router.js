@@ -96,6 +96,141 @@ angular.module('fxOnline')
                     }
                 }
             })
+            .state('fxOfficial.homepage', {
+                url: '/homepage',
+                views: {
+                    'fxOfficial': {
+                        templateUrl: 'fxOfficial/homepage.html',
+                        controller: 'homepageCtrl'
+                    }
+                }
+            })
+            /*丰信办公--日常管理*/
+            .state('fxOfficial.calendaring', {
+                url: '/calendaring',
+                views: {
+                    'fxOfficial': {
+                        templateUrl: 'fxOfficial/daily-management/calendaring.html',
+                        controller: 'calendaringCtrl'
+                    }
+                }
+            })
+            .state('fxOfficial.calendaringInfo', {
+                url: '/calendaringInfo',
+                views: {
+                    'fxOfficial': {
+                        templateUrl: 'fxOfficial/daily-management/calendaringInfo.html',
+                        controller: 'calendaringInfoCtrl'
+                    }
+                }
+            })
+            .state('fxOfficial.meetingSummary', {
+                url: '/meetingSummary',
+                views: {
+                    'fxOfficial': {
+                        templateUrl: 'fxOfficial/daily-management/meeting-summary.html',
+                        controller: 'meetingSummaryCtrl'
+                    }
+                }
+            })
+            .state('fxOfficial.addMeetingSummary', {
+                url: '/addMeetingSummary',
+                views: {
+                    'fxOfficial': {
+                        templateUrl: 'fxOfficial/daily-management/meeting-summary-add.html',
+                        controller: 'addMeetingSummaryCtrl'
+                    }
+                }
+            })
+            .state('fxOfficial.meetingSummaryInfo', {
+                url: '/meetingSummaryInfo',
+                views: {
+                    'fxOfficial': {
+                        templateUrl: 'fxOfficial/daily-management/meeting-summary-info.html',
+                        controller: 'meetingSummaryInfoCtrl'
+                    }
+                }
+            })
+
+            .state('fxOfficial.companySeal', {
+                url: '/companySeal',
+                views: {
+                    'fxOfficial': {
+                        templateUrl: 'fxOfficial/daily-management/company-seal.html',
+                        controller: 'companySealCtrl'
+                    }
+                }
+            })
+            .state('fxOfficial.addCompanySeal', {
+                url: '/addCompanySeal',
+                views: {
+                    'fxOfficial': {
+                        templateUrl: 'fxOfficial/daily-management/company-seal-add.html',
+                        controller: 'addCompanySealCtrl'
+                    }
+                }
+            })
+            .state('fxOfficial.companySealInfo', {
+                url: '/companySealInfo',
+                views: {
+                    'fxOfficial': {
+                        templateUrl: 'fxOfficial/daily-management/company-seal-info.html',
+                        controller: 'acompanySealInfoCtrl'
+                    }
+                }
+            })
+
+            .state('fxOfficial.customer', {
+                url: '/customer',
+                views: {
+                    'fxOfficial': {
+                        templateUrl: 'fxOfficial/daily-management/customer.html',
+                        controller: 'customerCtrl'
+                    }
+                }
+            })
+            .state('fxOfficial.customerInfo', {
+                url: '/customerInfo',
+                views: {
+                    'fxOfficial': {
+                        templateUrl: 'fxOfficial/daily-management/customer-info.html',
+                        controller: 'customerInfoCtrl'
+                    }
+                }
+            })
+            .state('fxOfficial.addCustomerInfo', {
+                url: '/addCustomerInfo',
+                views: {
+                    'fxOfficial': {
+                        templateUrl: 'fxOfficial/daily-management/customer-add.html',
+                        controller: 'addCustomerInfoCtrl'
+                    }
+                }
+            })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
             // 关于我们
             .state('aboutUs', {
