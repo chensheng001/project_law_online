@@ -1,0 +1,97 @@
+<ion-view view-title="创建新档案">
+    <ion-content class="add-meeting-summary">
+        <div class="card addNewFile">
+            <div class="item item-divider">
+                委托人信息
+            </div>
+            <div class="item item-text-wrap padding-0">
+                <div class="list">
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">档案编号</span>
+                        <input class="hasBorder" type="text" placeholder="单行输入">
+                    </label>
+
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">建档人</span>
+                        <input class="hasBorder" type="text" placeholder="单行输入">
+                    </label>
+
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">委托人姓名</span>
+                        <input class="hasBorder" type="text" placeholder="单行输入">
+                    </label>
+
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">委托人手机</span>
+                        <input class="hasBorder" type="text" placeholder="单行输入">
+                    </label>
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">委托人邮箱</span>
+                        <input class="hasBorder" type="email" placeholder="单行输入">
+                    </label>
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">委托人地址</span>
+                        <input class="hasBorder" type="text" placeholder="单行输入">
+                    </label>
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">委托事项</span>
+                        <input class="hasBorder" type="text" placeholder="单行输入">
+                    </label>
+
+
+
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">图片上传</span>
+                        <div class="img-upload">
+                            <img src="../static/img/becomeMember.jpg">
+                            <input onchange="angular.element(this).scope().fileChanged(this)" type="file">
+                        </div>
+                    </label>
+                </div>
+            </div>
+            <div class="item item-divider">
+                客户沟通
+            </div>
+            <div class="item item-text-wrap">
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">客户需求</span>
+                    <textarea class="hasBorder" placeholder="多行输入"></textarea>
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">沟通概要</span>
+                    <textarea class="hasBorder" placeholder="多行输入"></textarea>
+                </label>
+
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">事项报价</span>
+                    <input class="hasBorder" type="text" placeholder="单行输入">
+                </label>
+            </div>
+            <div class="item item-divider">
+                相关资料
+            </div>
+            <div class="item item-text-wrap">
+                <ul class="myData">
+                    <li>
+                        <i ng-click="removePic(item)" class="fa fa-remove"></i>
+                        <div ><img src="../static/img/becomeMember.jpg"></div>
+                    </li>
+                    <li>
+                        <i ng-click="removePic(item)" class="fa fa-remove"></i>
+                        <div ><img src="../static/img/becomeMember.jpg"></div>
+                    </li>
+                    <li>
+                        <i ng-click="removePic(item)" class="fa fa-remove"></i>
+                        <div ><img src="../static/img/becomeMember.jpg"></div>
+                    </li>
+                    <li class="btn-upload" ng-click="upload()">
+                        <p class="text-center"><i class="fa fa-plus"></i></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="padding">
+            <button  class="button button-block button-balanced">发布审核</button>
+        </div>
+    </ion-content>
+</ion-view>

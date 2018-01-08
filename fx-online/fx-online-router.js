@@ -236,6 +236,15 @@ angular.module('fxOnline')
                     }
                 }
             })
+            .state('fxOfficial.addNewFile', {
+                url: '/addNewFile',
+                views: {
+                    'fxOfficial': {
+                        templateUrl: 'fxOfficial/file-management/unLawFile/addNewFile.html',
+                        controller: 'unLawFileCtrl'
+                    }
+                }
+            })
             .state('unLawFile', {
                 url: '/unLawFile',
                 views: {
@@ -427,6 +436,51 @@ angular.module('fxOnline')
                     }
                 }
             })
+            .state('lawFile.consignPay', {
+                url: '/consignPay',
+                views: {
+                    'lawFile': {
+                        templateUrl: 'fxOfficial/file-management/lawFile/consignPay.html',
+                        controller: 'lawFileCtrl'
+                    }
+                }
+            })
+            .state('lawFile.applyCompanySeal', {
+                url: '/applyCompanySeal',
+                views: {
+                    'lawFile': {
+                        templateUrl: 'fxOfficial/file-management/lawFile/applyCompanySeal.html',
+                        controller: 'lawFileCtrl'
+                    }
+                }
+            })
+            .state('lawFile.fileMemorabilia', {
+                url: '/fileMemorabilia',
+                views: {
+                    'lawFile': {
+                        templateUrl: 'fxOfficial/file-management/lawFile/fileMemorabilia.html',
+                        controller: 'lawFileCtrl'
+                    }
+                }
+            })
+            .state('lawFile.fileMemorabiliaAdd', {
+                url: '/fileMemorabiliaAdd',
+                views: {
+                    'lawFile': {
+                        templateUrl: 'fxOfficial/file-management/lawFile/fileMemorabiliaAdd.html',
+                        controller: 'lawFileCtrl'
+                    }
+                }
+            })
+            .state('lawFile.fileMemorabiliaDetails', {
+                url: '/fileMemorabiliaDetails',
+                views: {
+                    'lawFile': {
+                        templateUrl: 'fxOfficial/file-management/lawFile/fileMemorabiliaDetails.html',
+                        controller: 'lawFileCtrl'
+                    }
+                }
+            })
             /*丰信办公--档案管理-诉讼审核*/
             .state('fxOfficial.lawCheck', {
                 url: '/lawCheck',
@@ -504,7 +558,7 @@ angular.module('fxOnline')
             .state('fileMemorabilia', {
                 url: '/fileMemorabilia',
                 views: {
-                    'fxOfficial': {
+                    'main': {
                         template: '<ion-nav-view name="fileMemorabilia"></ion-nav-view>',
                         abstract: true
                     }
@@ -513,8 +567,17 @@ angular.module('fxOnline')
             .state('fileMemorabilia.details', {
                 url: '/details',
                 views: {
-                    'fxOfficial': {
+                    'fileMemorabilia': {
                         templateUrl: 'fxOfficial/file-management/fileMemorabilia/details.html',
+                        controller: 'fileMemorabiliaCtrl'
+                    }
+                }
+            })
+            .state('fileMemorabilia.comment', {
+                url: '/comment',
+                views: {
+                    'fileMemorabilia': {
+                        templateUrl: 'fxOfficial/file-management/fileMemorabilia/commentEdit.html',
                         controller: 'fileMemorabiliaCtrl'
                     }
                 }

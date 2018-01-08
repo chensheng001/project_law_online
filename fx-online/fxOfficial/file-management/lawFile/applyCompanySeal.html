@@ -1,0 +1,46 @@
+<ion-view view-title="公章申请">
+    <ion-content class="add-meeting-summary">
+        <div class="list">
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">使用日期</span>
+                <input class="hasBorder" type="text" placeholder="单行输入">
+            </label>
+
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">申请人</span>
+                <input class="hasBorder" type="text" placeholder="单行输入">
+            </label>
+
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">手机</span>
+                <input class="hasBorder" type="text" placeholder="单行输入">
+            </label>
+
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">发出地址</span>
+                <input class="hasBorder" type="text" placeholder="单行输入">
+            </label>
+
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">盖章事项</span>
+                <textarea class="hasBorder" placeholder="多行输入"></textarea>
+            </label>
+
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">备注</span>
+                <input class="hasBorder" type="text" placeholder="单行输入">
+            </label>
+
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">图片上传</span>
+                <div class="img-upload">
+                    <img src="../static/img/becomeMember.jpg">
+                    <input onchange="angular.element(this).scope().fileChanged(this)" type="file">
+                </div>
+            </label>
+        </div>
+        <div class="padding">
+            <button ng-click="jump('fxOfficial.companySeal')" class="button button-block button-balanced">提交申请</button>
+        </div>
+    </ion-content>
+</ion-view>

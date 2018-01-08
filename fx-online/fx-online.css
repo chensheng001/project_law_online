@@ -221,7 +221,7 @@
 .add-meeting-summary .item-input{
     padding-right: 16px;
 }
-.add-meeting-summary .hasBorder{  
+.add-meeting-summary .hasBorder{
     resize:none; 
     margin-top: 10px;
     border: 1px solid #ddd;
@@ -371,6 +371,15 @@
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     white-space: normal;
+}
+.child-gray{
+    margin:0.5rem 0;
+}
+.child-gray span{
+    color: #959595;
+}
+.addNewFile .myData li{
+    min-height: 13rem;
 }
 
 

@@ -102,6 +102,18 @@ lawApp.controller('MyCtrl', function ($scope, $ionicSideMenuDelegate, $ionicModa
         $scope.myDatas=[{title:"都结束了呀，老铁1",date:"2017-11-11 11:11:11",uuid:"1"},
             {title:"都凉了呀，老铁2",date:"2017-11-11 11:11:11",uuid:"2"},
             {title:"都结束了呀，老铁3",date:"2017-11-11 11:11:11",uuid:"3"}];
+        $scope.cases=[{title:"哈哈哈哈哈哈哈哈哈哈哈dfgdsdddddddddddddd电热翁二翁翁翁无翁",content:"呵呵呵呵呵呵咕咕咕咕过过过过过过过过过过呵呵呵呵呵" +
+        "呵哈哈哈哈哈哈哈哈哈哈哈呵呵呵呵呵呵呵呵呵呵呵呵呵哈哈哈哈哈哈哈哈哈哈哈呵呵呵呵呵呵呵呵呵呵呵呵"},{title:"案件已经结束了" +
+        "",content:"gg"}];
+        $scope.getDetails=function(){
+            $state.go("lawFile.fileMemorabiliaDetails");
+        }
+        $scope.list=["sss","ssszz",'dddd'];
+        $scope.item={
+            title:"标题",
+            type:"dddd",
+            content:"水利水电流水的"
+        }
     })
     //诉讼审核
     .controller('lawCheckCtrl', function ($rootScope, $scope, $ionicModal, $state) {

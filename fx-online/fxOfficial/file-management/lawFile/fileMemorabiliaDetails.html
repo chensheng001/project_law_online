@@ -1,0 +1,29 @@
+<ion-view view-title="详情">
+    <ion-content>
+        <div class="list">
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">事件标题</span>
+                <input class="hasBorder" ng-model="item.title" type="text" placeholder="请输入">
+            </label>
+
+            <div class="item item-input item-select">
+                <div class="input-label">
+                    事件类别
+                </div>
+                <select ng-model="item.type">
+                    <option ng-repeat="i in list">{{i}}</option>
+                </select>
+            </div>
+
+
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">事件内容</span>
+                <textarea ng-model="item.content" class="hasBorder" placeholder="多行输入"></textarea>
+            </label>
+
+        </div>
+        <div class="padding">
+            <button  class="button button-block button-balanced">保存</button>
+        </div>
+    </ion-content>
+</ion-view>
