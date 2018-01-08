@@ -45,20 +45,27 @@ lawApp.controller('MyCtrl', function ($scope, $ionicSideMenuDelegate, $ionicModa
     $scope.toggleRight = function () {
         $ionicSideMenuDelegate.toggleRight();
     };
-
-    $scope.jump = (e)=>{
-        $state.go(e)
+    $scope.jump=function(e){
+        $state.go(e);
     }
+
 })
     //用户查询
     .controller('queryUserCtrl', function ($rootScope, $scope, $ionicModal, $state) {
+        $scope.login=function(){
+            $state.go("queryUser.index");
+        }
         $scope.myDatas=[{title:"都结束了呀，老铁1",date:"2017-11-11 11:11:11",uuid:"1"},
             {title:"都凉了呀，老铁2",date:"2017-11-11 11:11:11",uuid:"2"},
             {title:"都结束了呀，老铁3",date:"2017-11-11 11:11:11",uuid:"3"}];
     })
 
     //封信办公 登录页
-    .controller('fxOfficialCtrl', function ($rootScope, $scope, $ionicModal, $state) {})
+    .controller('fxOfficialCtrl', function ($rootScope, $scope, $ionicModal, $state) {
+        $scope.login=function(){
+            $state.go("fxOfficial.homepage");
+        }
+    })
     //封信办公 主页
     .controller('homepageCtrl', function ($rootScope, $scope, $ionicModal, $state) {})
 
@@ -76,6 +83,41 @@ lawApp.controller('MyCtrl', function ($scope, $ionicSideMenuDelegate, $ionicModa
     .controller('customerCtrl', function ($rootScope, $scope, $ionicModal, $state) {})
     .controller('customerInfoCtrl', function ($rootScope, $scope, $ionicModal, $state) {})
     .controller('addCustomerInfoCtrl', function ($rootScope, $scope, $ionicModal, $state) {})
+
+    //档案管理
+    //非诉建档
+    .controller('unLawFileCtrl', function ($rootScope, $scope, $ionicModal, $state) {
+        $scope.myDatas=[{title:"都结束了呀，老铁1",date:"2017-11-11 11:11:11",uuid:"1"},
+            {title:"都凉了呀，老铁2",date:"2017-11-11 11:11:11",uuid:"2"},
+            {title:"都结束了呀，老铁3",date:"2017-11-11 11:11:11",uuid:"3"}];
+    })
+    //非诉审核
+    .controller('unLawCheckCtrl', function ($rootScope, $scope, $ionicModal, $state) {
+        $scope.myDatas=[{title:"都结束了呀，老铁1",date:"2017-11-11 11:11:11",uuid:"1"},
+            {title:"都凉了呀，老铁2",date:"2017-11-11 11:11:11",uuid:"2"},
+            {title:"都结束了呀，老铁3",date:"2017-11-11 11:11:11",uuid:"3"}];
+    })
+    //诉讼建档
+    .controller('lawFileCtrl', function ($rootScope, $scope, $ionicModal, $state) {
+        $scope.myDatas=[{title:"都结束了呀，老铁1",date:"2017-11-11 11:11:11",uuid:"1"},
+            {title:"都凉了呀，老铁2",date:"2017-11-11 11:11:11",uuid:"2"},
+            {title:"都结束了呀，老铁3",date:"2017-11-11 11:11:11",uuid:"3"}];
+    })
+    //诉讼审核
+    .controller('lawCheckCtrl', function ($rootScope, $scope, $ionicModal, $state) {
+        $scope.myDatas=[{title:"都结束了呀，老铁1",date:"2017-11-11 11:11:11",uuid:"1"},
+            {title:"都凉了呀，老铁2",date:"2017-11-11 11:11:11",uuid:"2"},
+            {title:"都结束了呀，老铁3",date:"2017-11-11 11:11:11",uuid:"3"}];
+    })
+    //档案大事记
+    .controller('fileMemorabiliaCtrl', function ($rootScope, $scope, $ionicModal, $state) {
+        $scope.cases=[{title:"哈哈哈哈哈哈哈哈哈哈哈dfgdsdddddddddddddd电热翁二翁翁翁无翁",content:"呵呵呵呵呵呵咕咕咕咕过过过过过过过过过过呵呵呵呵呵" +
+        "呵哈哈哈哈哈哈哈哈哈哈哈呵呵呵呵呵呵呵呵呵呵呵呵呵哈哈哈哈哈哈哈哈哈哈哈呵呵呵呵呵呵呵呵呵呵呵呵"},{title:"案件已经结束了" +
+        "",content:"gg"}];
+        $scope.getDetails=function(){
+            $state.go("fileMemorabilia.details");
+        }
+    })
 ;
 
 

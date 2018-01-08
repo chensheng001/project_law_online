@@ -137,3 +137,6 @@ a{
 .text-align{
     text-align: center;
 }
+.button-bar a.btn-active{
+    color: #33cd5f
+}

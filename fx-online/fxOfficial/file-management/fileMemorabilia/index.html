@@ -1,0 +1,13 @@
+<ion-view view-title="档案大事记">
+    <ion-content>
+        <ul class="list caseList">
+            <li class="item item-icon-right" ng-click="getDetails()" ng-repeat="item in cases">
+                <h2>{{item.title}}</h2>
+                <div class="content">
+                    {{item.content}}
+                </div>
+                <i class="icon ion-chevron-right"></i>
+            </li>
+        </ul>
+    </ion-content>
+</ion-view>
