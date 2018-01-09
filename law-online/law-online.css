@@ -164,7 +164,7 @@ h2{
 .scoreMail ul li{
     width: 48%;
     float: left;
-    min-height: 26rem;
+    min-height: 18rem;
     border: 1px solid #ddd;
     margin: 1%;
     padding: 1.2rem;
@@ -384,4 +384,13 @@ p.stepText{
     font-size: 2rem;
     margin-top: 2rem;
     color: #000;
+}
+.border-circle{
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid #444;
+    border-radius: 1rem;
+    text-align: center;
+    line-height: 2rem;
 }
