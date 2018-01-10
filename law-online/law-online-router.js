@@ -422,7 +422,52 @@ angular.module('lawOnline')
                 views: {
                     'lc': {
                         templateUrl: 'lawyer-center/my-home/index.html',
-                        controller: 'lawyerCenter'
+                        controller: 'lmyHome'
+                    }
+                }
+            })
+            .state('lmyHome', {
+                url: '/lmyHome',
+                views: {
+                    'main': {
+                        template: '<ion-nav-view name="lmyHome"></ion-nav-view>',
+                        abstract: true
+                    }
+                }
+            })
+            .state('lmyHome.bannerSetting', {
+                url: '/bannerSetting',
+                views: {
+                    'lmyHome': {
+                        templateUrl: 'lawyer-center/my-home/bannerSetting.html',
+                        controller: 'lmyHome'
+                    }
+                }
+            })
+            .state('lmyHome.myIntroduction', {
+                url: '/myIntroduction',
+                views: {
+                    'lmyHome': {
+                        templateUrl: 'lawyer-center/my-home/myIntroduction.html',
+                        controller: 'lmyHome'
+                    }
+                }
+            })
+            .state('lmyHome.myCase', {
+                url: '/myCase',
+                views: {
+                    'lmyHome': {
+                        templateUrl: 'lawyer-center/my-home/myCase.html',
+                        controller: 'lmyHome'
+                    }
+                }
+            })
+            .state('lmyHome.myCase', {
+                url: '/myCase',
+                views: {
+                    'lmyHome': {
+                        templateUrl: 'lawyer-center/my-home/myCase.html',
+                        controller: 'lmyHome'
                     }
                 }
             })

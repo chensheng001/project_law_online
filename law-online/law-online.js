@@ -68,7 +68,7 @@ lawApp.controller('MyCtrl', function ($scope, $ionicSideMenuDelegate, $ionicModa
 
 
     })
-    //用户个人中心
+    //--------------------------------------------------用户个人中心
     .controller('personalCenter', function ($scope) {
 
         $scope.fileChanged = function (ele) {
@@ -179,7 +179,7 @@ lawApp.controller('MyCtrl', function ($scope, $ionicSideMenuDelegate, $ionicModa
 
 
 
-    //律师个人中心
+    //----------------------------------------------------律师个人中心
     .controller('lawyerCenter', function ($scope) {
 
         $scope.fileChanged = function (ele) {
@@ -189,6 +189,13 @@ lawApp.controller('MyCtrl', function ($scope, $ionicSideMenuDelegate, $ionicModa
             });
         };
 
+    })
+    //我的首页
+    .controller('lmyHome',function($scope,$state){
+        //我的案例
+        $scope.cases=[{title:"哈哈哈哈哈哈哈哈哈哈哈dfgdsdddddddddddddd电热翁二翁翁翁无翁",content:"呵呵呵呵呵呵咕咕咕咕过过过过过过过过过过呵呵呵呵呵" +
+        "呵哈哈哈哈哈哈哈哈哈哈哈呵呵呵呵呵呵呵呵呵呵呵呵呵哈哈哈哈哈哈哈哈哈哈哈呵呵呵呵呵呵呵呵呵呵呵呵"},{title:"哈哈哈哈哈哈哈哈哈哈哈dfgdsdddddddddddddd电热翁二翁翁翁无翁",content:"呵呵呵呵呵呵咕咕咕咕过过过过过过过过过过呵呵呵呵呵" +
+        "呵哈哈哈哈哈哈哈哈哈哈哈呵呵呵呵呵呵呵呵呵呵呵呵呵哈哈哈哈哈哈哈哈哈哈哈呵呵呵呵呵呵呵呵呵呵呵呵"}];
     })
     //我的订单
     .controller('lmyOrder',function($scope,$state){
