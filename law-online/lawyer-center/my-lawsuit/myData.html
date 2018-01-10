@@ -1,5 +1,9 @@
 <ion-view view-title="我的资料">
     <ion-content>
+        <div class="row">
+            <span class="col text-center"><a ui-sref="lmyLawsuit.uploadLawCase" class="button button-small button-balanced">上传诉讼方案</a></span>
+            <span class="col text-center"><a class="button button-small button-balanced">上传上诉方案</a></span>
+        </div>
         <ul class="myData">
             <li ng-repeat="item in myDatas">
                 <i ng-click="removePic(item)" class="fa fa-remove"></i>

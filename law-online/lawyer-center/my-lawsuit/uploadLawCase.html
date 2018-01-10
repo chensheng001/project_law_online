@@ -1,0 +1,37 @@
+<ion-view view-title="上传诉讼方案">
+    <ion-content class="padding">
+        <div class="list">
+            <div class="clearFloat">
+                <label class="input-label float-left">方案价格</label>
+                <input type="number" placeholder="请输入" style="border: 1px solid #ccc;">
+            </div>
+            <label class="input-label">方案资料</label>
+            <div class="row pics">
+                <div class="col col-33">
+                    <div class="uploadImg text-center">
+                        <img src="../static/img/becomeMember.jpg">
+                        <input onchange='angular.element(this).scope().fileChanged(this)'
+                               type="file">
+                    </div>
+                </div>
+                <div class="col col-33">
+                    <div class="uploadImg text-center">
+                        <img src="../static/img/becomeMember.jpg">
+                        <input onchange='angular.element(this).scope().fileChanged(this)'
+                               type="file">
+                    </div>
+                </div>
+                <div class="col col-33">
+                    <div class="uploadImg text-center">
+                        <img src="../static/img/becomeMember.jpg">
+                        <input onchange='angular.element(this).scope().fileChanged(this)'
+                               type="file">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <span class="col text-center"><a class="button btn-small button-block button-balanced">确认提交</a></span>
+        </div>
+    </ion-content>
+</ion-view>

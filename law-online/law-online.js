@@ -176,6 +176,9 @@ lawApp.controller('MyCtrl', function ($scope, $ionicSideMenuDelegate, $ionicModa
         $scope.list=["企业注册","企业管理","财税服务"]
     })
 
+
+
+
     //律师个人中心
     .controller('lawyerCenter', function ($scope) {
 
@@ -190,13 +193,13 @@ lawApp.controller('MyCtrl', function ($scope, $ionicSideMenuDelegate, $ionicModa
     //我的订单
     .controller('lmyOrder',function($scope,$state){
         $scope.getDetails=function(){
-            $state.go("myOrder.details");
+            $state.go("lmyOrder.details");
         }
     })
     //我的诉讼
     .controller('lmyLawsuit',function($scope,$state){
         $scope.getDetails=function(){
-            $state.go("myLawsuit.details");
+            $state.go("lmyLawsuit.details");
         };
 
         $scope.suitProgress=[{content:"都结束了呀，老铁",date:"2017-11-11 11:11:11"},

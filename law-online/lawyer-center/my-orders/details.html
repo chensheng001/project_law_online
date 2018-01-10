@@ -1,35 +1,29 @@
 <ion-view view-title="订单详情">
-    <ion-header-bar class="bar bar-header bar-positive">
-        <h1 class="title">详情</h1>
-        <button class="button button-clear button-primary" ng-click="modal.hide()">关闭</button>
-    </ion-header-bar>
     <ion-content>
         <ul class="myOrderDetails">
             <li class="card margin-lr-0">
                 <div class="item item-divider">
                     <span >订单信息</span>
-                    <span class="energized-bg label-parallelogram float-right">待处理</span>
+                    <span class="energized float-right">780元</span>
                 </div>
                 <div class="item-text-wrap">
                     <a class="item" href="#">
                         <p>订单类型：xxx</p>
-                        <p>订单价格：xxx</p>
                         <p>订单编号：xxx</p>
-                        <p>订单时间：xxx</p>
                     </a>
                 </div>
                 <div class="item item-divider">
-                    <span>服务律师</span>
+                    <span>用户信息</span>
                 </div>
                 <div class="item-text-wrap">
                     <a class="item item-avatar" href="#">
                         <img src="../static/img/becomeMember.jpg">
                         <h2>name</h2>
-                        <p>执照号：xxx</p>
+                        <p>手机号：xxx</p>
                     </a>
                 </div>
                 <div class="item item-divider">
-                    <span>咨询详情</span>
+                    <span>咨询信息</span>
                 </div>
                 <div class="item-text-wrap">
                     <a class="item row" href="#">
@@ -37,20 +31,20 @@
                         <p class="col-75">xxxxxxxxxxxxxxaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
                     </a>
                     <a class="item row" href="#">
-                        <p class="col-25">文字回复：</p>
-                        <p class="col-75">xxxxxxxxxxxxxx</p>
-                    </a>
-                    <a class="item row" href="#">
                         <p class="col-25">语音回复：</p>
-                        <p class="col-75">xxxxxxxxxxxxxx</p>
+                        <p class="col-75">
+                            <button class="button button-small button-balanced">点击录音</button>
+                            <button class="button button-small button-balanced">重录</button>
+                        </p>
+                    </a>
+                    <a class="item item-inpit" style="height: 10rem">
+                        <textarea style="width: 100%; height: 100%;border:1px solid #ccc;" ng-model="newComment" placeholder="请输入..." class="ng-pristine ng-untouched ng-valid ng-empty"></textarea>
                     </a>
                 </div>
             </li>
-            <li class="buttons row">
-                <a class="col button btn-small">确认服务完成</a>
-                <a ui-sref="myOrder.judge" class="col button btn-small margin-lf-5 assertive-bg">服务评价</a>
-                <a class="col button btn-small energized-bg">撤销订单</a>
-            </li>
         </ul>
+        <div class="text-center">
+            <button class="button  button-balanced button-block">提交</button>
+        </div>
     </ion-content>
 </ion-view>

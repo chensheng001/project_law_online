@@ -482,6 +482,69 @@ angular.module('lawOnline')
                     }
                 }
             })
+            .state('lmyLawsuit.reply', {
+                url: '/reply',
+                views: {
+                    'lmyLawsuit': {
+                        templateUrl: 'lawyer-center/my-lawsuit/consultReply.html',
+                        controller: 'lmyLawsuit'
+                    }
+                }
+            })
+            .state('lmyLawsuit.consignPay', {
+                url: '/consignPay',
+                views: {
+                    'lmyLawsuit': {
+                        templateUrl: 'lawyer-center/my-lawsuit/consignPay.html',
+                        controller: 'lmyLawsuit'
+                    }
+                }
+            })
+            .state('lmyLawsuit.suitProgress', {
+                url: '/suitProgress',
+                views: {
+                    'lmyLawsuit': {
+                        templateUrl: 'lawyer-center/my-lawsuit/suitProgress.html',
+                        controller: 'lmyLawsuit'
+                    }
+                }
+            })
+            .state('lmyLawsuit.addSuitProgress', {
+                url: '/addSuitProgress',
+                views: {
+                    'lmyLawsuit': {
+                        templateUrl: 'lawyer-center/my-lawsuit/commentEdit.html',
+                        controller: 'lmyLawsuit'
+                    }
+                }
+            })
+            .state('lmyLawsuit.myData', {
+                url: '/myData',
+                views: {
+                    'lmyLawsuit': {
+                        templateUrl: 'lawyer-center/my-lawsuit/myData.html',
+                        controller: 'lmyLawsuit'
+                    }
+                }
+            })
+            .state('lmyLawsuit.uploadLawCase', {
+                url: '/uploadLawCase',
+                views: {
+                    'lmyLawsuit': {
+                        templateUrl: 'lawyer-center/my-lawsuit/uploadLawCase.html',
+                        controller: 'lmyLawsuit'
+                    }
+                }
+            })
+            .state('lmyLawsuit.userData', {
+                url: '/lawyerData',
+                views: {
+                    'lmyLawsuit': {
+                        templateUrl: 'lawyer-center/my-lawsuit/userData.html',
+                        controller: 'lmyLawsuit'
+                    }
+                }
+            })
             //我的普法视频
             .state('lmyLawVideo', {
                 url: '/lmyLawVideo',

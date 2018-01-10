@@ -207,7 +207,7 @@ h2{
 }
 .myOrder .buttons{
     line-height: 5rem;
-    padding: 0 2rem;
+    padding: 0 1rem;
 }
 .myOrder .buttons button{
     top: 1rem;
@@ -394,5 +394,7 @@ p.stepText{
     text-align: center;
     line-height: 2rem;
 }
-
+.clearFloat{
+    overflow: hidden;
+}
 /*律师个人中心*/

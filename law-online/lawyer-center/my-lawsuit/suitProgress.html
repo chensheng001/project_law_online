@@ -1,5 +1,8 @@
 <ion-view view-title="办理进度">
     <ion-content>
+        <div class="item">
+            <a ui-sref="lmyLawsuit.addSuitProgress" class="button button-small float-right button-balanced">添加进展</a>
+        </div>
         <ul class="list">
             <li class="item" ng-repeat="item in suitProgress">
                 <p>{{item.content}}</p>
