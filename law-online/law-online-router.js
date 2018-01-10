@@ -301,7 +301,7 @@ angular.module('lawOnline')
                     }
                 }
             })
-            // 绑定手机啊
+            // 绑定手机
             .state('personalCenter.bindPhone', {
                 url: '/bindPhone',
                 views: {
@@ -393,6 +393,185 @@ angular.module('lawOnline')
             })
 
 
+
+/*-------------------------------------------------------------------------*/
+
+            // 个人中心（律师）
+            .state('lawyerCenter', {
+                url: '/lawyerCenter',
+                views: {
+                    'main': {
+                        template: '<ion-nav-view name="lc"></ion-nav-view>',
+                        abstract: true
+                    }
+                }
+            })
+            // 个人中心列表
+            .state('lawyerCenter.index', {
+                url: '/index',
+                views: {
+                    'lc': {
+                        templateUrl: 'lawyer-center/lawyer-center.html',
+                        controller: 'lawyerCenter'
+                    }
+                }
+            })
+            //我的主页
+            .state('lawyerCenter.myHome', {
+                url: '/myHome',
+                views: {
+                    'lc': {
+                        templateUrl: 'lawyer-center/my-home/index.html',
+                        controller: 'lawyerCenter'
+                    }
+                }
+            })
+            //我的订单
+            .state('lmyOrder', {
+                url: '/lmyOrder',
+                views: {
+                    'main': {
+                        template: '<ion-nav-view name="lmyOrder"></ion-nav-view>',
+                        abstract: true
+                    }
+                }
+            })
+            .state('lmyOrder.index', {
+                url: '/index',
+                views: {
+                    'lmyOrder': {
+                        templateUrl: 'lawyer-center/my-orders/list.html',
+                        controller: 'lmyOrder'
+                    }
+                }
+            })
+            .state('lmyOrder.details', {
+                url: '/details',
+                views: {
+                    'lmyOrder': {
+                        templateUrl: 'lawyer-center/my-orders/details.html',
+                        controller: 'lmyOrder'
+                    }
+                }
+            })
+            //我的诉讼
+            .state('lmyLawsuit', {
+                url: '/lmyLawsuit',
+                views: {
+                    'main': {
+                        template: '<ion-nav-view name="lmyLawsuit"></ion-nav-view>',
+                        abstract: true
+                    }
+                }
+            })
+            .state('lmyLawsuit.index', {
+                url: '/index',
+                views: {
+                    'lmyLawsuit': {
+                        templateUrl: 'lawyer-center/my-lawsuit/list.html',
+                        controller: 'lmyLawsuit'
+                    }
+                }
+            })
+            .state('lmyLawsuit.details', {
+                url: '/details',
+                views: {
+                    'lmyLawsuit': {
+                        templateUrl: 'lawyer-center/my-lawsuit/details.html',
+                        controller: 'lmyLawsuit'
+                    }
+                }
+            })
+            //我的普法视频
+            .state('lmyLawVideo', {
+                url: '/lmyLawVideo',
+                views: {
+                    'main': {
+                        template: '<ion-nav-view name="lmyLawVideo"></ion-nav-view>',
+                        abstract: true
+                    }
+                }
+            })
+            .state('lmyLawVideo.index', {
+                url: '/index',
+                views: {
+                    'lmyLawVideo': {
+                        templateUrl: 'lawyer-center/myLaw-video/list.html',
+                        controller: 'lmyLawVideo'
+                    }
+                }
+            })
+            .state('lmyLawVideo.details', {
+                url: '/details',
+                views: {
+                    'lmyLawVideo': {
+                        templateUrl: 'lawyer-center/myLaw-video/details.html',
+                        controller: 'lmyLawVideo'
+                    }
+                }
+            })
+            .state('lmyLawVideo.comment', {
+                url: '/comment',
+                views: {
+                    'lmyLawVideo': {
+                        templateUrl: 'lawyer-center/myLaw-video/commentEdit.html',
+                        controller: 'lmyLawVideo'
+                    }
+                }
+            })
+            // 我的钱包
+            .state('lawyerCenter.myMoney', {
+                url: '/myMoney',
+                views: {
+                    'lc': {
+                        templateUrl: 'lawyer-center/myMoney/list.html',
+                        controller: 'lmyMoney'
+                    }
+                }
+            })
+            // 我的提现
+            .state('lawyerCenter.withdraw', {
+                url: '/withdraw',
+                views: {
+                    'lc': {
+                        templateUrl: 'lawyer-center/myMoney/withdraw.html',
+                        controller: 'lmyMoney'
+                    }
+                }
+            })
+            // 设置
+            .state('lawyerCenter.setting', {
+                url: '/setting',
+                views: {
+                    'lc': {
+                        templateUrl: 'lawyer-center/setting/setting.html',
+                        controller: 'lpersonalSetting'
+                    }
+                }
+            })
+            // 安全设置
+            .state('lawyerCenter.safeSetting', {
+                url: '/safeSetting',
+                views: {
+                    'lc': {
+                        templateUrl: 'lawyer-center/safeSetting/setting.html',
+                        controller: 'lpersonalSetting'
+                    }
+                }
+            })
+            // 绑定手机
+            .state('lawyerCenter.bindPhone', {
+                url: '/bindPhone',
+                views: {
+                    'lc': {
+                        templateUrl: 'lawyer-center/safeSetting/bindPhone.html',
+                        controller: 'lpersonalSetting'
+                    }
+                }
+            })
+
+
+
             // 最新资讯
             .state('latestInformation', {
                 url: '/latestInformation',
@@ -419,6 +598,25 @@ angular.module('lawOnline')
                     'latestInformation': {
                         templateUrl: 'latestInformation/details.html',
                         controller: 'latestInformation'
+                    }
+                }
+            })
+            // 我的推荐
+            .state('lawyerCenter.promotion', {
+                url: '/promotion',
+                views: {
+                    'lc': {
+                        templateUrl: 'lawyer-center/promotion/index.html',
+                        controller: 'promotionCtrl'
+                    }
+                }
+            })
+            .state('lawyerCenter.promotionDetails', {
+                url: '/promotionDetails',
+                views: {
+                    'lc': {
+                        templateUrl: 'lawyer-center/promotion/details.html',
+                        controller: 'promotionCtrl'
                     }
                 }
             })

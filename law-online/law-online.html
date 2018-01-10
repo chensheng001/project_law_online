@@ -83,7 +83,11 @@
                     </a>
                     <a class="item" menu-close ui-sref="personalCenter.index">
                         <i class="ion ion-help"></i>
-                        登录中心
+                        登录中心（个人）
+                    </a>
+                    <a class="item" menu-close ui-sref="lawyerCenter.index">
+                        <i class="ion ion-help"></i>
+                        登录中心（律师）
                     </a>
                     <a class="item" menu-close ui-sref="latestInformation.index">
                         <i class="ion ion-help"></i>
@@ -99,22 +103,6 @@
                         <a class="item" menu-close ui-sref="personalCenter.personalLogin">
                             <i class="ion ion-log-in"></i>
                             登录
-                        </a>
-                    </div>
-                    <div ng-if="_role == 'user'">
-                        <a class="item" menu-close ui-sref="personalCenter.centerList">
-                            <i class="ion ion-ios-person"></i>
-                            个人中心
-                        </a>
-                    </div>
-                    <div ng-if="_role == 'lawyer'">
-                        <a class="item" menu-close ui-sref="lawyerCenter.centerList">
-                            <i class="ion ion-university"></i>
-                            个人中心
-                        </a>
-                        <a class="item" menu-close ui-sref="concierge.list">
-                            <i class="ion ion-android-calendar"></i>
-                            委托代办
                         </a>
                     </div>
                 </div>

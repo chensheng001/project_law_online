@@ -1,0 +1,44 @@
+<ion-view view-title="个人登录">
+    <ion-content>
+        <div class="list" id="login">
+            <label class="item item-input">
+                <i class="fa fa-phone"></i>
+                <input type="number" placeholder="手机号码" ng-model="$parent.mobile">
+            </label>
+            <div class="item item-input">
+                <div class="col-30">
+                    <i class="fa fa-unlock"></i>
+                </div>
+                <div class="col-30">
+                    <input placeholder="验证码" type="text" ng-model="info.code">
+                </div>
+                <div class="col-40 padding-right">
+                    <checkcode></checkcode>
+                </div>
+            </div>
+            <div class="item item-toggle">
+                我已阅读并同意
+                <a class="assertive" href ng-click="modal.show()" style="pointer-events: auto">《电子合同条款》</a>
+                <label class="toggle toggle-balanced">
+                    <input type="checkbox" ng-model="$parent.isAgree" ng-true-value="true" ng-false-value="false">
+                    <div class="track">
+                        <div class="handle"></div>
+                    </div>
+                </label>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <button class="button  button-block button-balanced" ng-click="wxLogin()">
+                        微信快捷登录
+                    </button>
+                </div>
+                <div class="col">
+                    <button class="button  button-block button-positive" ui-sref="lawyerCenter.login">
+                        登录
+                    </button>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
+

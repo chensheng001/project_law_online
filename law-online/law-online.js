@@ -78,7 +78,6 @@ lawApp.controller('MyCtrl', function ($scope, $ionicSideMenuDelegate, $ionicModa
             });
         };
 
-
     })
 
     //最新资讯
@@ -175,6 +174,81 @@ lawApp.controller('MyCtrl', function ($scope, $ionicSideMenuDelegate, $ionicModa
             $state.go("personalCenter.applyAccess");
         }
         $scope.list=["企业注册","企业管理","财税服务"]
+    })
+
+    //律师个人中心
+    .controller('lawyerCenter', function ($scope) {
+
+        $scope.fileChanged = function (ele) {
+            commService.uploadFile(ele.files[0]).then(function (res) {
+                $scope.user.photoUrl = res;
+
+            });
+        };
+
+    })
+    //我的订单
+    .controller('lmyOrder',function($scope,$state){
+        $scope.getDetails=function(){
+            $state.go("myOrder.details");
+        }
+    })
+    //我的诉讼
+    .controller('lmyLawsuit',function($scope,$state){
+        $scope.getDetails=function(){
+            $state.go("myLawsuit.details");
+        };
+
+        $scope.suitProgress=[{content:"都结束了呀，老铁",date:"2017-11-11 11:11:11"},
+            {content:"都凉了呀，老铁",date:"2017-11-11 11:11:11"},
+            {content:"都结束了呀，老铁",date:"2017-11-11 11:11:11"}];
+        $scope.myDatas=[{title:"都结束了呀，老铁1",date:"2017-11-11 11:11:11",uuid:"1"},
+            {title:"都凉了呀，老铁2",date:"2017-11-11 11:11:11",uuid:"2"},
+            {title:"都结束了呀，老铁3",date:"2017-11-11 11:11:11",uuid:"3"}];
+        $scope.lawyerDatas=[{title:"都结束了呀，老铁1",date:"2017-11-11 11:11:11",uuid:"1"},
+            {title:"都凉了呀，老铁2",date:"2017-11-11 11:11:11",uuid:"2"},
+            {title:"都结束了呀，老铁3",date:"2017-11-11 11:11:11",uuid:"3"}];
+        $scope.removePic=function(item){
+            angular.forEach($scope.myDatas,function(value,index){
+                if(item.uuid==value.uuid){
+                    $scope.myDatas.splice(index,1);
+                }
+            })
+        }
+    })
+    //我查看过的视频
+    .controller('lmyLawVideo',function($scope,$state){
+        $scope.list=[{content:"wwww",name:"jjj",address:"dddd",license_no:"110",listen_num:55}];
+        $scope.detail={content:"wwww",name:"jjj",address:"dddd",license_no:"110",listen_num:55,reply:'哈哈哈'};
+    })
+    //我的钱包
+    .controller('lmyMoney',function($scope,$state){
+        $scope.cash=5000000;
+        $scope.list=[{title:"体现",date:"2017-11-11",money:"+13元"},
+            {title:"体现",date:"2017-11-11",money:"+13元"}];
+        $scope.listType=["支付宝","银行卡"];
+
+        //切换体现方式
+        $scope.byType1=true;
+        $scope.byType2=false;
+        $scope.Type1=function(){
+            $scope.byType1=true;
+            $scope.byType2=false;
+        };
+        $scope.Type2=function(){
+            $scope.byType1=false;
+            $scope.byType2=true;
+        }
+    })
+    //设置、安全设置
+    .controller('lpersonalSetting',function($scope,$state){
+        $scope.bindPhone=function(){
+            $state.go('lawyerCenter.bindPhone');
+        }
+    })
+    //推广管理
+    .controller('promotionCtrl',function($scope,$state){
+
     })
 
     //咨询预约

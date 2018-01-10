@@ -1,0 +1,15 @@
+<ion-view view-title="我的资料">
+    <ion-content>
+        <ul class="myData">
+            <li ng-repeat="item in myDatas">
+                <i ng-click="removePic(item)" class="fa fa-remove"></i>
+                <div ><img src="../static/img/becomeMember.jpg"></div>
+                <h2 class="text-center">{{item.title}}</h2>
+                <div class="text-center">{{item.date}}</div>
+            </li>
+            <li class="btn-upload" ng-click="upload()">
+                <p class="text-center"><i class="fa fa-plus"></i></p>
+            </li>
+        </ul>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,74 @@
+<ion-view view-title="个人中心">
+    <ion-content>
+        <div id="personalCenter">
+            <div class="user-info text-center">
+                <div class="level">
+                    LV3
+                </div>
+                <div class="photo">
+                    <img src="../static/img/becomeMember.jpg">
+                    <input onchange='angular.element(this).scope().fileChanged(this)'
+                           type="file">
+                </div>
+                <div style="margin: 0;padding: 1rem" class="name">张律师</div>
+            </div>
+            <div class="item item-toggle text-right" style="padding-right: 80px;">
+                在线
+                <label class="toggle toggle-balanced">
+                    <input type="checkbox" checked="">
+                    <div class="track">
+                        <div class="handle"></div>
+                    </div>
+                </label>
+            </div>
+            <div class="list list-inset">
+
+                <a class="item item-icon-left item-icon-right" ui-sref="lawyerCenter.myHome">
+                    <i style="color: #eb4f38" class="fa icon fa-home"></i>
+                    我的主页
+                    <i class="icon ion-chevron-right"></i>
+                </a>
+
+                <a class="item item-icon-left item-icon-right" ui-sref="lmyOrder.index">
+                    <i style="color: #19b5ff" class="fa icon fa-file"></i>
+                    我的订单
+                    <i class="icon ion-chevron-right"></i>
+                </a>
+
+                <a class="item item-icon-left item-icon-right" ui-sref="lmyLawsuit.index">
+                    <i style="color: #ff9399" class="fa icon fa-bell"></i>
+                    我的诉讼
+                    <i class="icon ion-chevron-right"></i>
+                </a>
+
+                <a class="item item-icon-left item-icon-right" ui-sref="lmyLawVideo.index">
+                    <i style="color: #96a0fe" class="fa icon fa-video-camera"></i>
+                    我的普法视频
+                    <i class="icon ion-chevron-right"></i>
+                </a>
+
+                <a class="item item-icon-left item-icon-right" ui-sref="lawyerCenter.myMoney">
+                    <i style="color: #fe9e37" class="fa icon fa-money"></i>
+                    我的钱包
+                    <i class="icon ion-chevron-right"></i>
+                </a>
+                <a class="item item-icon-left item-icon-right" ui-sref="lawyerCenter.promotion">
+                    <i style="color: #617be8" class="icon fa fa-external-link"></i>
+                    推广管理
+                    <i class="icon ion-chevron-right"></i>
+                </a>
+                <a class="item item-icon-left item-icon-right" ui-sref="lawyerCenter.safeSetting">
+                    <i style="color: #c463cf" class="icon fa fa-cogs"></i>
+                    安全设置
+                    <i class="icon ion-chevron-right"></i>
+                </a>
+                <a class="item item-icon-left item-icon-right" ui-sref="lawyerCenter.setting">
+                    <i style="color: #a3a3a3" class="icon fa fa-cog"></i>
+                    设置
+                    <i class="icon ion-chevron-right"></i>
+                </a>
+
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
