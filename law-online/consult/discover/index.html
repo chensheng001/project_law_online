@@ -1,0 +1,93 @@
+<ion-view view-title="预约咨询-发现">
+    <ion-content>
+        <div class="discover bg-gray">
+            <ion-slide-box>
+                <ion-slide>
+                    <div class="box blue">
+                        <img src="../static/img/becomeMember-qyty.jpg" alt="" style="width: 100%">
+                    </div>
+                </ion-slide>
+                <ion-slide>
+                    <div class="box blue">
+                        <img src="../static/img/becomeMember-jcqy.jpg" alt="" style="width: 100%">
+                    </div>
+                </ion-slide>
+                <ion-slide>
+                    <div class="box blue">
+                        <img src="../static/img/becomeMember-gw.jpg" alt="" style="width: 100%">
+                    </div>
+                </ion-slide>
+            </ion-slide-box>
+            <div class="link row bg-white">
+                <div class="col text-center" ng-click="linkLatestInformation()">
+                    <p><i class="fa fa-question-circle"></i></p>
+                    <p>最新资讯</p>
+                </div>
+                <div class="col text-center" ng-click="linkVipActivity()">
+                    <p><i class="fa fa-eye"></i></p>
+                    <p>会员活动</p>
+                </div>
+                <div class="col text-center" ng-click="linkVipBbs()">
+                    <p><i class="fa fa-video-camera"></i></p>
+                    <p>会员论坛</p>
+                </div>
+                <div class="col text-center" ng-click="linkVipEnterpriseHelp()">
+                    <p><i class="fa fa-video-camera"></i></p>
+                    <p>企业互助</p>
+                </div>
+                <div class="col text-center" ng-click="eliteList()">
+                    <p><i class="fa fa-download"></i></p>
+                    <p>精英名录</p>
+                </div>
+            </div>
+
+            <div id="information" class="margin-tb-20">
+                <h2 class="item item-button-right">
+                    <span>为你精选</span>
+                    <a class="button btn-small button-balanced float-right">更多>></a>
+                </h2>
+                <ul class="list">
+                    <li class="item item-thumbnail-right" ng-click="getDetails()" ng-repeat="item in listMsg">
+                        <img src="../static/img/becomeMember-qyty.jpg" alt="" style="width: 100%">
+                        <h2>{{item.title}}</h2>
+                        <p class="bottom">
+                            <span>{{item.date}}</span>
+                            <span class="col-offset-10"><i class="number">{{item.person}}</i>已浏览</span>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="vipActivity">
+                <h2 class="item item-button-right">
+                    <span>会员活动</span>
+                    <a class="button btn-small button-balanced float-right">更多>></a>
+                </h2>
+                <ul class="vip-activity-list">
+                    <li class="border-radius-5">
+                        <div class="item item-text-wrap">
+                            <h2 style="margin-bottom: 5px">婚姻法讲座</h2>
+                            <p>主讲人：女儿王国</p>
+                            <p>活动时间：2017年12月25日 上午10:00</p>
+                            <p>活动地址：女儿国皇宫大殿婚姻殿堂</p>
+                            <div class="padding-0 col col-33 col-offset-67">
+                                <button ng-click="jump('vip.activityInfo')" class="textSize-14 margin-bottom-0 button button-small button-calm button-block button-positive">详情报名</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="border-radius-5">
+                        <div class="item item-text-wrap">
+                            <h2 style="margin-bottom: 5px">婚姻法讲座</h2>
+                            <p>主讲人：女儿王国</p>
+                            <p>活动时间：2017年12月25日 上午10:00</p>
+                            <p>活动地址：女儿国皇宫大殿婚姻殿堂</p>
+                            <div class="padding-0 col col-33 col-offset-67">
+                                <button ng-click="jump('vip.activityInfo')" class="textSize-14 margin-bottom-0 button button-small button-calm button-block button-positive">详情报名</button>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

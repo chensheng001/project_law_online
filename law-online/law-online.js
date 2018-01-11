@@ -370,6 +370,40 @@ lawApp.controller('MyCtrl', function ($scope, $ionicSideMenuDelegate, $ionicModa
             {title:"订单消息",content:"你有新的消息啦",date:"2018-01-11"},
             {title:"订单消息",content:"你有新的消息啦",date:"2018-01-11"}]
     })
+    //咨询预约-发现
+    .controller('discoverCtrl',function($scope,$state){
+        $scope.listMsg=[{title:"北京时间12月26日凌晨4点，骑士和勇士备受瞩目的年终大战开打，" +
+        "勒布朗-詹姆斯将和凯文-杜兰特交锋。骑士和勇士已经连续三年在总决赛相遇",date:"2017-01-01",person:6},
+            {title:"北京时间12月26日凌晨4点，骑士和勇士备受瞩目的年终大战开打，" +
+            "勒布朗-詹姆斯将和凯文-杜兰特交锋。骑士和勇士已经连续三年在总决赛相遇",date:"2017-01-02",person:5}];
+
+        //跳转最新资讯
+        $scope.linkLatestInformation=function(){
+            window.location.href="/project_law_online/law-online/law-online.html#/latestInformation/index";
+        };
+        //跳转会员活动
+        $scope.linkVipActivity=function(){
+            window.location.href="/project_law_online/vip-online/vip.html#/vip/activityIndex";
+        };
+        //跳转会员论坛
+        $scope.linkVipBbs=function(){
+            window.location.href="/project_law_online/vip-online/vip.html#/vip/bbs";
+        };
+        //跳转企业互助
+        $scope.linkVipEnterpriseHelp=function(){
+            window.location.href="/project_law_online/vip-online/vip.html#/vip/enterpriseHelp";
+        };
+        //跳转精英名录
+        $scope.eliteList=function(){
+            $state.go("eliteList.index");
+        }
+    })
+
+    //精英名录
+    .controller('eliteListCtrl',function($scope,$state){
+
+    })
+
 ;
 
 

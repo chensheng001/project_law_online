@@ -9,7 +9,7 @@
 }
 /*最新资讯*/
 #information .list .item {
-    margin-bottom: 2rem;
+    /*margin-bottom: 2rem;*/
 }
 #information .list .item h2{
     font-size: 1.6rem;

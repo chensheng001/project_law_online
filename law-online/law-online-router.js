@@ -1045,4 +1045,45 @@ angular.module('lawOnline')
                 }
             })
 
+            // 预约咨询--发现
+            .state('discover', {
+                url: '/discover',
+                views: {
+                    'main': {
+                        template: '<ion-nav-view name="discover"></ion-nav-view>',
+                        abstract: true
+                    }
+                }
+            })
+            //
+            .state('discover.index', {
+                url: '/index',
+                views: {
+                    'discover': {
+                        templateUrl: 'consult/discover/index.html',
+                        controller: 'discoverCtrl'
+                    }
+                }
+            })
+            //精英名录
+            .state('eliteList', {
+                url: '/eliteList',
+                views: {
+                    'main': {
+                        template: '<ion-nav-view name="eliteList"></ion-nav-view>',
+                        abstract: true
+                    }
+                }
+            })
+            //
+            .state('eliteList.index', {
+                url: '/index',
+                views: {
+                    'eliteList': {
+                        templateUrl: 'consult/discover/eliteList/index.html',
+                        controller: 'eliteListCtrl'
+                    }
+                }
+            })
+
     });

@@ -80,8 +80,14 @@ a{
 .padding-tb-5{
     padding: 1rem 0;
 }
+.margin-tb-20{
+    margin:20px 0
+}
 .bg-gray{
     background: #f5f5f5;
+}
+.bg-white{
+    background: #fff;
 }
 .margin-b-5{
     margin-bottom: 1rem;
