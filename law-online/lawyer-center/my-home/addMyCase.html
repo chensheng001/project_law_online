@@ -1,14 +1,20 @@
-<ion-view view-title="我的简介">
+<ion-view view-title="添加案例">
     <ion-content>
         <div class="card lawyerIntroduction">
             <div class="item item-divider">
-                <span>我的简介</span>
+                <span>标题</span>
+            </div>
+            <div class="item item-text-wrap item-input">
+                <input type="text" class="" placeholder="请输入标题"/>
+            </div>
+            <div class="item item-divider">
+                <span>案件内容</span>
             </div>
             <div class="item item-text-wrap">
                 <textarea style="width: 100%; height: 100%;" ng-model="newComment" placeholder="请输入..." class="ng-pristine ng-untouched ng-valid ng-empty"></textarea>
             </div>
             <div class="item item-divider">
-                <span>我的资质</span>
+                <span>案件资料</span>
             </div>
             <div class="item item-text-wrap">
                 <div class="row pics">
@@ -34,7 +40,7 @@
             </div>
         </div>
         <div class="padding">
-            <button class="button button-block button-balanced">保存设置</button>
+            <button class="button button-block button-balanced">确认提交</button>
         </div>
     </ion-content>
 </ion-view>

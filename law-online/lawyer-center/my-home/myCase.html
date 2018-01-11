@@ -1,7 +1,10 @@
 <ion-view view-title="我的案例">
     <ion-content>
+        <div class="item">
+            <a ui-sref="lmyHome.addMyCase" class="button button-small button-balanced float-right">添加案例</a>
+        </div>
         <ul class="list myCase">
-            <li class="item item-icon-right" ng-click="getDetails()" ng-repeat="item in cases">
+            <li class="item item-icon-right" ng-click="getDetailsMyCase()" ng-repeat="item in cases">
                 <h2>{{item.title}}</h2>
                 <div class="content">
                     {{item.content}}

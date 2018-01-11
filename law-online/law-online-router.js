@@ -462,11 +462,83 @@ angular.module('lawOnline')
                     }
                 }
             })
-            .state('lmyHome.myCase', {
-                url: '/myCase',
+            .state('lmyHome.addMyCase', {
+                url: '/addMyCase',
                 views: {
                     'lmyHome': {
-                        templateUrl: 'lawyer-center/my-home/myCase.html',
+                        templateUrl: 'lawyer-center/my-home/addMyCase.html',
+                        controller: 'lmyHome'
+                    }
+                }
+            })
+            .state('lmyHome.myCaseDetails', {
+                url: '/myCaseDetails',
+                views: {
+                    'lmyHome': {
+                        templateUrl: 'lawyer-center/my-home/myCaseDetails.html',
+                        controller: 'lmyHome'
+                    }
+                }
+            })
+            .state('lmyHome.myService', {
+                url: '/myService',
+                views: {
+                    'lmyHome': {
+                        templateUrl: 'lawyer-center/my-home/myService.html',
+                        controller: 'lmyHome'
+                    }
+                }
+            })
+            .state('lmyHome.addLawService', {
+                url: '/addLawService',
+                views: {
+                    'lmyHome': {
+                        templateUrl: 'lawyer-center/my-home/addLawService.html',
+                        controller: 'lmyHome'
+                    }
+                }
+            })
+            .state('lmyHome.addLawServiceDetails', {
+                url: '/addLawServiceDetails',
+                views: {
+                    'lmyHome': {
+                        templateUrl: 'lawyer-center/my-home/addLawServiceDetails.html',
+                        controller: 'lmyHome'
+                    }
+                }
+            })
+            .state('lmyHome.myServiceDetails', {
+                url: '/myServiceDetails',
+                views: {
+                    'lmyHome': {
+                        templateUrl: 'lawyer-center/my-home/myServiceDetails.html',
+                        controller: 'lmyHome'
+                    }
+                }
+            })
+            .state('lmyHome.myPackage', {
+                url: '/myPackage',
+                views: {
+                    'lmyHome': {
+                        templateUrl: 'lawyer-center/my-home/myPackage.html',
+                        controller: 'lmyHome'
+                    }
+                }
+            })
+            .state('lmyHome.addPackage', {
+                url: '/addPackage',
+                views: {
+                    'lmyHome': {
+                        templateUrl: 'lawyer-center/my-home/addPackage.html',
+                        controller: 'lmyHome'
+                    }
+                }
+            })
+            .state('lmyHome.addPackageService', {
+                url: '/addPackageService',
+                views: {
+                    'lmyHome': {
+                        templateUrl: 'lawyer-center/my-home/addPackageService.html',
                         controller: 'lmyHome'
                     }
                 }

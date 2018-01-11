@@ -1,5 +1,28 @@
 <ion-view view-title="轮播图设置">
     <ion-content>
-        轮播图设置
+        <div class="item">
+            <h2>轮播图一</h2>
+            <div class="uploadImg">
+                <img src="../static/img/becomeMember.jpg">
+                <input onchange="angular.element(this).scope().fileChanged(this)" type="file">
+            </div>
+        </div>
+        <div class="item">
+            <h2>轮播图二</h2>
+            <div class="uploadImg">
+                <img src="../static/img/becomeMember.jpg">
+                <input onchange="angular.element(this).scope().fileChanged(this)" type="file">
+            </div>
+        </div>
+        <div class="item">
+            <h2>轮播图三</h2>
+            <div class="uploadImg">
+                <img src="../static/img/becomeMember.jpg">
+                <input onchange="angular.element(this).scope().fileChanged(this)" type="file">
+            </div>
+        </div>
+        <div class="padding">
+            <button class="button button-block button-balanced">保存设置</button>
+        </div>
     </ion-content>
 </ion-view>

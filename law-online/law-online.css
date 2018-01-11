@@ -144,8 +144,8 @@ h2{
     top: 0;
     opacity: 0;
     height: 10rem;
+    width: 100%;
     z-index: 999;
-    width: 10rem;
 }
 
 /*充值*/
