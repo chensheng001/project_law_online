@@ -1,7 +1,7 @@
 /**
  * Created by xieiqng on 2017/6/23.
  */
-lawApp = angular.module('lawOnline', ['ionic']);
+lawApp = angular.module('lawOnline', ['ionic', 'ionic-citypicker']);
 
 // 验证码指令
 lawApp.directive('checkcode', function ($interval) {
@@ -41,9 +41,39 @@ lawApp.directive('checkcode', function ($interval) {
     }
 });
 
+lawApp.run(['$rootScope', '$state', '$templateCache', function ($rootScope, $state, $templateCache) {
+
+    $templateCache.put('citySelect.html', '<ionic-city-picker options="vm.CityPickData"></ionic-city-picker>');
+
+    localStorage.defaultCity = "";
+
+    $rootScope.$on('$stateChangeStart',
+        function (event, toState, toParams, fromState, fromParams) {
+            if (toState.name == "consult.index") {
+                $rootScope.isShowCitySelect = true;
+            } else {
+                $rootScope.isShowCitySelect = false;
+            }
+        });
+}]);
+
 lawApp.controller('MyCtrl', function ($scope, $ionicSideMenuDelegate, $ionicModal) {
     $scope.toggleRight = function () {
         $ionicSideMenuDelegate.toggleRight();
+    };
+    var vm = $scope.vm = {};
+    vm.CityPickData = {
+        areaData: [localStorage.defaultCity && localStorage.defaultCity != 'undefined' ? localStorage.defaultCity : '选择城市'],
+        selectLevel: 1,
+        iconClass: 'ion-location',
+        cssClass: 'button ',
+        spanClass: 'item-note item-note-white',
+        hardwareBackButtonClose: false,
+        cityPickers: localStorage.cityPickers,
+        buttonClicked: function () {
+            localStorage.defaultCity = vm.CityPickData.areaData[0];
+            console.log(localStorage.defaultCity)
+        }
     };
 })
     //登录
@@ -331,6 +361,14 @@ lawApp.controller('MyCtrl', function ($scope, $ionicSideMenuDelegate, $ionicModa
         $scope.getDetails=function(){
             $state.go("consult.myCaseDetails");
         }
+
+    })
+
+    //咨询预约-消息
+    .controller('informationCtrl',function($scope,$state){
+        $scope.list=[{title:"订单消息",content:"你有新的消息啦",date:"2018-01-11"},
+            {title:"订单消息",content:"你有新的消息啦",date:"2018-01-11"},
+            {title:"订单消息",content:"你有新的消息啦",date:"2018-01-11"}]
     })
 ;
 

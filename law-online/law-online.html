@@ -13,31 +13,6 @@
     <script src="law-online.js"></script>
     <script src="law-online-router.js"></script>
     <script src="../static/js/ionic-citypicker.min.js"></script>
-    <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
-
-    <script>
-        Date.prototype.Format = function (fmt) { //author: meizz
-            var o = {
-                "M+": this.getMonth() + 1, //月份
-                "d+": this.getDate(), //日
-                "h+": this.getHours(), //小时
-                "m+": this.getMinutes(), //分
-                "s+": this.getSeconds(), //秒
-                "q+":    Math.floor((this.getMonth() + 3) / 3), //季度
-                "S": this.getMilliseconds() //毫秒
-            };
-            if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
-            for (var k in o)
-                if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
-            return fmt;
-        };
-    </script>
-    <!--  -->
-    <script src="http://gosspublic.alicdn.com/aliyun-oss-sdk-4.4.4.min.js"></script>
-
-
-    <!--图标文件-->
-    <link rel="stylesheet" href="//at.alicdn.com/t/font_291853_5gp8apz83g0evcxr.css">
 
 </head>
 <body ng-controller="MyCtrl">
@@ -80,6 +55,10 @@
                     <a class="item" menu-close ui-sref="consult.index">
                         <i class="ion ion-help"></i>
                         预约咨询
+                    </a>
+                    <a class="item" menu-close ui-sref="information.index">
+                        <i class="ion ion-help"></i>
+                        预约咨询--消息
                     </a>
                     <a class="item" menu-close ui-sref="personalCenter.index">
                         <i class="ion ion-help"></i>

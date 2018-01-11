@@ -1024,37 +1024,23 @@ angular.module('lawOnline')
 
 
 
-            // 关于我们
-            .state('aboutUs', {
-                url: '/aboutUs',
+            // 预约咨询--消息
+            .state('information', {
+                url: '/information',
                 views: {
                     'main': {
-                        template: '<ion-nav-view name="about"></ion-nav-view>',
+                        template: '<ion-nav-view name="information"></ion-nav-view>',
                         abstract: true
                     }
                 }
             })
-            .state('aboutUs.contribution', {
-                url: '/contribution',
+            // 预约咨询主页面
+            .state('information.index', {
+                url: '/index',
                 views: {
-                    'about': {
-                        templateUrl: 'about-us/contribution.html',
-                    }
-                }
-            })
-            .state('aboutUs.spread', {
-                url: '/spread',
-                views: {
-                    'about': {
-                        templateUrl: 'about-us/spread.html',
-                    }
-                }
-            })
-            .state('aboutUs.about', {
-                url: '/about',
-                views: {
-                    'about': {
-                        templateUrl: 'about-us/about-us.html',
+                    'information': {
+                        templateUrl: 'consult/information.html',
+                        controller: 'informationCtrl'
                     }
                 }
             })
