@@ -42,12 +42,13 @@
             </div>
 
             <div id="information" class="margin-tb-20">
-                <h2 class="item item-button-right">
+                <div class="item item-button-right">
                     <span>为你精选</span>
-                    <a class="button btn-small button-balanced float-right">更多>></a>
-                </h2>
+                    <a ui-sref="latestInformation.index" class="button btn-small button-balanced float-right">更多>></a>
+                </div>
+
                 <ul class="list">
-                    <li class="item item-thumbnail-right" ng-click="getDetails()" ng-repeat="item in listMsg">
+                    <li class="item item-thumbnail-right" ng-click="getInformationDetails()" ng-repeat="item in listMsg">
                         <img src="../static/img/becomeMember-qyty.jpg" alt="" style="width: 100%">
                         <h2>{{item.title}}</h2>
                         <p class="bottom">
@@ -59,10 +60,10 @@
             </div>
 
             <div class="vipActivity">
-                <h2 class="item item-button-right">
+                <div class="item item-button-right">
                     <span>会员活动</span>
-                    <a class="button btn-small button-balanced float-right">更多>></a>
-                </h2>
+                    <a ng-click="linkVipActivity()" class="button btn-small button-balanced float-right">更多>></a>
+                </div>
                 <ul class="vip-activity-list">
                     <li class="border-radius-5">
                         <div class="item item-text-wrap">
@@ -71,7 +72,7 @@
                             <p>活动时间：2017年12月25日 上午10:00</p>
                             <p>活动地址：女儿国皇宫大殿婚姻殿堂</p>
                             <div class="padding-0 col col-33 col-offset-67">
-                                <button ng-click="jump('vip.activityInfo')" class="textSize-14 margin-bottom-0 button button-small button-calm button-block button-positive">详情报名</button>
+                                <button ng-click="linkVipActivityDetails()" class="textSize-14 margin-bottom-0 button button-small button-calm button-block button-positive">详情报名</button>
                             </div>
                         </div>
                     </li>
@@ -82,7 +83,7 @@
                             <p>活动时间：2017年12月25日 上午10:00</p>
                             <p>活动地址：女儿国皇宫大殿婚姻殿堂</p>
                             <div class="padding-0 col col-33 col-offset-67">
-                                <button ng-click="jump('vip.activityInfo')" class="textSize-14 margin-bottom-0 button button-small button-calm button-block button-positive">详情报名</button>
+                                <button ng-click="linkVipActivityDetails()" class="textSize-14 margin-bottom-0 button button-small button-calm button-block button-positive">详情报名</button>
                             </div>
                         </div>
                     </li>

@@ -1,5 +1,36 @@
 <ion-view view-title="精英名录">
     <ion-content>
-        精英名录
+        <div>
+            <img src="../static/img/becomeMember-qyty.jpg" alt="" style="width: 100%">
+        </div>
+        <div class="item text-right">
+            <a ui-sref="eliteList.add" class="button btn-small button-balanced float-right">申请加入>></a>
+        </div>
+        <ul class="list">
+            <li class="item" ng-repeat="item in list">
+                <div class="item item-divider">
+                    {{item.name}}
+                </div>
+                <div class="item item-text-wrap">
+                    <p class="row">
+                        <span class="col-33">职业：</span>
+                        <span class="col-67">{{item.profession}}</span>
+                    </p>
+                    <p class="row">
+                        <span class="col-33">公司：</span>
+                        <span class="col-67">{{item.company}}</span>
+                    </p>
+                    <p class="row">
+                        <span class="col-33">职位：</span>
+                        <span class="col-67">{{item.position}}</span>
+                    </p>
+                    <p class="row">
+                        <span class="col-33">加入时间：</span>
+                        <span class="col-67">{{item.date}}</span>
+                    </p>
+
+                </div>
+            </li>
+        </ul>
     </ion-content>
 </ion-view>

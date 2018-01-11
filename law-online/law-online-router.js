@@ -1075,12 +1075,21 @@ angular.module('lawOnline')
                     }
                 }
             })
-            //
+            //列表
             .state('eliteList.index', {
                 url: '/index',
                 views: {
                     'eliteList': {
                         templateUrl: 'consult/discover/eliteList/index.html',
+                        controller: 'eliteListCtrl'
+                    }
+                }
+            })
+            .state('eliteList.add', {
+                url: '/add',
+                views: {
+                    'eliteList': {
+                        templateUrl: 'consult/discover/eliteList/add.html',
                         controller: 'eliteListCtrl'
                     }
                 }

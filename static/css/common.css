@@ -149,3 +149,6 @@ a{
 .color-text{
     color: #666;
 }
+.back-button i,.back-button span{
+    color: #fff;
+}

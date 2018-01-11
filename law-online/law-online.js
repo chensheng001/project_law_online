@@ -385,6 +385,9 @@ lawApp.controller('MyCtrl', function ($scope, $ionicSideMenuDelegate, $ionicModa
         $scope.linkVipActivity=function(){
             window.location.href="/project_law_online/vip-online/vip.html#/vip/activityIndex";
         };
+        $scope.linkVipActivityDetails=function(){
+            window.location.href="/project_law_online/vip-online/vip.html#/vip/activityInfo";
+        };
         //跳转会员论坛
         $scope.linkVipBbs=function(){
             window.location.href="/project_law_online/vip-online/vip.html#/vip/bbs";
@@ -397,11 +400,17 @@ lawApp.controller('MyCtrl', function ($scope, $ionicSideMenuDelegate, $ionicModa
         $scope.eliteList=function(){
             $state.go("eliteList.index");
         }
+
+        //跳转消息详情
+        $scope.getInformationDetails=function(){
+            $state.go("latestInformation.details")
+        }
     })
 
     //精英名录
     .controller('eliteListCtrl',function($scope,$state){
-
+        $scope.list=[{name:"勒布朗",profession:"运动员",company:"克利夫兰",position:"小前锋",date:"1984-12-31"},{name:"勒布朗",profession:"运动员",company:"克利夫兰",position:"小前锋",date:"1984-12-31"},
+            {name:"勒布朗",profession:"运动员",company:"克利夫兰",position:"小前锋",date:"1984-12-31"},{name:"勒布朗",profession:"运动员",company:"克利夫兰",position:"小前锋",date:"1984-12-31"}]
     })
 
 ;
