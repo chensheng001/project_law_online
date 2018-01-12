@@ -362,11 +362,11 @@ angular.module('lawOnline')
                 }
             })
             // 产品列表
-            .state('personalCenter.ProductList', {
-                url: '/ProductList',
+            .state('personalCenter.productList', {
+                url: '/productList',
                 views: {
                     'pc': {
-                        templateUrl: 'personal-center/myEnterpriseHelp/ProductList.html',
+                        templateUrl: 'personal-center/myEnterpriseHelp/productList.html',
                         controller: 'myEnterpriseHelp'
                     }
                 }
@@ -377,6 +377,16 @@ angular.module('lawOnline')
                 views: {
                     'pc': {
                         templateUrl: 'personal-center/myEnterpriseHelp/productDetails.html',
+                        controller: 'myEnterpriseHelp'
+                    }
+                }
+            })
+            // 产品详情-作者评论
+            .state('personalCenter.productAuthorComment', {
+                url: '/productAuthorComment',
+                views: {
+                    'pc': {
+                        templateUrl: 'personal-center/myEnterpriseHelp/commentEdit.html',
                         controller: 'myEnterpriseHelp'
                     }
                 }

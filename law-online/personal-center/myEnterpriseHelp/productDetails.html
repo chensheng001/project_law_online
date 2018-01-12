@@ -1,9 +1,9 @@
 <ion-view view-title="产品详情">
-    <ion-content>
+    <ion-content class="bg-gray">
         <div class="text-center item">
             代理记账
         </div>
-        <ul>
+        <ul class="bg-white">
             <li class="row">
                 <div class="col col-20">产品价格</div>
                 <div class="col">3000</div>
@@ -22,25 +22,25 @@
                     可随时发布图片、文字、语音翻译请求,从此告别尴尬的机器翻译。随时随地,读懂一切。</div>
             </li>
         </ul>
-        <ul class="list">
+        <ul class="list margin-tb-20">
             <li>
-                <a class="item item-avatar" href="#">
+                <div class="item item-avatar" >
                     <img src="../static/img/becomeMember.jpg">
                     <h2>老李</h2>
                     <p>比比比比比</p>
-                    <p>2017-11-11<span class="float-right positive">回复</span></p>
-                </a>
+                    <p>2017-11-11<a ng-click="productAddComment()" class="float-right positive">回复</a></p>
+                </div>
             </li>
             <li>
-                <a class="item item-avatar" href="#">
-                    <img src="../static/img/becomeMember.jpg">
+                <div class="item item-avatar">
+                  <img src="../static/img/becomeMember.jpg">
                     <h2>老李</h2>
                     <p>你瞅啥</p>
                     <p>2017-11-11</p>
                     <h2 style="margin-top: 1rem;">作者回复</h2>
                     <p>瞅你咋地</p>
                     <p>2017-11-11</p>
-                </a>
+                </div>
             </li>
         </ul>
     </ion-content>

@@ -198,12 +198,17 @@ lawApp.controller('MyCtrl', function ($scope, $ionicSideMenuDelegate, $ionicModa
     //我的企业互助
     .controller('myEnterpriseHelp',function($scope,$state){
         $scope.myProductList=function(){
-            $state.go("personalCenter.ProductList");
+            $state.go("personalCenter.productList");
         }
         $scope.applyAccess=function(){
             $state.go("personalCenter.applyAccess");
         }
-        $scope.list=["企业注册","企业管理","财税服务"]
+        $scope.list=["企业注册","企业管理","财税服务"];
+
+        //作者评论
+        $scope.productAddComment=function(){
+            $state.go("personalCenter.productAuthorComment");
+        }
     })
 
 
